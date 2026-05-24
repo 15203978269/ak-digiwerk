@@ -1,0 +1,62 @@
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn-p {
+  font-size: .72rem; font-weight: 700; color: #fff; background: var(--blue);
+  padding: .75rem 1.6rem; border-radius: 3px; letter-spacing: .07em;
+  text-transform: uppercase; transition: background .15s;
+  border: none; cursor: pointer; text-decoration: none; display: inline-block;
+}
+.btn-p:hover { background: var(--blue2); }
+
+.btn-s {
+  font-size: .72rem; font-weight: 700; color: var(--ink); background: transparent;
+  padding: .75rem 1.6rem; border-radius: 3px; letter-spacing: .07em;
+  text-transform: uppercase; border: 1px solid var(--bord2);
+  transition: background .15s; cursor: pointer; text-decoration: none; display: inline-block;
+}
+.btn-s:hover { background: var(--bg2); }
+
+.btn-w {
+  font-size: .72rem; font-weight: 700; letter-spacing: .07em;
+  text-transform: uppercase; background: #fff; color: var(--blue);
+  border: none; padding: .75rem 1.6rem; border-radius: 3px;
+  cursor: pointer; transition: background .15s; flex-shrink: 0;
+}
+.btn-w:hover { background: #dce6f5; }
+
+/* ============================================================
+   TAGS & PILLS
+   ============================================================ */
+.tag {
+  font-size: .5rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--blue); background: var(--blue-lt);
+  padding: 3px 7px; border-radius: 2px;
+}
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.pill {
+  font-size: .52rem; font-weight: 700; letter-spacing: .06em;
+  text-transform: uppercase; color: var(--blue); background: var(--blue-lt);
+  padding: 3px 8px; border-radius: 2px;
+}
+.pills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: .7rem; }
+
+/* ============================================================
+   COOKIE BANNER
+   ============================================================ */
+#cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: var(--ink); color: rgba(255,255,255,.6);
+  padding: .85rem clamp(1.2rem,4vw,4rem);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap; font-size: .77rem; line-height: 1.6;
+}
+#cookie-banner a { color: #fff; text-decoration: underline; }
+.cb-btns { display: flex; gap: .5rem; flex-shrink: 0; }
+.cb-btns button {
+  font-size: .72rem; padding: .38rem .95rem; border-radius: 3px;
+  border: 1px solid rgba(255,255,255,.25); cursor: pointer;
+  background: transparent; color: rgba(255,255,255,.6);
+}
+#cb-accept { background: #fff !important; color: var(--ink) !important; border-color: #fff !important; }

@@ -1,0 +1,151 @@
+/* ============================================================
+   HOME — HERO
+   ============================================================ */
+.hero { border-bottom: 1px solid var(--border); }
+.hero-wrap {
+  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
+  padding: 5rem clamp(1.2rem,4vw,5rem);
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: center;
+  min-height: calc(100vh - 56px);
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-size: .58rem; font-weight: 700; letter-spacing: .15em;
+  text-transform: uppercase; color: var(--muted); margin-bottom: 1.6rem;
+}
+.dot-g {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #2a8a56; flex-shrink: 0;
+  animation: blink 2.5s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+
+.hero h1 {
+  font-size: clamp(2.6rem,4vw,4.4rem); font-weight: 800;
+  line-height: .95; letter-spacing: -.04em;
+  color: var(--ink); margin-bottom: 1.5rem;
+}
+.hero h1 .acc { color: var(--red); }
+.hero-desc { font-size: .95rem; color: var(--ink2); line-height: 1.82; max-width: 400px; margin-bottom: 2rem; }
+.hero-desc strong { color: var(--ink); font-weight: 500; }
+.hero-btns { display: flex; gap: .7rem; flex-wrap: wrap; }
+
+/* Hero image frame (desktop) */
+.gif-frame {
+  width: 70%; max-width: 560px; aspect-ratio: 5/8;
+  border-radius: 5px; overflow: hidden;
+  border: 1px solid var(--bord2); position: relative;
+  background: var(--bg3); box-shadow: 0 2px 20px rgba(0,0,0,.06);
+  margin-left: auto;
+}
+.gif-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gif-badge {
+  position: absolute; top: 10px; left: 10px;
+  background: var(--blue); color: #fff;
+  font-size: .52rem; font-weight: 700; letter-spacing: .1em;
+  text-transform: uppercase; padding: 3px 8px; border-radius: 2px;
+}
+
+/* Hero image (mobile only) */
+.hero-mobile-img {
+  display: none;
+  width: 100%; height: 220px; overflow: hidden;
+  border-radius: 5px; border: 1px solid var(--bord2);
+  margin-top: 1.5rem; position: relative; background: var(--bg3);
+}
+.hero-mobile-img img { width: 100%; height: 100%; object-fit: cover; }
+.hero-mobile-img .gif-badge { position: absolute; top: 10px; left: 10px; }
+
+/* ============================================================
+   HOME — STATS BAR
+   ============================================================ */
+.stat-bar { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.stat-bar-in {
+  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
+  padding: 0 clamp(1.2rem,4vw,5rem);
+  display: grid; grid-template-columns: repeat(4,1fr);
+}
+.stat-item { padding: 1.5rem 1rem 1.5rem 0;}
+.stat-item:last-child { border-right: none; }
+.sn { font-size: 1.8rem; font-weight: 800; color: var(--ink); letter-spacing: -.04em; line-height: 1; }
+.sn em { color: var(--red); font-style: normal; }
+.sl { font-size: .7rem; color: var(--muted); margin-top: 5px; }
+
+/* ============================================================
+   HOME — LOGO STRIP (background companies)
+   ============================================================ */
+.ls { border-bottom: 1px solid var(--border); }
+.ls-in {
+  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
+  padding: .85rem clamp(1.2rem,4vw,5rem);
+  display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;
+}
+.ls-lbl { font-size: .54rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--muted); opacity: .4; white-space: nowrap; }
+.ls-sep { width: 1px; height: 11px; background: var(--bord2); flex-shrink: 0; }
+.co { font-size: .78rem; color: var(--muted); opacity: .5; }
+
+/* ============================================================
+   HOME — ABOUT SECTION
+   ============================================================ */
+.about { border-bottom: 1px solid var(--border); }
+.about-in {
+  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
+  padding: 5rem clamp(1.2rem,4vw,5rem);
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 5rem; align-items: start;
+}
+.about-sh {
+  font-size: 1.6rem; font-weight: 800; color: var(--ink);
+  letter-spacing: -.03em; line-height: 1.05; margin-bottom: 2.2rem;
+}
+.aval {
+  border-left: 2px solid var(--border); padding-left: 1rem;
+  margin-bottom: 1.6rem; transition: border-color .15s;
+}
+.aval:hover { border-left-color: var(--red); }
+.aval h4 { font-size: .86rem; font-weight: 700; color: var(--ink); margin-bottom: .28rem; }
+.aval p   { font-size: .83rem; color: var(--muted); line-height: 1.75; }
+.about-profile { display: flex; gap: 1.8rem; align-items: flex-start; }
+.profile-img { width: 130px; height: 164px; border-radius: 4px; object-fit: cover; object-position: center top; flex-shrink: 0; border: 1px solid var(--bord2); }
+.profile-ph {
+  width: 130px; height: 164px; border-radius: 4px; flex-shrink: 0;
+  border: 1px solid var(--bord2); background: var(--bg3);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+}
+.profile-ph svg { width: 34px; height: 34px; stroke: var(--muted); fill: none; opacity: .3; }
+.profile-ph span { font-size: .58rem; color: var(--muted); opacity: .35; letter-spacing: .05em; text-transform: uppercase; }
+.bio h3 { font-size: 1.15rem; font-weight: 800; color: var(--ink); letter-spacing: -.02em; margin-bottom: .2rem; }
+.bio-title { font-size: .78rem; color: var(--muted); margin-bottom: 1rem; }
+.bio p { font-size: .84rem; color: var(--ink2); line-height: 1.8; margin-bottom: .75rem; }
+
+/* ============================================================
+   HOME — CTA BAND
+   ============================================================ */
+.cta-band { background: var(--blue); padding: 3rem 0; }
+.cta-in {
+  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
+  padding: 0 clamp(1.2rem,4vw,5rem);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; flex-wrap: wrap;
+}
+.cta-in h2 { font-size: clamp(1.3rem,2.2vw,1.85rem); font-weight: 800; color: #fff; letter-spacing: -.03em; line-height: 1.05; margin-bottom: .25rem; }
+.cta-in p  { font-size: .86rem; color: rgba(255,255,255,.42); }
+
+/* ============================================================
+   HOME — RESPONSIVE
+   ============================================================ */
+@media(max-width: 940px) {
+  .hero-wrap { grid-template-columns: 1fr; min-height: auto; padding-bottom: 3rem; }
+  .hero-r { display: none; }
+  .hero-mobile-img { display: block; }
+
+  .stat-bar-in { grid-template-columns: 1fr 1fr; }
+  .stat-item:nth-child(2) { border-right: none; }
+  .stat-item:nth-child(3),
+  .stat-item:nth-child(4) { border-top: 1px solid var(--border); }
+  .stat-item:nth-child(4) { border-right: none; }
+
+  .about-in { grid-template-columns: 1fr; gap: 3rem; }
+  .cta-in   { flex-direction: column; align-items: flex-start; }
+}

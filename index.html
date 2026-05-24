@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AK.DIGIWERK | Affan Khan – Freelance Digitalisation Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ========================================================
+       STYLES — loaded in order (tokens → base → layout → ...)
+       ======================================================== -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+  <link rel="stylesheet" href="css/pages/services.css">
+  <link rel="stylesheet" href="css/pages/case-studies.css">
+  <link rel="stylesheet" href="css/pages/contact.css">
+  <link rel="stylesheet" href="css/pages/legal.css">
+</head>
+<body>
+
+  <!-- ========================================================
+       COOKIE BANNER (lives outside the page system)
+       ======================================================== -->
+  <div id="cookie-banner">
+    <span id="cb-text">Diese Website verwendet ausschließlich technisch notwendige Cookies. <a href="#" onclick="showPage('datenschutz');closeBanner();return false;">Datenschutzerklärung</a></span>
+    <div class="cb-btns">
+      <button onclick="closeBanner()">Ablehnen</button>
+      <button id="cb-accept" onclick="closeBanner()">Verstanden</button>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       NAVIGATION
+       ======================================================== -->
+  <nav>
+    <div class="nav-in">
+      <a href="#" class="logo" onclick="showPage('home')">AK<span class="dot">.</span>DIGIWERK</a>
+      <div class="nav-links">
+        <button onclick="showPage('home')"        id="nav-home"     class="active" data-key="n0">Home</button>
+        <button onclick="showPage('services')"    id="nav-services"                data-key="n1">Services</button>
+        <button onclick="showPage('casestudies')" id="nav-cs"                      data-key="n2">Case Studies</button>
+        <button onclick="showPage('contact')"     id="nav-contact"                 data-key="n3">Contact</button>
+        <button onclick="showPage('contact')"     class="nav-cta"                  data-key="n4">Get in touch</button>
+      </div>
+      <div class="lang-sw">
+        <button id="lb-en" class="on" onclick="setLang('en')">EN</button>
+        <button id="lb-de"            onclick="setLang('de')">DE</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================
+       PAGE CONTAINER — partials are loaded into here by app.js
+       ======================================================== -->
+  <div id="page-container"></div>
+
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
+  <footer>
+    <div class="f-in">
+      <div class="f-logo">AK<span class="dot">.</span>DIGIWERK</div>
+      <div class="f-copy">© 2026 Affan Khan · Flensburg, Deutschland · USt-IdNr. auf Anfrage</div>
+      <div class="f-links">
+        <a href="#" onclick="showPage('impressum');return false;" data-key="fim">Impressum</a>
+        <a href="#" onclick="showPage('datenschutz');return false;" data-key="fprv">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       SCRIPTS — load order matters
+       1. translation data (defines window.T.en / window.T.de)
+       2. modules that depend on it
+       3. app.js boots everything
+       ======================================================== -->
+  <script src="js/data/translations-en.js"></script>
+  <script src="js/data/translations-de.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/accordion.js"></script>
+  <script src="js/cookie-banner.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+/* ============================================================
+   LEGAL / IMPRESSUM / DATENSCHUTZ
+   ============================================================ */
+.legal-body {
+  max-width: 720px; margin: 0 auto;
+  padding: 3.5rem clamp(1.2rem,4vw,4rem) 5rem;
+}
+.legal-body h2 { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin: 2rem 0 .5rem; letter-spacing: -.02em; }
+.legal-body h3 { font-size: .9rem; font-weight: 700; color: var(--ink); margin: 1.4rem 0 .4rem; }
+.legal-body p  { font-size: .86rem; color: var(--ink2); line-height: 1.82; margin-bottom: .75rem; }
+.legal-body a  { color: var(--blue); text-decoration: underline; }
+.legal-body ul { list-style: disc; padding-left: 1.2rem; margin-bottom: .75rem; }
+.legal-body ul li { font-size: .86rem; color: var(--ink2); line-height: 1.75; }
+
+/* ============================================================
+   LEGAL — RESPONSIVE
+   ============================================================ */
+@media(max-width: 580px) {
+  footer, .f-in { flex-direction: column; text-align: center; }
+  .nav-cta { display: none; }
+  .nav-links button:not(.nav-cta) { display: none; }
+  .lang-sw { margin-left: auto; }
+  .nav-in  { justify-content: space-between; }
+}

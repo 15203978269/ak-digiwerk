@@ -1,0 +1,16 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer { border-top: 1px solid var(--border); padding: 1.3rem 0; }
+.f-in {
+  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
+  padding: 0 clamp(1.2rem,4vw,5rem);
+  display: flex; justify-content: space-between;
+  align-items: center; flex-wrap: wrap; gap: .7rem;
+}
+.f-logo { font-weight: 800; font-size: .86rem; color: var(--ink); }
+.f-logo .dot { color: var(--red); }
+.f-copy  { font-size: .66rem; color: var(--muted); }
+.f-links { display: flex; gap: 1.2rem; }
+.f-links a { font-size: .56rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+.f-links a:hover { color: var(--ink); }

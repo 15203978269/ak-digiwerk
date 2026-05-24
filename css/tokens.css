@@ -1,0 +1,26 @@
+/* ============================================================
+   DESIGN TOKENS
+   All colors, borders, shared values live here.
+   Change a brand colour? Only this file needs editing.
+   ============================================================ */
+:root {
+  /* Backgrounds */
+  --bg:       #f5f2ed;
+  --bg2:      #edeae4;
+  --bg3:      #e4e0d8;
+
+  /* Text */
+  --ink:      #18160f;
+  --ink2:     #2a2722;
+  --muted:    #6f6b63;
+
+  /* Brand */
+  --blue:     #1c3f72;
+  --blue2:    #2c5ea8;
+  --blue-lt:  #e9eef7;
+  --red:      #c03a18;
+
+  /* Borders */
+  --border:   rgba(24,22,15,.09);
+  --bord2:    rgba(24,22,15,.16);
+}

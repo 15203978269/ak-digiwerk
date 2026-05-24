@@ -1,0 +1,41 @@
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
+  height: 56px; background: var(--bg); border-bottom: 1px solid var(--border);
+}
+.nav-in {
+  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
+  padding: 0 clamp(1.2rem,4vw,5rem);
+  height: 100%; display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem;
+}
+.logo {
+  font-weight: 800; font-size: .92rem; text-decoration: none;
+  color: var(--ink); letter-spacing: .01em; flex-shrink: 0;
+}
+.logo .dot { color: var(--red); }
+.nav-links { display: flex; align-items: center; gap: .15rem; }
+.nav-links button {
+  font-size: .82rem; font-weight: 400; color: var(--muted);
+  background: transparent; border: none; cursor: pointer;
+  padding: .4rem .8rem; border-radius: 3px;
+  transition: color .15s, background .15s;
+}
+.nav-links button:hover,
+.nav-links button.active { color: var(--ink); background: var(--bg2); }
+.nav-cta { background: var(--blue) !important; color: #fff !important; font-weight: 500 !important; border-radius: 3px !important; }
+.nav-cta:hover { background: var(--blue2) !important; }
+
+/* Language switcher */
+.lang-sw {
+  display: flex; border: 1px solid var(--bord2); border-radius: 3px;
+  overflow: hidden; margin-left: .8rem; flex-shrink: 0;
+}
+.lang-sw button {
+  font-size: .58rem; font-weight: 700; letter-spacing: .1em;
+  padding: 4px 9px; border: none; cursor: pointer;
+  background: transparent; color: var(--muted); transition: all .15s;
+}
+.lang-sw button.on { background: var(--ink); color: #fff; }

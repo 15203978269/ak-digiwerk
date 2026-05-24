@@ -1,0 +1,50 @@
+/* ============================================================
+   SERVICES — GRID
+   ============================================================ */
+.svc-grid {
+  max-width: clamp(900px, 80vw, 1300px); margin: 0 auto;
+  padding: 3rem clamp(1.2rem,4vw,5rem) 0;
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 1px; background: var(--border);
+}
+.sc { background: var(--bg); padding: 2rem 1.6rem; transition: background .15s; }
+.sc:hover { background: var(--bg2); }
+.sc-num { font-size: .52rem; font-weight: 700; letter-spacing: .14em; color: var(--muted); margin-bottom: 1.2rem; opacity: .45; }
+.sc-ico { width: 32px; height: 32px; margin-bottom: .85rem; border: 1px solid var(--bord2); border-radius: 3px; display: flex; align-items: center; justify-content: center; }
+.sc-ico svg { width: 14px; height: 14px; stroke: var(--blue); fill: none; stroke-width: 1.8; }
+.sc h3 { font-size: .88rem; font-weight: 700; color: var(--ink); margin-bottom: .4rem; line-height: 1.2; }
+.sc p  { font-size: .79rem; color: var(--muted); line-height: 1.75; margin-bottom: .85rem; }
+
+/* ============================================================
+   SERVICES — PROCESS STEPS
+   ============================================================ */
+.proc-s { padding: 4rem 0; border-top: 1px solid var(--border); }
+.proc-in { max-width: 1060px; margin: 0 auto; padding: 0 clamp(1.2rem,4vw,4rem); }
+.proc-in h2 { font-size: 1.4rem; font-weight: 800; color: var(--ink); letter-spacing: -.03em; margin-bottom: 1.8rem; }
+.proc-steps {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1px; background: var(--border); border-radius: 4px; overflow: hidden;
+}
+.ps { background: var(--bg2); padding: 1.6rem 1.3rem; transition: background .15s; }
+.ps:hover { background: var(--bg3); }
+.ps-n { font-size: .5rem; font-weight: 700; letter-spacing: .14em; color: var(--red); margin-bottom: .8rem; }
+.ps h4 { font-size: .84rem; font-weight: 700; color: var(--ink); margin-bottom: .28rem; }
+.ps p  { font-size: .77rem; color: var(--muted); line-height: 1.7; }
+
+/* ============================================================
+   SERVICES — RESPONSIVE
+   ============================================================ */
+@media(max-width: 940px) {
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .proc-steps { grid-template-columns: 1fr 1fr; }
+  .ps:nth-child(2) { border-right: none; }
+  .ps:nth-child(3),
+  .ps:nth-child(4) { border-top: 1px solid var(--border); }
+}
+
+@media(max-width: 580px) {
+  .svc-grid    { grid-template-columns: 1fr; }
+  .proc-steps  { grid-template-columns: 1fr; }
+  .ps          { border-right: none !important; border-top: 1px solid var(--border); }
+  .ps:first-child { border-top: none; }
+}

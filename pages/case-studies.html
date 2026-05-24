@@ -1,0 +1,239 @@
+<!-- ============================================================
+     PAGE: CASE STUDIES
+     ============================================================ -->
+<div id="page-casestudies" class="page">
+
+  <div class="cs-intro">
+    <div class="cs-intro-in">
+      <div>
+        <span class="sec-lbl" data-key="cslbl">Case studies</span>
+        <h1 data-key="csh1">Real projects.<br>Real results.</h1>
+        <p data-key="cssub" style="margin-top:.65rem;">Click any project to read the full problem, approach, and results.</p>
+      </div>
+      <div class="nda-box">
+        <strong data-key="ndah">NDA &amp; DSGVO</strong>
+        <span data-key="ndap">Visuals are intentionally anonymised to protect client IP under mutual NDA and DSGVO Art. 6 Abs. 1 lit. b.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cs-list">
+    <div class="accordion">
+
+      <!-- ====================================================
+           PROJECT 1: Wind Turbine Production Simulation
+           ==================================================== -->
+      <div class="acc-card" id="card-cs1">
+        <div class="acc-head" onclick="toggleCS('cs1')">
+          <div class="acc-yr">2022</div>
+          <div>
+            <div class="acc-meta" data-key="c1m">Heavy Infrastructure · Germany · Discrete Event Simulation</div>
+            <div class="acc-title" data-key="c1t">Wind Turbine Production Simulation</div>
+          </div>
+          <div class="acc-tags"><span class="tag">AnyLogic</span><span class="tag">Digital Twin</span><span class="tag">DES</span></div>
+          <button class="acc-toggle" onclick="toggleCS('cs1');event.stopPropagation()"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+        <div class="acc-body">
+          <div class="acc-content">
+            <div class="acc-img"><img src="assets/1st.gif" alt="Wind turbine simulation — anonymised" onerror="this.parentElement.style.display='none'"></div>
+            <div class="acc-right">
+              <div class="psr-tabs">
+                <button class="psr-tab active" onclick="tab(this,'cs1','p')" data-key="tp">Problem</button>
+                <button class="psr-tab"        onclick="tab(this,'cs1','s')" data-key="ts">Solution</button>
+                <button class="psr-tab"        onclick="tab(this,'cs1','r')" data-key="tr">Results</button>
+              </div>
+              <div id="cs1-p" class="psr-pane active" data-key="c1p">A leading industrial client needed to justify a major crane investment for their wind turbine assembly line. Conventional capacity planning could not capture stochastic variability, equipment breakdowns, and shift interdependencies — the management required evidence, not assumptions. The objective was to evaluate the impact of a new crane on overall productivity and determine whether the existing material handling system constituted a bottleneck.</div>
+              <div id="cs1-s" class="psr-pane">
+                <span data-key="c1si">A discrete-event simulation (DES) model was developed in AnyLogic to represent the relevant production segment and associated material handling processes. Empirical production data was used for parameterization and validation, while structured verification was performed throughout the model lifecycle.</span>
+                <ul>
+                  <li data-key="c1s1">Data-driven model calibration using historical production datasets</li>
+                  <li data-key="c1s2">Stepwise verification of process logic and system interactions</li>
+                  <li data-key="c1s3">Scenario design incorporating stochastic demand inputs from upstream processes</li>
+                  <li data-key="c1s4">Throughput analysis and bottleneck detection under multiple crane configurations</li>
+                </ul>
+              </div>
+              <div id="cs1-r" class="psr-pane" data-key="c1r">The model supported quantitative evaluation of crane scenarios based on utilization, throughput, and queue dynamics. Task allocation for the new crane was structured to balance system load and minimize bottlenecks. The impact of pull-based upstream processes on system performance was also analyzed. An interactive dashboard was developed to visualize KPI behavior across scenarios.</div>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi-item"><div class="kn" style="color:green;">⬆</div><div class="kl" data-key="c1k1">Throughput improvement</div></div>
+            <div class="kpi-item"><div class="kn" style="color:green;">⬆</div><div class="kl" data-key="c1k2">Machine utilization stability</div></div>
+            <div class="kpi-item"><div class="kn" style="color:var(--red);">⬇</div><div class="kl" data-key="c1k3">Material handling delays</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           PROJECT 2: Wind Turbine Installation Optimisation
+           ==================================================== -->
+      <div class="acc-card" id="card-cs2">
+        <div class="acc-head" onclick="toggleCS('cs2')">
+          <div class="acc-yr">2024</div>
+          <div>
+            <div class="acc-meta" data-key="c2m">Wind Industry · Germany · Heuristic Algorithm</div>
+            <div class="acc-title" data-key="c2t">Wind Turbine Installation Optimisation</div>
+          </div>
+          <div class="acc-tags"><span class="tag">AnyLogic</span><span class="tag">Java</span><span class="tag">DoE</span><span class="tag">Minitab</span></div>
+          <button class="acc-toggle" onclick="toggleCS('cs2');event.stopPropagation()"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+        <div class="acc-body">
+          <div class="acc-content">
+            <div class="acc-img"><img src="assets/thesis3.png" alt="Tabu search scheduling — anonymised" onerror="this.parentElement.style.display='none'"></div>
+            <div class="acc-right">
+              <div class="psr-tabs">
+                <button class="psr-tab active" onclick="tab(this,'cs2','p')" data-key="tp">Problem</button>
+                <button class="psr-tab"        onclick="tab(this,'cs2','s')" data-key="ts">Approach</button>
+                <button class="psr-tab"        onclick="tab(this,'cs2','r')" data-key="tr">Results</button>
+              </div>
+              <div id="cs2-p" class="psr-pane active" data-key="c2p">Wind turbine installation operations are highly sensitive to wind-speed-related constraints, which significantly impact installation duration and project execution efficiency. Planning methods often lack the ability to quantify how variations in component-level wind tolerance affect overall system performance under uncertain environmental conditions.</div>
+              <div id="cs2-s" class="psr-pane">
+                <span data-key="c2si">A DES of the full logistics chain in AnyLogic was paired with a custom Tabu Search algorithm in Java. It iteratively rescheduled tasks around weather forecasts to minimise constraint violations.</span>
+                <ul>
+                  <li data-key="c2s1">Stochastic weather modelling from historical European wind data</li>
+                  <li data-key="c2s2">Greedy heuristic in Java for constrained schedule optimisation</li>
+                  <li data-key="c2s3">Full factorial DoE to identify critical driver variables</li>
+                  <li data-key="c2s4">ANOVA and interaction analysis validated in Minitab</li>
+                </ul>
+              </div>
+              <div id="cs2-r" class="psr-pane" data-key="c2r">The analysis showed that increasing component-level wind tolerance consistently reduces installation time across all evaluated scenarios. Sensitivity analysis identified the nacelle as the most critical component influencing overall installation performance. The results further demonstrated that operational strategies alone are not sufficient, as system performance remains strongly affected by wind variability and shift-dependent execution patterns.</div>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi-item"><div class="kn">DoE</div><div class="kl" data-key="c2k1">Full factorial design</div></div>
+            <div class="kpi-item"><div class="kn">ANOVA</div><div class="kl" data-key="c2k2">Statistical validation</div></div>
+            <div class="kpi-item"><div class="kn">Java</div><div class="kl" data-key="c2k3">Greedy heuristic</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           PROJECT 3: Multi-Market Algorithmic Trader
+           ==================================================== -->
+      <div class="acc-card" id="card-cs3">
+        <div class="acc-head" onclick="toggleCS('cs3')">
+          <div class="acc-yr">2025</div>
+          <div>
+            <div class="acc-meta" data-key="c3m">Personal Project · Live Web Application</div>
+            <div class="acc-title" data-key="c3t">Multi-Market Algorithmic Trader</div>
+          </div>
+          <div class="acc-tags"><span class="tag">Python</span><span class="tag">Live Data API</span><span class="tag">Web App</span></div>
+          <button class="acc-toggle" onclick="toggleCS('cs3');event.stopPropagation()"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+        <div class="acc-body">
+          <div class="acc-content">
+            <div class="acc-img"><img src="assets/app.png" style="width:80%;" alt="Algorithmic trading dashboard" onerror="this.parentElement.style.display='none'"></div>
+            <div class="acc-right">
+              <div class="psr-tabs">
+                <button class="psr-tab active" onclick="tab(this,'cs3','p')" data-key="tp">Problem</button>
+                <button class="psr-tab"        onclick="tab(this,'cs3','s')" data-key="ts">Approach</button>
+                <button class="psr-tab"        onclick="tab(this,'cs3','r')" data-key="tr">Results</button>
+              </div>
+              <div id="cs3-p" class="psr-pane active" data-key="c3p">Manual identification of institutional Smart Money patterns across multiple international markets is time-consuming, inconsistent, and prone to missed signals — especially when monitoring different time zones and asset classes simultaneously.</div>
+              <div id="cs3-s" class="psr-pane">
+                <span data-key="c3si">A full-stack Python application was built with live API integrations for Crypto, Tadawul (Saudi Arabia), and PSX (Pakistan). Pattern detection algorithms continuously scan price data and surface signals through a real-time dashboard.</span>
+                <ul>
+                  <li data-key="c3s1">Live multi-market data ingestion with reconnect logic</li>
+                  <li data-key="c3s2">Algorithmic FVG, Order Block, and liquidity grab detection</li>
+                  <li data-key="c3s3">Signal confidence scoring and risk categorisation</li>
+                  <li data-key="c3s4">Modular — new markets added in under 30 minutes</li>
+                </ul>
+              </div>
+              <div id="cs3-r" class="psr-pane" data-key="c3r">A fully operational real-time scanner running across three live markets simultaneously, surfacing pattern-based signals with zero manual effort. Built to demonstrate applied algorithmic engineering beyond industrial simulation.</div>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi-item"><div class="kn">3</div><div class="kl" data-key="c3k1">Live markets</div></div>
+            <div class="kpi-item"><div class="kn">RT</div><div class="kl" data-key="c3k2">Real-time signals</div></div>
+            <div class="kpi-item"><div class="kn">100%</div><div class="kl" data-key="c3k3">Python, no third-party logic</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           PROJECT 4: 3D Bin Packing
+           ==================================================== -->
+      <div class="acc-card" id="card-cs4">
+        <div class="acc-head" onclick="toggleCS('cs4')">
+          <div class="acc-yr">2026</div>
+          <div>
+            <div class="acc-meta" data-key="c4m">Logistics Research · Smart search algorithm</div>
+            <div class="acc-title" data-key="c4t">3D Bin Packing Optimization System</div>
+          </div>
+          <div class="acc-tags"><span class="tag">Python</span><span class="tag">Combinatorial Optimization</span></div>
+          <button class="acc-toggle" onclick="toggleCS('cs4');event.stopPropagation()"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+        <div class="acc-body">
+          <div class="acc-content">
+            <div class="acc-img"><img src="assets/3_d bin optimizer.png" style="width:70%;" alt="3D bin packing optimiser" onerror="this.parentElement.style.display='none'"></div>
+            <div class="acc-right">
+              <div class="psr-tabs">
+                <button class="psr-tab active" onclick="tab(this,'cs4','p')" data-key="tp">Problem</button>
+                <button class="psr-tab"        onclick="tab(this,'cs4','s')" data-key="ts">Approach</button>
+                <button class="psr-tab"        onclick="tab(this,'cs4','r')" data-key="tr">Results</button>
+              </div>
+              <div id="cs4-p" class="psr-pane active" data-key="c4p">This project addresses the 3D bin packing problem commonly found in manufacturing, logistics, and automated packaging systems. The objective is to efficiently arrange parts of varying dimensions inside available boxes while maximizing space utilization and ensuring no overlaps or boundary violations.</div>
+              <div id="cs4-s" class="psr-pane">
+                <span data-key="c4si">A hybrid optimization strategy was implemented, combining a greedy constructive heuristic with simulated annealing. The greedy phase builds an initial feasible solution using layered skyline-based placement, while the simulated annealing phase iteratively improves it through random swaps, rotations, and repositioning.</span>
+                <ul>
+                  <li data-key="c4s1">Greedy skyline-based initial placement</li>
+                  <li data-key="c4s2">3D collision + boundary checks</li>
+                  <li data-key="c4s3">Simulated annealing for optimization (swap, rotate, move)</li>
+                </ul>
+              </div>
+              <div id="cs4-r" class="psr-pane" data-key="c4r">The system successfully generates valid packing configurations across multiple box sizes, ensuring all parts are placed without collision. It achieves improved space utilization by reducing unused volume through optimization and adapts effectively to different container dimensions.</div>
+            </div>
+          </div>
+          <div class="kpi-row">
+            <div class="kpi-item"><div class="kn">SA</div><div class="kl" data-key="c4k1">Combinatorial Optimization</div></div>
+            <div class="kpi-item"><div class="kn">3D</div><div class="kl" data-key="c4k2">Volumetric state space</div></div>
+            <div class="kpi-item"><div class="kn">⬆ Vol</div><div class="kl" data-key="c4k3">Space utilisation vs baseline</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====================================================
+           PROJECT 5: RL Benchmarking
+           ==================================================== -->
+      <div class="acc-card" id="card-cs5">
+        <div class="acc-head" onclick="toggleCS('cs5')">
+          <div class="acc-yr">2026</div>
+          <div>
+            <div class="acc-meta" data-key="c5m">Academic Research · Netherlands · Reinforcement Learning</div>
+            <div class="acc-title" data-key="c5t">Your Next Project Title</div>
+          </div>
+          <div class="acc-tags"><span class="tag">Python</span><span class="tag">TensorFlow</span></div>
+          <button class="acc-toggle" onclick="toggleCS('cs5');event.stopPropagation()"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
+        </div>
+        <div class="acc-body">
+          <div class="acc-content">
+            <div style="min-height:160px; overflow:hidden; background:var(--bg3);">
+              <div class="acc-img"><img src="assets/guido.png" style="width:100%;" alt="RL supply chain research" onerror="this.parentElement.style.display='none'"></div>
+            </div>
+            <div class="acc-right">
+              <div class="psr-tabs">
+                <button class="psr-tab active" onclick="tab(this,'cs5','p')" data-key="tp">Problem</button>
+                <button class="psr-tab"        onclick="tab(this,'cs5','s')" data-key="ts">Approach</button>
+                <button class="psr-tab"        onclick="tab(this,'cs5','r')" data-key="tr">Results</button>
+              </div>
+              <div id="cs5-p" class="psr-pane active" data-key="c5p">The client was a doctoral-level academic researcher comparing a custom AnyLogic supply chain simulation against a peer-reviewed RL model. The open-source RL codebase required significant adaptation to match the client's experimental setup, cost structure, and parameters — requiring a dedicated Python specialist to make it research-ready.</div>
+              <div id="cs5-s" class="psr-pane">
+                <span data-key="c5si">Summarise the method you used in one or two sentences. What tool or algorithm and why?</span>
+                <ul>
+                  <li data-key="c5s1">Key step one — e.g. data collection and model parameterisation</li>
+                  <li data-key="c5s2">Key step two — e.g. scenario design and sensitivity analysis</li>
+                  <li data-key="c5s3">Key step three — e.g. validation against real production data</li>
+                  <li data-key="c5s4">Key step four — e.g. dashboard / handover to client team</li>
+                </ul>
+              </div>
+              <div id="cs5-r" class="psr-pane" data-key="c5r">Delivered a fully experiment-ready RL pipeline — the client could independently run, verify and replicate all results, enabling a successful thesis comparison between both models.</div>
+            </div>
+          </div>
+          <div class="kpi-row">
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /accordion -->
+  </div>
+
+</div>

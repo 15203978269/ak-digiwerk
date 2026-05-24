@@ -1,0 +1,86 @@
+<!-- ============================================================
+     PAGE: CONTACT
+     ============================================================ -->
+<div id="page-contact" class="page">
+
+  <div class="ph">
+    <div class="wrap">
+      <span class="sec-lbl" data-key="cnlbl">Contact</span>
+      <h1 data-key="cnh1">Ready to optimise?</h1>
+      <p  data-key="cnsub">Response within 24 hours — in English or German.</p>
+    </div>
+  </div>
+
+  <div class="con-body">
+
+    <!-- Left column: direct contact links + DSGVO -->
+    <div class="con-l">
+      <h2 data-key="cnh2">Get in touch directly.</h2>
+      <p class="sub" data-key="cnp">Available for project-based engagements in Germany and remotely. Typical response within one business day.</p>
+
+      <a href="mailto:affan@ak-digiwerk.de" class="clink">
+        <div class="cico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+        <div><span class="ci-lbl">Email</span><span class="ci-val">affan@ak-digiwerk.de</span></div>
+      </a>
+
+      <a href="https://linkedin.com/in/affan-khan-industrialengineer" class="clink" target="_blank" rel="noopener noreferrer">
+        <div class="cico"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+        <div><span class="ci-lbl">LinkedIn</span><span class="ci-val">affan-khan-industrialengineer</span></div>
+      </a>
+
+      <div class="dsgvo">
+        <span class="dl" data-key="dlbl">DSGVO compliance</span>
+        <p data-key="dp">Form data processed solely to respond to your enquiry (Art. 6 Abs. 1 lit. b DSGVO). Not shared with third parties. <a href="#" onclick="showPage('datenschutz');return false;" data-key="plnk">Privacy Policy</a>.</p>
+      </div>
+    </div>
+
+    <!--
+      CONTACT FORM — TO ACTIVATE EMAIL SENDING:
+      1. Sign up at https://formspree.io (free tier)
+      2. Create a form, copy your endpoint URL
+      3. Replace the `action` URL below with yours
+    -->
+    <form class="form-grid" id="contact-form"
+          action="https://formspree.io/f/xrerlvna"
+          method="POST">
+      <div class="frow2">
+        <div class="field"><label data-key="fn">Name</label><input type="text"  name="name"  autocomplete="name"  placeholder="Max Mustermann" required></div>
+        <div class="field"><label data-key="fe">Email</label><input type="email" name="email" autocomplete="email" placeholder="max@firma.de"    required></div>
+      </div>
+      <div class="field"><label data-key="fc">Company (optional)</label><input type="text" name="company" placeholder="Musterfirma GmbH"></div>
+      <div class="field">
+        <label data-key="fs">Service of interest</label>
+        <select name="service">
+          <option value="" data-key="fs0">Select a service…</option>
+          <option data-key="fs1">Discrete Event Simulation</option>
+          <option data-key="fs2">Process &amp; Layout Optimisation</option>
+          <option data-key="fs3">Python Automation</option>
+          <option data-key="fs4">Data Analysis &amp; Reporting</option>
+          <option data-key="fs5">IBM Maximo Implementation</option>
+          <option data-key="fs6">Algorithm &amp; Web App Development</option>
+          <option data-key="fs7">Other / Not sure yet</option>
+        </select>
+      </div>
+      <div class="field"><label data-key="fm">Project details</label><textarea name="message" placeholder="Describe your challenge…" required></textarea></div>
+      <p class="f-priv" data-key="fpriv">By submitting you agree to processing your data to handle your enquiry (Art. 6 Abs. 1 lit. b DSGVO). <a href="#" onclick="showPage('datenschutz');return false;">Privacy Policy</a>.</p>
+      <button type="submit" class="btn-p" id="form-submit" data-key="fsub" style="align-self:flex-start">Send message →</button>
+      <div class="f-ok"  id="form-ok"  data-key="fok">✓ Message sent. I'll be in touch within 24 hours.</div>
+      <div class="f-err" id="form-err">✗ Something went wrong. Please email me directly at affan@ak-digiwerk.de</div>
+    </form>
+
+  </div>
+
+  <!-- Process mini at bottom -->
+  <div class="con-aside">
+    <div class="ca-in">
+      <h3 data-key="plbl">How it works</h3>
+      <div class="proc-mini">
+        <div class="pm"><div class="pm-n">01</div><h4 data-key="p1h">Discovery call</h4><p data-key="p1ps">30 min. Understand your challenge.</p></div>
+        <div class="pm"><div class="pm-n">02</div><h4 data-key="p2h">Clear proposal</h4><p data-key="p2ps">Fixed scope, timeline &amp; price.</p></div>
+        <div class="pm"><div class="pm-n">03</div><h4 data-key="p3h">Build &amp; update</h4><p data-key="p3ps">Weekly updates. Full transparency.</p></div>
+        <div class="pm"><div class="pm-n">04</div><h4 data-key="p4h">Deliver &amp; support</h4><p data-key="p4ps">Handover with docs. Support included.</p></div>
+      </div>
+    </div>
+  </div>
+
+</div>
