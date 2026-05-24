@@ -1,10 +1,9 @@
 /* ============================================================
-   DESIGN TOKENS
-   All colors, borders, shared values live here.
-   Change a brand colour? Only this file needs editing.
+   DESIGN TOKENS — AK DigiWerk brand palette
+   Matches business card: deep teal + warm off-white
    ============================================================ */
 :root {
-  /* Backgrounds */
+  /* Backgrounds — keep the warm paper feel from your card */
   --bg:       #f5f2ed;
   --bg2:      #edeae4;
   --bg3:      #e4e0d8;
@@ -14,11 +13,11 @@
   --ink2:     #2a2722;
   --muted:    #6f6b63;
 
-  /* Brand */
-  --blue:     #1c3f72;
-  --blue2:    #2c5ea8;
-  --blue-lt:  #e9eef7;
-  --red:      #c03a18;
+  /* Brand — teal replaces the old navy blue */
+  --blue:     #0d5e5b;   /* primary teal (matches card) */
+  --blue2:    #14807c;   /* lighter teal for hover states */
+  --blue-lt:  #e3efee;   /* very pale teal background tint */
+  --red:      #c03a18;   /* accent — kept your existing warm red */
 
   /* Borders */
   --border:   rgba(24,22,15,.09);
