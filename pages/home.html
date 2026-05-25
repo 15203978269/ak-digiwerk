@@ -3,94 +3,88 @@
      ============================================================ -->
 <div id="page-home" class="page active">
 
+  <!-- ─── HERO ─────────────────────────────────────────────── -->
   <section class="hero">
-    <div class="hero-wrap">
+    <div class="hero-in">
       <div>
-        <div class="eyebrow"><span class="dot-g"></span><span data-key="avail">Available · Germany &amp; Remote</span></div>
-        <h1 data-key="h1">Simulate.<br>Optimise.<br><span class="acc">Deliver.</span></h1>
-        <p class="hero-desc" data-key="hdesc">Freelance Digitalisation Engineer — <strong>Discrete Event Simulation</strong>, process optimisation &amp; Python automation for manufacturers who need numbers, not narratives.</p>
-        <div class="hero-btns">
-          <button class="btn-p" onclick="showPage('contact')"     data-key="hb1">Start a project →</button>
-          <button class="btn-s" onclick="showPage('casestudies')" data-key="hb2">View case studies</button>
-        </div>
-        <!-- Mobile-only hero image -->
-        <div class="hero-mobile-img">
-          <img src="assets/image.gif" alt="Selected simulation and engineering projects — details anonymised per NDA">
-          <span class="gif-badge" data-key="gbadge">Selected Work</span>
+        <div class="hero-eyebrow" data-key="avail">Available · Germany &amp; Remote</div>
+        <h1 data-key="h1">Simulate.<br>Optimise.<br><span class="accent">Deliver.</span></h1>
+        <p data-key="hdesc">Freelance Digitalisation Engineer — <strong>Discrete Event Simulation</strong>, process optimisation and Python automation for manufacturers who need numbers, not narratives.</p>
+        <div class="hero-actions">
+          <button class="btn" onclick="showPage('contact')" data-key="hb1">Start a project <span class="btn-arrow">→</span></button>
+          <button class="btn-ghost" onclick="showPage('casestudies')" data-key="hb2">View case studies</button>
         </div>
       </div>
-      <!-- Desktop hero image -->
-      <div class="hero-r">
-        <div class="gif-frame">
-          <img src="assets/image.gif" alt="Selected simulation and engineering projects — details anonymised per NDA">
-          <span class="gif-badge" data-key="gbadge">Selected Work</span>
-        </div>
+      <div class="hero-mark">
+        <img src="assets/logo.png" alt="AK DigiWerk logo">
       </div>
     </div>
   </section>
 
-  <!-- Stats bar -->
-  <div class="stat-bar">
-    <div class="stat-bar-in">
-      <div class="stat-item"><div class="sn">5<em>+</em></div><div class="sl" data-key="s1">Years experience</div></div>
-      <div class="stat-item"><div class="sn"><em>+</em>16<em>%</em></div><div class="sl" data-key="s2">Avg. throughput gain</div></div>
-      <div class="stat-item"><div class="sn"><em>+</em>30<em>%</em></div><div class="sl" data-key="s3">Capacity optimised</div></div>
-      <div class="stat-item"><div class="sn">M<em>.</em>Eng</div><div class="sl" data-key="s4">Simulation &amp; System Design</div></div>
+  <!-- ─── CREDENTIAL STRIP (replaces old stat bar) ─────────── -->
+  <div class="cred-strip">
+    <div class="cred-in">
+      <span data-key="cred1">5+ years inside global manufacturers</span>
+      <span class="cred-sep">·</span>
+      <span data-key="cred2">M.Eng Simulation &amp; System Design</span>
+      <span class="cred-sep">·</span>
+      <span data-key="cred3">HS Stralsund</span>
+      <span class="cred-sep">·</span>
+      <span data-key="cred4">DSGVO-compliant</span>
     </div>
   </div>
 
-  <!-- Company logo strip -->
-  <div class="ls">
-    <div class="ls-in">
-      <span class="ls-lbl" data-key="bgd">Professional background</span>
-      <div class="ls-sep"></div>
-      <span class="co">Semikron Danfoss</span>
-      <span class="co">Max Bögl</span>
-      <span class="co">Pak Suzuki Motors</span>
-      <span class="co">Artistic Milliners</span>
-      <span class="co">HS Stralsund</span>
+  <!-- ─── BACKGROUND COMPANIES ────────────────────────────── -->
+  <div class="bg-strip">
+    <div class="bg-in">
+      <span class="bg-label" data-key="bgd">Professional background</span>
+      <span class="bg-co">Semikron Danfoss</span>
+      <span class="bg-co">Max Bögl</span>
+      <span class="bg-co">Pak Suzuki Motors</span>
+      <span class="bg-co">Artistic Milliners</span>
     </div>
   </div>
 
-  <!-- About section -->
+  <!-- ─── ABOUT ─────────────────────────────────────────────── -->
   <section class="about">
     <div class="about-in">
-      <div>
-        <span class="sec-lbl" data-key="albl">About me</span>
-        <h2 class="about-sh" data-key="ash">Engineering precision<br>for industrial growth.</h2>
-        <div class="aval"><h4 data-key="v1h">Industrial pedigree</h4><p data-key="v1p">Built within the internal teams of global industry leaders — from power electronics to automotive — I translate complex production challenges into validated simulation models.</p></div>
-        <div class="aval"><h4 data-key="v2h">Data protection first</h4><p data-key="v2p">Operating under strict German DSGVO standards. Your IP is yours. All case study visuals are anonymised to protect proprietary client data.</p></div>
-        <div class="aval"><h4 data-key="v3h">Numbers, not narratives</h4><p data-key="v3p">Actionable insights through Discrete Event Simulation and Python automation. No guesswork — just validated engineering results with clear ROI.</p></div>
-      </div>
-      <div class="about-profile">
-        <div class="profile-ph" id="profile-wrap">
+      <div class="about-photo">
+        <div class="photo-ph" id="profile-wrap">
           <svg viewBox="0 0 24 24" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
           <span>mak.png</span>
         </div>
-        <div class="bio">
-          <h3 data-key="bion">Affan Khan</h3>
-          <div class="bio-title" data-key="biot">M.Eng · Freelance Digitalisation Engineer · Flensburg, DE</div>
-          <p data-key="biop1">Over five years of hands-on experience inside leading global manufacturers. My work spans discrete event simulation, lean process optimisation, and custom Python tooling — all delivering measurable results.</p>
-          <p data-key="biop2">Based in Flensburg, working across Germany and remotely. Every engagement ends with a documented model, a trained team, and a clear return on investment.</p>
-          <div class="pills">
-            <span class="pill">AnyLogic</span><span class="pill">SimPy</span><span class="pill">Python</span>
-            <span class="pill">IBM Maximo</span><span class="pill">Power BI</span>
-            <span class="pill">Lean / VSM</span><span class="pill">DoE / Minitab</span>
-          </div>
+      </div>
+      <div class="about-text">
+        <div class="eyebrow" data-key="albl">About</div>
+        <h2 data-key="ash">Engineering precision for industrial growth.</h2>
+        <p class="lede" data-key="biop1">Over five years inside leading global manufacturers — power electronics, automotive, infrastructure. I translate complex production challenges into validated simulation models and Python automation that produces measurable returns.</p>
+        <p data-key="biop2">Operating under strict German DSGVO standards. Your IP stays yours. Every engagement ends with a documented model, a trained team, and a clear return on investment.</p>
+        <div class="name">
+          <strong data-key="bion">Affan Khan</strong>
+          <span data-key="biot">M.Eng · Freelance Digitalisation Engineer · Flensburg, DE</span>
+        </div>
+        <div class="skills">
+          <span class="tag">AnyLogic</span>
+          <span class="tag">SimPy</span>
+          <span class="tag">Python</span>
+          <span class="tag">IBM Maximo</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Lean / VSM</span>
+          <span class="tag">DoE / Minitab</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA band -->
-  <div class="cta-band">
-    <div class="cta-in">
+  <!-- ─── CTA ─────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="cta-card">
       <div>
         <h2 data-key="ctah">Free 30-minute discovery call.</h2>
-        <p  data-key="ctasub">Fixed scope. Fixed price. No surprises.</p>
+        <p data-key="ctasub">Fixed scope. Fixed price. No surprises.</p>
       </div>
-      <button class="btn-w" onclick="showPage('contact')" data-key="ctabtn">Book a call →</button>
+      <button class="btn-inv" onclick="showPage('contact')" data-key="ctabtn">Book a call <span class="btn-arrow">→</span></button>
     </div>
-  </div>
+  </section>
 
 </div>

@@ -1,41 +1,115 @@
 /* ============================================================
-   NAVIGATION
+   NAVIGATION — sits at the top, fixed, premium feel
    ============================================================ */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-  height: 56px; background: var(--bg); border-bottom: 1px solid var(--border);
-}
-.nav-in {
-  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
-  padding: 0 clamp(1.2rem,4vw,5rem);
-  height: 100%; display: flex; align-items: center;
-  justify-content: space-between; gap: 1rem;
-}
-.logo {
-  font-weight: 800; font-size: .92rem; text-decoration: none;
-  color: var(--ink); letter-spacing: .01em; flex-shrink: 0;
-}
-.logo .dot { color: var(--red); }
-.nav-links { display: flex; align-items: center; gap: .15rem; }
-.nav-links button {
-  font-size: .82rem; font-weight: 400; color: var(--muted);
-  background: transparent; border: none; cursor: pointer;
-  padding: .4rem .8rem; border-radius: 3px;
-  transition: color .15s, background .15s;
-}
-.nav-links button:hover,
-.nav-links button.active { color: var(--ink); background: var(--bg2); }
-.nav-cta { background: var(--blue) !important; color: #fff !important; font-weight: 500 !important; border-radius: 3px !important; }
-.nav-cta:hover { background: var(--blue2) !important; }
 
-/* Language switcher */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 900;
+  height: var(--nav-h);
+  background: rgba(250, 250, 249, 0.85);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-in {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* ─── Logo (image + wordmark) ─────────────────────────────── */
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  /* Multiply blend lets the off-white logo bg merge with the page bg */
+  mix-blend-mode: multiply;
+}
+.logo-text {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+/* ─── Nav links (centre cluster) ──────────────────────────── */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.nav-links button {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2px;
+  transition: color var(--t-fast);
+  position: relative;
+}
+.nav-links button:hover { color: var(--ink); }
+.nav-links button.active { color: var(--ink); }
+/* Active page indicator — quiet underline */
+.nav-links button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0.9rem;
+  right: 0.9rem;
+  height: 1px;
+  background: var(--teal);
+}
+.nav-cta {
+  margin-left: 0.5rem;
+  background: var(--teal) !important;
+  color: #fff !important;
+  padding: 0.55rem 1.1rem !important;
+  border-radius: 2px !important;
+  font-weight: 500 !important;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--teal-dark) !important; color: #fff !important; }
+
+/* ─── Language switcher ───────────────────────────────────── */
 .lang-sw {
-  display: flex; border: 1px solid var(--bord2); border-radius: 3px;
-  overflow: hidden; margin-left: .8rem; flex-shrink: 0;
+  display: flex;
+  border: 1px solid var(--line-2);
+  border-radius: 2px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 .lang-sw button {
-  font-size: .58rem; font-weight: 700; letter-spacing: .1em;
-  padding: 4px 9px; border: none; cursor: pointer;
-  background: transparent; color: var(--muted); transition: all .15s;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  padding: 5px 9px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--muted);
+  transition: all var(--t-fast);
 }
-.lang-sw button.on { background: var(--ink); color: #fff; }
+.lang-sw button.on {
+  background: var(--ink);
+  color: #fff;
+}

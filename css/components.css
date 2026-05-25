@@ -1,62 +1,140 @@
 /* ============================================================
-   BUTTONS
+   COMPONENTS — buttons, tags, cookie banner
    ============================================================ */
-.btn-p {
-  font-size: .72rem; font-weight: 700; color: #fff; background: var(--blue);
-  padding: .75rem 1.6rem; border-radius: 3px; letter-spacing: .07em;
-  text-transform: uppercase; transition: background .15s;
-  border: none; cursor: pointer; text-decoration: none; display: inline-block;
-}
-.btn-p:hover { background: var(--blue2); }
 
-.btn-s {
-  font-size: .72rem; font-weight: 700; color: var(--ink); background: transparent;
-  padding: .75rem 1.6rem; border-radius: 3px; letter-spacing: .07em;
-  text-transform: uppercase; border: 1px solid var(--bord2);
-  transition: background .15s; cursor: pointer; text-decoration: none; display: inline-block;
-}
-.btn-s:hover { background: var(--bg2); }
+/* ─── BUTTONS ─────────────────────────────────────────────── */
 
-.btn-w {
-  font-size: .72rem; font-weight: 700; letter-spacing: .07em;
-  text-transform: uppercase; background: #fff; color: var(--blue);
-  border: none; padding: .75rem 1.6rem; border-radius: 3px;
-  cursor: pointer; transition: background .15s; flex-shrink: 0;
+/* Primary — solid teal, used for main CTAs only */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  color: #fff;
+  background: var(--teal);
+  border: 1px solid var(--teal);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
+  text-decoration: none;
+  white-space: nowrap;
 }
-.btn-w:hover { background: #dce6f5; }
+.btn:hover {
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+  color: #fff;
+}
+.btn:active { transform: translateY(1px); }
 
-/* ============================================================
-   TAGS & PILLS
-   ============================================================ */
+/* Secondary — outlined, for less-important actions */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line-2);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: border-color var(--t-fast), background var(--t-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-ghost:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* Inverted — for use on teal/dark backgrounds */
+.btn-inv {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--teal);
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background var(--t-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-inv:hover { background: var(--teal-tint); color: var(--teal-dark); }
+
+/* Arrow micro-icon inside buttons */
+.btn-arrow {
+  display: inline-block;
+  transition: transform var(--t-fast);
+}
+.btn:hover .btn-arrow,
+.btn-ghost:hover .btn-arrow,
+.btn-inv:hover .btn-arrow { transform: translateX(2px); }
+
+/* ─── TAGS ────────────────────────────────────────────────── */
 .tag {
-  font-size: .5rem; font-weight: 700; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--blue); background: var(--blue-lt);
-  padding: 3px 7px; border-radius: 2px;
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  background: transparent;
+  border: 1px solid var(--teal-tint);
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
-.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
-.pill {
-  font-size: .52rem; font-weight: 700; letter-spacing: .06em;
-  text-transform: uppercase; color: var(--blue); background: var(--blue-lt);
-  padding: 3px 8px; border-radius: 2px;
-}
-.pills { display: flex; flex-wrap: wrap; gap: 4px; margin-top: .7rem; }
-
-/* ============================================================
-   COOKIE BANNER
-   ============================================================ */
+/* ─── COOKIE BANNER ──────────────────────────────────────── */
 #cookie-banner {
-  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
-  background: var(--ink); color: rgba(255,255,255,.6);
-  padding: .85rem clamp(1.2rem,4vw,4rem);
-  display: flex; align-items: center; justify-content: space-between;
-  gap: 1rem; flex-wrap: wrap; font-size: .77rem; line-height: 1.6;
+  position: fixed;
+  bottom: 1rem; left: 1rem; right: 1rem;
+  z-index: 9999;
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--ink);
+  color: rgba(255,255,255,0.82);
+  padding: 1rem 1.25rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
 }
 #cookie-banner a { color: #fff; text-decoration: underline; }
-.cb-btns { display: flex; gap: .5rem; flex-shrink: 0; }
+.cb-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
 .cb-btns button {
-  font-size: .72rem; padding: .38rem .95rem; border-radius: 3px;
-  border: 1px solid rgba(255,255,255,.25); cursor: pointer;
-  background: transparent; color: rgba(255,255,255,.6);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  background: transparent;
+  color: rgba(255,255,255,0.7);
+  transition: background var(--t-fast), color var(--t-fast);
 }
-#cb-accept { background: #fff !important; color: var(--ink) !important; border-color: #fff !important; }
+.cb-btns button:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+#cb-accept {
+  background: #fff !important;
+  color: var(--ink) !important;
+  border-color: #fff !important;
+}
+#cb-accept:hover { background: rgba(255,255,255,0.85) !important; }

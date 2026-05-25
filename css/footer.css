@@ -1,16 +1,66 @@
 /* ============================================================
-   FOOTER
+   FOOTER — minimal, scannable, restrained
    ============================================================ */
-footer { border-top: 1px solid var(--border); padding: 1.3rem 0; }
-.f-in {
-  max-width: clamp(1060px, 88vw, 1600px); margin: 0 auto;
-  padding: 0 clamp(1.2rem,4vw,5rem);
-  display: flex; justify-content: space-between;
-  align-items: center; flex-wrap: wrap; gap: .7rem;
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 2rem 0;
+  background: var(--bg);
 }
-.f-logo { font-weight: 800; font-size: .86rem; color: var(--ink); }
-.f-logo .dot { color: var(--red); }
-.f-copy  { font-size: .66rem; color: var(--muted); }
-.f-links { display: flex; gap: 1.2rem; }
-.f-links a { font-size: .56rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-decoration: none; }
+
+.f-in {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.f-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.f-brand img {
+  width: 22px; height: 22px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.f-brand span {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+.f-copy {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.f-links {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+}
+.f-links a {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color var(--t-fast);
+}
 .f-links a:hover { color: var(--ink); }
+
+/* Mobile stack */
+@media (max-width: 640px) {
+  .f-in {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1rem;
+  }
+  .f-brand { justify-content: center; }
+  .f-links { justify-content: center; }
+}

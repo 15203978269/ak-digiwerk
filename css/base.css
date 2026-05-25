@@ -1,11 +1,54 @@
 /* ============================================================
-   RESET & BASE
+   RESET & BASE TYPOGRAPHY
+   Sets the document-wide rhythm. Everything inherits from here.
    ============================================================ */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 1.7;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'kern', 'liga', 'calt';
+}
+
+/* Display headlines — tight, confident, no swagger */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
   color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+h1 { letter-spacing: -0.035em; line-height: 1.02; font-weight: 700; }
+h2 { letter-spacing: -0.025em; }
+
+/* Links */
+a { color: var(--teal); text-decoration: none; transition: color var(--t-fast); }
+a:hover { color: var(--teal-dark); }
+
+/* Selection */
+::selection { background: var(--teal); color: #fff; }
+
+/* Images shouldn't overflow */
+img, svg { display: block; max-width: 100%; }
+
+/* Inputs inherit the document font (browsers don't by default) */
+input, textarea, select, button { font: inherit; color: inherit; }
+
+/* Focus rings — visible but understated */
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 2px;
+  border-radius: 2px;
 }

@@ -3,15 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AK.DIGIWERK | Affan Khan – Freelance Digitalisation Engineer</title>
+  <title>AK DigiWerk · Affan Khan — Freelance Digitalisation Engineer</title>
+  <meta name="description" content="Discrete Event Simulation, process optimisation and Python automation for German manufacturers. M.Eng — DSGVO-compliant.">
 
-  <!-- Fonts -->
+  <!-- ════════════════════════════════════════════════════════
+       FONTS — Switzer (display) + Inter (body)
+       Loaded from Fontshare for Switzer + Google for Inter
+       ════════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- ========================================================
-       STYLES — loaded in order (tokens → base → layout → ...)
-       ======================================================== -->
+  <!-- ════════════════════════════════════════════════════════
+       STYLES — load order matters: tokens → base → layout → ...
+       ════════════════════════════════════════════════════════ -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -26,9 +33,9 @@
 </head>
 <body>
 
-  <!-- ========================================================
-       COOKIE BANNER (lives outside the page system)
-       ======================================================== -->
+  <!-- ════════════════════════════════════════════════════════
+       COOKIE BANNER
+       ════════════════════════════════════════════════════════ -->
   <div id="cookie-banner">
     <span id="cb-text">Diese Website verwendet ausschließlich technisch notwendige Cookies. <a href="#" onclick="showPage('datenschutz');closeBanner();return false;">Datenschutzerklärung</a></span>
     <div class="cb-btns">
@@ -37,12 +44,15 @@
     </div>
   </div>
 
-  <!-- ========================================================
+  <!-- ════════════════════════════════════════════════════════
        NAVIGATION
-       ======================================================== -->
+       ════════════════════════════════════════════════════════ -->
   <nav>
     <div class="nav-in">
-      <a href="#" class="logo" onclick="showPage('home')">AK<span class="dot">.</span>DIGIWERK</a>
+      <a href="#" class="logo-link" onclick="showPage('home');return false;">
+        <img src="assets/logo.png" alt="AK DigiWerk" class="logo-img">
+        <span class="logo-text">AK DigiWerk</span>
+      </a>
       <div class="nav-links">
         <button onclick="showPage('home')"        id="nav-home"     class="active" data-key="n0">Home</button>
         <button onclick="showPage('services')"    id="nav-services"                data-key="n1">Services</button>
@@ -57,17 +67,20 @@
     </div>
   </nav>
 
-  <!-- ========================================================
-       PAGE CONTAINER — partials are loaded into here by app.js
-       ======================================================== -->
+  <!-- ════════════════════════════════════════════════════════
+       PAGE CONTAINER — partials loaded here by app.js
+       ════════════════════════════════════════════════════════ -->
   <div id="page-container"></div>
 
-  <!-- ========================================================
+  <!-- ════════════════════════════════════════════════════════
        FOOTER
-       ======================================================== -->
+       ════════════════════════════════════════════════════════ -->
   <footer>
     <div class="f-in">
-      <div class="f-logo">AK<span class="dot">.</span>DIGIWERK</div>
+      <div class="f-brand">
+        <img src="assets/logo.png" alt="">
+        <span>AK DigiWerk</span>
+      </div>
       <div class="f-copy">© 2026 Affan Khan · Flensburg, Deutschland · USt-IdNr. auf Anfrage</div>
       <div class="f-links">
         <a href="#" onclick="showPage('impressum');return false;" data-key="fim">Impressum</a>
@@ -76,16 +89,12 @@
     </div>
   </footer>
 
-  <!-- ========================================================
-       SCRIPTS — load order matters
-       1. translation data (defines window.T.en / window.T.de)
-       2. modules that depend on it
-       3. app.js boots everything
-       ======================================================== -->
+  <!-- ════════════════════════════════════════════════════════
+       SCRIPTS — order matters
+       ════════════════════════════════════════════════════════ -->
   <script src="js/data/translations-en.js"></script>
   <script src="js/data/translations-de.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/accordion.js"></script>
   <script src="js/cookie-banner.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/app.js"></script>

@@ -1,26 +1,47 @@
 /* ============================================================
-   DESIGN TOKENS
-   All colors, borders, shared values live here.
-   Change a brand colour? Only this file needs editing.
+   DESIGN TOKENS — AK DigiWerk v2
+   Swiss-precision palette · teal + grays · NO red
    ============================================================ */
 :root {
-  /* Backgrounds */
-  --bg:       #f5f2ed;
-  --bg2:      #edeae4;
-  --bg3:      #e4e0d8;
 
-  /* Text */
-  --ink:      #18160f;
-  --ink2:     #2a2722;
-  --muted:    #6f6b63;
+  /* ─── BACKGROUNDS ─────────────────────────────────────────
+     Barely-warm off-white. Pure white was too clinical;
+     this keeps a hint of paper without going beige. */
+  --bg:        #fafaf9;
+  --bg-2:      #f4f3f1;   /* subtle section contrast */
+  --bg-3:      #ececea;   /* card hover, image fallback */
 
-  /* Brand */
-  --blue:     #1c3f72;
-  --blue2:    #2c5ea8;
-  --blue-lt:  #e9eef7;
-  --red:      #c03a18;
+  /* ─── INK (text colours) ──────────────────────────────────
+     Near-black, not pure black. Easier on the eye. */
+  --ink:       #0a0a0a;
+  --ink-2:     #3a3a38;
+  --muted:     #6b6b66;
+  --muted-2:   #9a9a93;
 
-  /* Borders */
-  --border:   rgba(24,22,15,.09);
-  --bord2:    rgba(24,22,15,.16);
+  /* ─── BRAND (one colour, used with restraint) ─────────────
+     Pulled directly from the AK DigiWerk business card. */
+  --teal:      #0d5e5b;   /* primary — card colour */
+  --teal-dark: #084543;   /* hover / pressed */
+  --teal-tint: #e3efee;   /* very pale wash for backgrounds */
+
+  /* ─── BORDERS (whisper-thin) ──────────────────────────────
+     Confidence is in what you DON'T draw on the page. */
+  --line:      rgba(10,10,10,.07);
+  --line-2:    rgba(10,10,10,.14);
+
+  /* ─── TYPOGRAPHY ──────────────────────────────────────────
+     Switzer = free Söhne-alternative (display + body)
+     Inter   = workhorse body (rendered everywhere else)
+     Fonts are loaded in index.html from Fontshare. */
+  --font-display: 'Switzer', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  /* ─── MOTION ──────────────────────────────────────────────
+     Quick, never-bouncy. Engineering aesthetic. */
+  --t-fast:    .15s ease;
+  --t-med:     .25s ease;
+
+  /* ─── LAYOUT ──────────────────────────────────────────────
+     Header offset used by .page top-padding. */
+  --nav-h:     64px;
 }

@@ -1,88 +1,220 @@
 /* ============================================================
-   CASE STUDIES — INTRO
+   CASE STUDIES — full inline sections, no accordion
+   Each project gets its own breathable section
    ============================================================ */
-.cs-intro { border-bottom: 1px solid var(--border); padding: 4rem 0 3rem; }
+
+/* ─── CASE STUDY INTRO ───────────────────────────────────── */
+.cs-intro {
+  padding: clamp(4rem, 8vw, 6rem) 0 clamp(3rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--line);
+}
 .cs-intro-in {
-  max-width: 1060px; margin: 0 auto;
-  padding: 0 clamp(1.2rem,4vw,4rem);
-  display: flex; align-items: flex-end; justify-content: space-between;
-  gap: 2rem; flex-wrap: wrap;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: end;
 }
-.cs-intro h1 { font-size: clamp(2rem,3.5vw,3.2rem); font-weight: 800; color: var(--ink); letter-spacing: -.04em; line-height: .95; margin-bottom: .6rem; }
-.cs-intro p  { font-size: .88rem; color: var(--muted); max-width: 400px; line-height: 1.75; }
-.nda-box {
-  font-size: .73rem; color: var(--muted); border: 1px solid var(--bord2);
-  padding: .65rem .95rem; border-radius: 3px; line-height: 1.6;
-  max-width: 250px; flex-shrink: 0; background: var(--bg2);
+.cs-intro h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
 }
-.nda-box strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 2px; font-size: .74rem; }
-
-/* ============================================================
-   CASE STUDIES — ACCORDION
-   ============================================================ */
-.cs-list { max-width: 1060px; margin: 0 auto; padding: 2.5rem clamp(1.2rem,4vw,4rem) 3rem; }
-.accordion { display: flex; flex-direction: column; gap: 2px; }
-
-.acc-card { background: var(--bg); border: 1px solid var(--border); border-radius: 5px; overflow: hidden; transition: border-color .15s; }
-.acc-card.open { border-color: var(--bord2); }
-
-/* Accordion header row */
-.acc-head {
-  display: grid; grid-template-columns: 56px 1fr auto 32px;
-  gap: 1.2rem; align-items: center; padding: 1.4rem 1.6rem;
-  cursor: pointer; user-select: none; transition: background .15s;
+.cs-intro p {
+  font-size: 1.0625rem;
+  color: var(--muted);
+  max-width: 500px;
+  line-height: 1.6;
 }
-.acc-head:hover          { background: var(--bg2); }
-.acc-card.open .acc-head { background: var(--bg2); }
-.acc-yr    { font-size: 1.1rem; font-weight: 800; color: var(--red); letter-spacing: -.02em; line-height: 1; opacity: .55; }
-.acc-meta  { font-size: .56rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: .3rem; }
-.acc-title { font-size: .97rem; font-weight: 700; color: var(--ink); letter-spacing: -.01em; line-height: 1.15; }
-.acc-tags  { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
-.acc-toggle {
-  width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--bord2);
-  background: transparent; display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; cursor: pointer; transition: all .22s;
+
+.nda-note {
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding: 0.85rem 1rem;
+  border-left: 2px solid var(--teal);
+  background: var(--teal-tint);
+  border-radius: 0 2px 2px 0;
+  max-width: 280px;
+  line-height: 1.55;
 }
-.acc-card.open .acc-toggle { background: var(--blue); border-color: var(--blue); }
-.acc-toggle svg { width: 11px; height: 11px; stroke: var(--muted); fill: none; stroke-width: 2; transition: transform .22s, stroke .22s; }
-.acc-card.open .acc-toggle svg { stroke: #fff; transform: rotate(45deg); }
-
-/* Accordion body */
-.acc-body { display: none; border-top: 1px solid var(--border); }
-.acc-card.open .acc-body { display: block; }
-.acc-content { display: grid; grid-template-columns: 2fr 3fr; }
-.acc-img { overflow: hidden; max-height: 260px; display: flex; align-items: center; justify-content: center; background: var(--bg3); border-right: 1px solid var(--border); }
-.acc-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.acc-right { padding: 1.8rem; }
-
-/* PSR tabs (Problem / Solution / Results) */
-.psr-tabs { display: flex; border-bottom: 1px solid var(--border); margin-bottom: 1.3rem; }
-.psr-tab {
-  font-size: .58rem; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; padding: .5rem 1rem;
-  border: none; background: transparent; color: var(--muted);
-  cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px;
-  transition: color .15s, border-color .15s;
+.nda-note strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-size: 0.8125rem;
 }
-.psr-tab.active { color: var(--blue); border-bottom-color: var(--blue); }
-.psr-pane { display: none; font-size: .84rem; color: var(--ink2); line-height: 1.82; min-height: 90px; }
-.psr-pane.active { display: block; }
-.psr-pane ul { list-style: none; margin-top: .7rem; }
-.psr-pane ul li { padding: .38rem 0 .38rem 1rem; border-bottom: 1px solid var(--border); font-size: .82rem; position: relative; }
-.psr-pane ul li:last-child { border-bottom: none; }
-.psr-pane ul li::before { content: '→'; position: absolute; left: 0; color: var(--red); font-size: .76rem; line-height: 1.82; }
 
-/* KPI row */
-.kpi-row { display: flex; gap: 2rem; padding: .95rem 1.6rem; border-top: 1px solid var(--border); background: var(--bg2); flex-wrap: wrap; }
-.kpi-item .kn { font-size: 1.35rem; font-weight: 800; color: var(--blue); letter-spacing: -.03em; line-height: 1; }
-.kpi-item .kl { font-size: .66rem; color: var(--muted); margin-top: 2px; }
+/* ─── CASE STUDY LIST ────────────────────────────────────── */
+.cs-list {
+  padding: 0 0 clamp(3rem, 6vw, 5rem);
+}
 
-/* ============================================================
-   CASE STUDIES — RESPONSIVE
-   ============================================================ */
-@media(max-width: 940px) {
-  .acc-head { grid-template-columns: 1fr 32px; gap: .8rem; }
-  .acc-yr, .acc-tags { display: none; }
-  .acc-content { grid-template-columns: 1fr; }
-  .acc-img { border-right: none; border-bottom: 1px solid var(--border); max-height: 180px; }
+/* Individual case study — alternating image/text layout */
+.cs-item {
+  padding: clamp(4rem, 7vw, 6rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+.cs-item:last-child { border-bottom: none; }
+
+.cs-item-in {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+/* Alternate sides for visual rhythm */
+.cs-item:nth-child(even) .cs-item-in {
+  grid-template-columns: 1.2fr 1fr;
+}
+.cs-item:nth-child(even) .cs-visual {
+  order: 2;
+}
+
+/* Visual column */
+.cs-visual {
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.cs-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cs-visual-placeholder {
+  font-size: 0.75rem;
+  color: var(--muted-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Year badge over visual */
+.cs-year {
+  position: absolute;
+  top: 12px; left: 12px;
+  background: rgba(250,250,249,0.95);
+  border: 1px solid var(--line);
+  padding: 4px 10px;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  border-radius: 2px;
+  backdrop-filter: blur(8px);
+}
+
+/* Content column */
+.cs-content {
+  padding-top: 0.5rem;
+}
+.cs-meta {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.85rem;
+}
+.cs-title {
+  font-size: clamp(1.5rem, 2.8vw, 2.125rem);
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+
+/* Inline subsections (Problem / Approach / Results) */
+.cs-block { margin-bottom: 1.5rem; }
+.cs-block:last-child { margin-bottom: 0; }
+.cs-block-label {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 0.5rem;
+}
+.cs-block p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin-bottom: 0.5rem;
+}
+.cs-block ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.cs-block li {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--ink-2);
+  padding: 0.4rem 0 0.4rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.cs-block li:last-child { border-bottom: none; }
+.cs-block li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  width: 8px;
+  height: 1px;
+  background: var(--teal);
+}
+
+/* KPI strip below content */
+.cs-kpis {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.cs-kpi-num {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.cs-kpi-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+/* Tag strip in case studies */
+.cs-tags {
+  margin-bottom: 1.25rem;
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 880px) {
+  .cs-intro-in { grid-template-columns: 1fr; align-items: start; }
+  .cs-item-in,
+  .cs-item:nth-child(even) .cs-item-in {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .cs-item:nth-child(even) .cs-visual { order: -1; }
+  .cs-visual { aspect-ratio: 16/10; }
 }

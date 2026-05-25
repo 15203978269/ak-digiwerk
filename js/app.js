@@ -1,15 +1,8 @@
 /* ============================================================
-   APP — page router, partial loader, boot sequence
-   ============================================================
-
-   This file:
-   1. Loads each page partial (pages/*.html) into the main shell
-   2. Provides the showPage() router used everywhere
-   3. Wires up the profile image fallback
-   4. Boots all modules once everything is ready
+   APP — page router, partial loader, boot sequence (v2)
    ============================================================ */
 
-/* List of pages to load on startup. Order matches the original layout. */
+/* Pages to load, in order */
 const PAGES = [
   { id: 'home',         file: 'pages/home.html'          },
   { id: 'services',     file: 'pages/services.html'      },
@@ -27,7 +20,7 @@ function showPage(id) {
   const pg = document.getElementById('page-' + id);
   if (pg) pg.classList.add('active');
 
-  // Nav button highlight (case studies has a shorter id "cs")
+  // Nav button highlight ("casestudies" → "cs" in the nav id)
   const navId = id === 'casestudies' ? 'cs' : id;
   const nb = document.getElementById('nav-' + navId);
   if (nb) nb.classList.add('active');
@@ -35,7 +28,7 @@ function showPage(id) {
   window.scrollTo(0, 0);
 }
 
-/* ── Profile image loader (falls back to placeholder if missing) ── */
+/* ── Profile image loader (replaces placeholder if image exists) ── */
 function initProfileImage() {
   const wrap = document.getElementById('profile-wrap');
   if (!wrap) return;
@@ -44,7 +37,6 @@ function initProfileImage() {
     const el = document.createElement('img');
     el.src = 'assets/mak.png';
     el.alt = 'Affan Khan';
-    el.className = 'profile-img';
     wrap.replaceWith(el);
   };
   img.src = 'assets/mak.png';
@@ -61,9 +53,9 @@ async function loadPages() {
 
 /* ── Boot sequence ────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', async () => {
-  await loadPages();        // pull in HTML partials
-  initCookieBanner();       // close cookie banner if previously dismissed
-  initContactForm();        // wire up form submit
-  initProfileImage();       // replace placeholder with photo if available
-  initLang();               // detect/apply language
+  await loadPages();
+  initCookieBanner();
+  initContactForm();
+  initProfileImage();
+  initLang();
 });

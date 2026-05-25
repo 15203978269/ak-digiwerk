@@ -3,20 +3,20 @@
      ============================================================ -->
 <div id="page-contact" class="page">
 
-  <div class="ph">
+  <div class="page-header">
     <div class="wrap">
-      <span class="sec-lbl" data-key="cnlbl">Contact</span>
-      <h1 data-key="cnh1">Ready to optimise?</h1>
-      <p  data-key="cnsub">Response within 24 hours — in English or German.</p>
+      <div class="eyebrow" data-key="cnlbl">Contact</div>
+      <h1 data-key="cnh1">Let's discuss your project.</h1>
+      <p data-key="cnsub">Response within one business day — in English or German.</p>
     </div>
   </div>
 
   <div class="con-body">
 
-    <!-- Left column: direct contact links + DSGVO -->
+    <!-- ─── LEFT: direct contact + DSGVO ─────────────────── -->
     <div class="con-l">
       <h2 data-key="cnh2">Get in touch directly.</h2>
-      <p class="sub" data-key="cnp">Available for project-based engagements in Germany and remotely. Typical response within one business day.</p>
+      <p class="sub" data-key="cnp">Available for project-based engagements across Germany and remotely.</p>
 
       <a href="mailto:affan@ak-digiwerk.de" class="clink">
         <div class="cico"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
@@ -34,18 +34,13 @@
       </div>
     </div>
 
-    <!--
-      CONTACT FORM — TO ACTIVATE EMAIL SENDING:
-      1. Sign up at https://formspree.io (free tier)
-      2. Create a form, copy your endpoint URL
-      3. Replace the `action` URL below with yours
-    -->
+    <!-- ─── RIGHT: contact form ──────────────────────────── -->
     <form class="form-grid" id="contact-form"
           action="https://formspree.io/f/xrerlvna"
           method="POST">
       <div class="frow2">
-        <div class="field"><label data-key="fn">Name</label><input type="text"  name="name"  autocomplete="name"  placeholder="Max Mustermann" required></div>
-        <div class="field"><label data-key="fe">Email</label><input type="email" name="email" autocomplete="email" placeholder="max@firma.de"    required></div>
+        <div class="field"><label data-key="fn">Name</label><input type="text" name="name" autocomplete="name" placeholder="Max Mustermann" required></div>
+        <div class="field"><label data-key="fe">Email</label><input type="email" name="email" autocomplete="email" placeholder="max@firma.de" required></div>
       </div>
       <div class="field"><label data-key="fc">Company (optional)</label><input type="text" name="company" placeholder="Musterfirma GmbH"></div>
       <div class="field">
@@ -63,24 +58,40 @@
       </div>
       <div class="field"><label data-key="fm">Project details</label><textarea name="message" placeholder="Describe your challenge…" required></textarea></div>
       <p class="f-priv" data-key="fpriv">By submitting you agree to processing your data to handle your enquiry (Art. 6 Abs. 1 lit. b DSGVO). <a href="#" onclick="showPage('datenschutz');return false;">Privacy Policy</a>.</p>
-      <button type="submit" class="btn-p" id="form-submit" data-key="fsub" style="align-self:flex-start">Send message →</button>
-      <div class="f-ok"  id="form-ok"  data-key="fok">✓ Message sent. I'll be in touch within 24 hours.</div>
-      <div class="f-err" id="form-err">✗ Something went wrong. Please email me directly at affan@ak-digiwerk.de</div>
+      <button type="submit" class="btn" id="form-submit" style="align-self:flex-start" data-key="fsub">Send message <span class="btn-arrow">→</span></button>
+      <div class="f-ok" id="form-ok" data-key="fok">✓ Message sent. I'll be in touch within one business day.</div>
+      <div class="f-err" id="form-err">Something went wrong. Please email affan@ak-digiwerk.de directly.</div>
     </form>
 
   </div>
 
-  <!-- Process mini at bottom -->
-  <div class="con-aside">
-    <div class="ca-in">
+  <!-- ─── PROCESS STRIP AT BOTTOM ──────────────────────────── -->
+  <section class="con-process">
+    <div class="cp-in">
       <h3 data-key="plbl">How it works</h3>
-      <div class="proc-mini">
-        <div class="pm"><div class="pm-n">01</div><h4 data-key="p1h">Discovery call</h4><p data-key="p1ps">30 min. Understand your challenge.</p></div>
-        <div class="pm"><div class="pm-n">02</div><h4 data-key="p2h">Clear proposal</h4><p data-key="p2ps">Fixed scope, timeline &amp; price.</p></div>
-        <div class="pm"><div class="pm-n">03</div><h4 data-key="p3h">Build &amp; update</h4><p data-key="p3ps">Weekly updates. Full transparency.</p></div>
-        <div class="pm"><div class="pm-n">04</div><h4 data-key="p4h">Deliver &amp; support</h4><p data-key="p4ps">Handover with docs. Support included.</p></div>
+      <div class="cp-steps">
+        <div class="cp-step">
+          <div class="cp-step-num">01</div>
+          <h4 data-key="p1h">Discovery call</h4>
+          <p data-key="p1ps">30 minutes. Understand the challenge.</p>
+        </div>
+        <div class="cp-step">
+          <div class="cp-step-num">02</div>
+          <h4 data-key="p2h">Clear proposal</h4>
+          <p data-key="p2ps">Fixed scope, timeline, price.</p>
+        </div>
+        <div class="cp-step">
+          <div class="cp-step-num">03</div>
+          <h4 data-key="p3h">Build &amp; update</h4>
+          <p data-key="p3ps">Weekly updates. Full transparency.</p>
+        </div>
+        <div class="cp-step">
+          <div class="cp-step-num">04</div>
+          <h4 data-key="p4h">Deliver &amp; support</h4>
+          <p data-key="p4ps">Handover with docs. Support included.</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 
 </div>
