@@ -157,7 +157,7 @@
 .about-photo img,
 .about-photo .photo-ph {
   width: 100%;
-  max-width: 340px;
+  max-width: 280px;
   aspect-ratio: 4/5;
   object-fit: cover;
   object-position: center top;
