@@ -2,23 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AK DigiWerk · Affan Khan — Freelance Digitalisation Engineer</title>
-  <meta name="description" content="Discrete Event Simulation, process optimisation and Python automation for German manufacturers. M.Eng — DSGVO-compliant.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <!-- ════════════════════════════════════════════════════════
-       FONTS — Switzer (display) + Inter (body)
-       Loaded from Fontshare for Switzer + Google for Inter
+       SEO META TAGS
        ════════════════════════════════════════════════════════ -->
+  <title>AK DigiWerk · Freelance Digitalisation Engineer Germany — Affan Khan, M.Eng</title>
+  <meta name="description" content="Freelance Digitalisation Engineer in Germany. Discrete Event Simulation, process optimisation, Python automation and IBM Maximo implementation for manufacturers. M.Eng, DSGVO-compliant, based in Flensburg.">
+  <meta name="keywords" content="Digitalisation Engineer, Discrete Event Simulation, AnyLogic, Process Optimisation, Python Automation, Lean Engineering, IBM Maximo, Industrial Engineering, Freelance Germany, Flensburg">
+  <meta name="author" content="Affan Khan">
+  <link rel="canonical" href="https://ak-digiwerk.de/">
+
+  <!-- Open Graph (Facebook, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ak-digiwerk.de/">
+  <meta property="og:title" content="AK DigiWerk · Freelance Digitalisation Engineer Germany">
+  <meta property="og:description" content="Discrete Event Simulation, process optimisation and Python automation for German manufacturers. M.Eng, DSGVO-compliant.">
+  <meta property="og:image" content="https://ak-digiwerk.de/assets/logo.png">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="de_DE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AK DigiWerk · Freelance Digitalisation Engineer Germany">
+  <meta name="twitter:description" content="Discrete Event Simulation, process optimisation and Python automation for German manufacturers.">
+  <meta name="twitter:image" content="https://ak-digiwerk.de/assets/logo.png">
+
+  <!-- Schema.org JSON-LD — huge for German B2B search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "AK DigiWerk",
+    "image": "https://ak-digiwerk.de/assets/logo.png",
+    "url": "https://ak-digiwerk.de/",
+    "description": "Freelance Digitalisation Engineer offering Discrete Event Simulation, process optimisation and Python automation for German manufacturers.",
+    "founder": {
+      "@type": "Person",
+      "name": "Affan Khan",
+      "jobTitle": "Freelance Digitalisation Engineer",
+      "alumniOf": "Hochschule Stralsund",
+      "hasCredential": "M.Eng Simulation & System Design"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Flensburg",
+      "addressCountry": "DE"
+    },
+    "areaServed": "DE",
+    "knowsAbout": [
+      "Discrete Event Simulation",
+      "AnyLogic",
+      "SimPy",
+      "Python Automation",
+      "Lean Manufacturing",
+      "Process Optimisation",
+      "IBM Maximo",
+      "Data Analysis",
+      "Industrial Engineering"
+    ],
+    "email": "affan@ak-digiwerk.de"
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://api.fontshare.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600,700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- ════════════════════════════════════════════════════════
-       STYLES — load order matters: tokens → base → layout → ...
-       ════════════════════════════════════════════════════════ -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
@@ -33,9 +90,7 @@
 </head>
 <body>
 
-  <!-- ════════════════════════════════════════════════════════
-       COOKIE BANNER
-       ════════════════════════════════════════════════════════ -->
+  <!-- Cookie banner -->
   <div id="cookie-banner">
     <span id="cb-text">Diese Website verwendet ausschließlich technisch notwendige Cookies. <a href="#" onclick="showPage('datenschutz');closeBanner();return false;">Datenschutzerklärung</a></span>
     <div class="cb-btns">
@@ -49,28 +104,119 @@
        ════════════════════════════════════════════════════════ -->
   <nav>
     <div class="nav-in">
-      <a href="#" class="logo-link" onclick="showPage('home');return false;">
-        <img src="assets/logo.png" alt="AK DigiWerk" class="logo-img">
+      <a href="#" class="logo-link" onclick="showPage('home');closeMobileNav();return false;">
+        <img src="assets/logo.png" alt="AK DigiWerk logo" class="logo-img" width="30" height="30">
         <span class="logo-text">AK DigiWerk</span>
       </a>
-      <div class="nav-links">
-        <button onclick="showPage('home')"        id="nav-home"     class="active" data-key="n0">Home</button>
-        <button onclick="showPage('services')"    id="nav-services"                data-key="n1">Services</button>
-        <button onclick="showPage('casestudies')" id="nav-cs"                      data-key="n2">Case Studies</button>
-        <button onclick="showPage('contact')"     id="nav-contact"                 data-key="n3">Contact</button>
-        <button onclick="showPage('contact')"     class="nav-cta"                  data-key="n4">Get in touch</button>
+
+      <div class="nav-links" id="nav-links">
+        <button onclick="showPage('home');closeMobileNav()"        id="nav-home"     class="active" data-key="n0">Home</button>
+        <button onclick="showPage('services');closeMobileNav()"    id="nav-services"                data-key="n1">Services</button>
+        <button onclick="showPage('casestudies');closeMobileNav()" id="nav-cs"                      data-key="n2">Case Studies</button>
+        <button onclick="showPage('contact');closeMobileNav()"     id="nav-contact"                 data-key="n3">Contact</button>
+        <button onclick="showPage('contact');closeMobileNav()"     class="nav-cta"                  data-key="n4">Get in touch</button>
       </div>
-      <div class="lang-sw">
-        <button id="lb-en" class="on" onclick="setLang('en')">EN</button>
-        <button id="lb-de"            onclick="setLang('de')">DE</button>
+
+      <div class="nav-right">
+        <div class="lang-sw">
+          <button id="lb-en" class="on" onclick="setLang('en')">EN</button>
+          <button id="lb-de"            onclick="setLang('de')">DE</button>
+        </div>
+        <button class="nav-burger" id="nav-burger" onclick="toggleMobileNav()" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
   <!-- ════════════════════════════════════════════════════════
-       PAGE CONTAINER — partials loaded here by app.js
+       INLINED HOME PAGE — for SEO (Googlebot sees real content)
+       Other pages still load via fetch below
        ════════════════════════════════════════════════════════ -->
-  <div id="page-container"></div>
+  <div id="page-container">
+    <div id="page-home" class="page active">
+
+      <section class="hero">
+        <div class="hero-in">
+          <div>
+            <div class="hero-eyebrow" data-key="avail">Available · Germany &amp; Remote</div>
+            <h1 data-key="h1">Simulate.<br>Optimise.<br><span class="accent">Deliver.</span></h1>
+            <p data-key="hdesc">Freelance Digitalisation Engineer — <strong>Discrete Event Simulation</strong>, process optimisation and Python automation for manufacturers who need numbers, not narratives.</p>
+            <div class="hero-actions">
+              <button class="btn" onclick="showPage('contact')" data-key="hb1">Start a project <span class="btn-arrow">→</span></button>
+              <button class="btn-ghost" onclick="showPage('casestudies')" data-key="hb2">View case studies</button>
+            </div>
+          </div>
+          <div class="hero-mark">
+            <img src="assets/image.gif" alt="Selected engineering and simulation work by AK DigiWerk" width="460" height="690">
+          </div>
+        </div>
+      </section>
+
+      <div class="cred-strip">
+        <div class="cred-in">
+          <span data-key="cred1">5+ years inside global manufacturers</span>
+          <span class="cred-sep">·</span>
+          <span data-key="cred2">M.Eng Simulation &amp; System Design</span>
+          <span class="cred-sep">·</span>
+          <span data-key="cred3">HS Stralsund</span>
+          <span class="cred-sep">·</span>
+          <span data-key="cred4">DSGVO-compliant</span>
+        </div>
+      </div>
+
+      <div class="bg-strip">
+        <div class="bg-in">
+          <span class="bg-label" data-key="bgd">Professional background</span>
+          <span class="bg-co">Semikron Danfoss</span>
+          <span class="bg-co">Max Bögl</span>
+          <span class="bg-co">Pak Suzuki Motors</span>
+          <span class="bg-co">Artistic Milliners</span>
+        </div>
+      </div>
+
+      <section class="about">
+        <div class="about-in">
+          <div class="about-photo">
+            <div class="photo-ph" id="profile-wrap">
+              <svg viewBox="0 0 24 24" stroke-width="1.2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+              <span>mak.png</span>
+            </div>
+          </div>
+          <div class="about-text">
+            <div class="eyebrow" data-key="albl">About</div>
+            <h2 data-key="ash">Engineering precision for industrial growth.</h2>
+            <p class="lede" data-key="biop1">Over five years inside leading global manufacturers — power electronics, automotive, infrastructure. I translate complex production challenges into validated simulation models and Python automation that produces measurable returns.</p>
+            <p data-key="biop2">Operating under strict German DSGVO standards. Your IP stays yours. Every engagement ends with a documented model, a trained team, and a clear return on investment.</p>
+            <div class="name">
+              <strong data-key="bion">Affan Khan</strong>
+              <span data-key="biot">M.Eng · Freelance Digitalisation Engineer · Flensburg, DE</span>
+            </div>
+            <div class="skills">
+              <span class="tag">AnyLogic</span>
+              <span class="tag">SimPy</span>
+              <span class="tag">Python</span>
+              <span class="tag">IBM Maximo</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Lean / VSM</span>
+              <span class="tag">DoE / Minitab</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="cta-card">
+          <div>
+            <h2 data-key="ctah">Free 30-minute discovery call.</h2>
+            <p data-key="ctasub">Fixed scope. Fixed price. No surprises.</p>
+          </div>
+          <button class="btn-inv" onclick="showPage('contact')" data-key="ctabtn">Book a call <span class="btn-arrow">→</span></button>
+        </div>
+      </section>
+
+    </div>
+  </div>
 
   <!-- ════════════════════════════════════════════════════════
        FOOTER
@@ -78,7 +224,7 @@
   <footer>
     <div class="f-in">
       <div class="f-brand">
-        <img src="assets/logo.png" alt="">
+        <img src="assets/logo.png" alt="" width="22" height="22">
         <span>AK DigiWerk</span>
       </div>
       <div class="f-copy">© 2026 Affan Khan · Flensburg, Deutschland · USt-IdNr. auf Anfrage</div>
@@ -90,7 +236,7 @@
   </footer>
 
   <!-- ════════════════════════════════════════════════════════
-       SCRIPTS — order matters
+       SCRIPTS
        ════════════════════════════════════════════════════════ -->
   <script src="js/data/translations-en.js"></script>
   <script src="js/data/translations-de.js"></script>

@@ -1,5 +1,5 @@
 /* ============================================================
-   NAVIGATION — sits at the top, fixed, premium feel
+   NAVIGATION — fixed mobile burger menu + premium feel
    ============================================================ */
 
 nav {
@@ -7,7 +7,7 @@ nav {
   top: 0; left: 0; right: 0;
   z-index: 900;
   height: var(--nav-h);
-  background: rgba(250, 250, 249, 0.85);
+  background: rgba(250, 250, 249, 0.92);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--line);
@@ -16,15 +16,15 @@ nav {
 .nav-in {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
+  padding: 0 clamp(1rem, 4vw, 3rem);
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
-/* ─── Logo (image + wordmark) ─────────────────────────────── */
+/* ─── Logo ────────────────────────────────────────────────── */
 .logo-link {
   display: flex;
   align-items: center;
@@ -33,10 +33,9 @@ nav {
   flex-shrink: 0;
 }
 .logo-img {
-  width: 32px;
-  height: 32px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
-  /* Multiply blend lets the off-white logo bg merge with the page bg */
   mix-blend-mode: multiply;
 }
 .logo-text {
@@ -47,7 +46,7 @@ nav {
   color: var(--ink);
 }
 
-/* ─── Nav links (centre cluster) ──────────────────────────── */
+/* ─── Nav links — desktop ─────────────────────────────────── */
 .nav-links {
   display: flex;
   align-items: center;
@@ -65,10 +64,10 @@ nav {
   border-radius: 2px;
   transition: color var(--t-fast);
   position: relative;
+  white-space: nowrap;
 }
 .nav-links button:hover { color: var(--ink); }
 .nav-links button.active { color: var(--ink); }
-/* Active page indicator — quiet underline */
 .nav-links button.active::after {
   content: '';
   position: absolute;
@@ -88,6 +87,14 @@ nav {
 }
 .nav-cta::after { display: none !important; }
 .nav-cta:hover { background: var(--teal-dark) !important; color: #fff !important; }
+
+/* ─── Right cluster ───────────────────────────────────────── */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
 
 /* ─── Language switcher ───────────────────────────────────── */
 .lang-sw {
@@ -112,4 +119,83 @@ nav {
 .lang-sw button.on {
   background: var(--ink);
   color: #fff;
+}
+
+/* ─── Burger button (mobile only) ─────────────────────────── */
+.nav-burger {
+  display: none;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid var(--line-2);
+  border-radius: 2px;
+  cursor: pointer;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+  transition: border-color var(--t-fast);
+}
+.nav-burger:hover { border-color: var(--ink); }
+.nav-burger span {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: var(--ink);
+  border-radius: 1px;
+  transition: transform var(--t-fast), opacity var(--t-fast);
+}
+.nav-burger.open span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+
+/* ============================================================
+   MOBILE NAV (≤ 880px)
+   ============================================================ */
+@media (max-width: 880px) {
+  .nav-burger { display: flex; }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 1rem clamp(1rem, 4vw, 3rem);
+    gap: 0;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform var(--t-med), opacity var(--t-med);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+  }
+  .nav-links.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-links button {
+    text-align: left;
+    padding: 0.85rem 0;
+    font-size: 1rem;
+    color: var(--ink);
+    border-bottom: 1px solid var(--line);
+    border-radius: 0;
+  }
+  .nav-links button:last-child { border-bottom: none; }
+  .nav-links button.active::after { display: none; }
+  .nav-links button.active { color: var(--teal); }
+
+  .nav-cta {
+    margin-left: 0 !important;
+    margin-top: 0.75rem !important;
+    text-align: center !important;
+    background: var(--teal) !important;
+    color: #fff !important;
+    padding: 0.85rem 1rem !important;
+  }
 }

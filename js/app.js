@@ -1,10 +1,11 @@
 /* ============================================================
-   APP — page router, partial loader, boot sequence (v2)
+   APP — page router + mobile nav + partial loader (v3)
+   Home page is INLINED in index.html for SEO.
+   Other pages load via fetch.
    ============================================================ */
 
-/* Pages to load, in order */
+/* Pages to load — home is excluded because it's inlined */
 const PAGES = [
-  { id: 'home',         file: 'pages/home.html'          },
   { id: 'services',     file: 'pages/services.html'      },
   { id: 'casestudies',  file: 'pages/case-studies.html'  },
   { id: 'contact',      file: 'pages/contact.html'       },
@@ -20,7 +21,6 @@ function showPage(id) {
   const pg = document.getElementById('page-' + id);
   if (pg) pg.classList.add('active');
 
-  // Nav button highlight ("casestudies" → "cs" in the nav id)
   const navId = id === 'casestudies' ? 'cs' : id;
   const nb = document.getElementById('nav-' + navId);
   if (nb) nb.classList.add('active');
@@ -28,7 +28,17 @@ function showPage(id) {
   window.scrollTo(0, 0);
 }
 
-/* ── Profile image loader (replaces placeholder if image exists) ── */
+/* ── Mobile nav toggle ────────────────────────────────────── */
+function toggleMobileNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+  document.getElementById('nav-burger').classList.toggle('open');
+}
+function closeMobileNav() {
+  document.getElementById('nav-links').classList.remove('open');
+  document.getElementById('nav-burger').classList.remove('open');
+}
+
+/* ── Profile image loader ─────────────────────────────────── */
 function initProfileImage() {
   const wrap = document.getElementById('profile-wrap');
   if (!wrap) return;
@@ -37,18 +47,21 @@ function initProfileImage() {
     const el = document.createElement('img');
     el.src = 'assets/mak.png';
     el.alt = 'Affan Khan';
+    el.width = 240;
+    el.height = 300;
     wrap.replaceWith(el);
   };
   img.src = 'assets/mak.png';
 }
 
-/* ── Load all page partials in parallel ───────────────────── */
+/* ── Load remaining page partials ─────────────────────────── */
 async function loadPages() {
   const container = document.getElementById('page-container');
   const html = await Promise.all(
     PAGES.map(p => fetch(p.file).then(r => r.text()))
   );
-  container.innerHTML = html.join('\n');
+  // Append after the inlined home page
+  container.insertAdjacentHTML('beforeend', html.join('\n'));
 }
 
 /* ── Boot sequence ────────────────────────────────────────── */

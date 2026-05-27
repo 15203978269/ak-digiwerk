@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ak-digiwerk.de/sitemap.xml

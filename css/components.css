@@ -3,8 +3,6 @@
    ============================================================ */
 
 /* ─── BUTTONS ─────────────────────────────────────────────── */
-
-/* Primary — solid teal, used for main CTAs only */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -30,7 +28,6 @@
 }
 .btn:active { transform: translateY(1px); }
 
-/* Secondary — outlined, for less-important actions */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -53,7 +50,6 @@
   color: var(--ink);
 }
 
-/* Inverted — for use on teal/dark backgrounds */
 .btn-inv {
   display: inline-flex;
   align-items: center;
@@ -73,7 +69,6 @@
 }
 .btn-inv:hover { background: var(--teal-tint); color: var(--teal-dark); }
 
-/* Arrow micro-icon inside buttons */
 .btn-arrow {
   display: inline-block;
   transition: transform var(--t-fast);
@@ -98,32 +93,34 @@
 }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
 
-/* ─── COOKIE BANNER ──────────────────────────────────────── */
+/* ─── COOKIE BANNER — fixed bottom, narrower, doesn't cover ─── */
 #cookie-banner {
   position: fixed;
-  bottom: 1rem; left: 1rem; right: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
   z-index: 9999;
-  max-width: 760px;
+  max-width: 540px;
   margin: 0 auto;
   background: var(--ink);
   color: rgba(255,255,255,0.82);
-  padding: 1rem 1.25rem;
+  padding: 0.85rem 1.1rem;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.25rem;
+  gap: 1rem;
   flex-wrap: wrap;
   font-size: 0.8125rem;
-  line-height: 1.55;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  line-height: 1.5;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
 }
 #cookie-banner a { color: #fff; text-decoration: underline; }
 .cb-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
 .cb-btns button {
   font-size: 0.75rem;
   font-weight: 500;
-  padding: 0.45rem 1rem;
+  padding: 0.4rem 0.85rem;
   border-radius: 2px;
   border: 1px solid rgba(255,255,255,0.25);
   cursor: pointer;
@@ -138,3 +135,14 @@
   border-color: #fff !important;
 }
 #cb-accept:hover { background: rgba(255,255,255,0.85) !important; }
+
+@media (max-width: 480px) {
+  #cookie-banner {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    gap: 0.75rem;
+    padding: 0.85rem;
+  }
+  .cb-btns { justify-content: center; }
+}
