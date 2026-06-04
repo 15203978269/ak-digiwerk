@@ -8,12 +8,7 @@ window.T.de = {
 
   /* ────────── HOMEPAGE ────────── */
   eyebrow:'Freiberuflicher Digitalisierungsingenieur · Deutschland',
-<<<<<<< HEAD
-  /* Soft hyphens in the long compound word so it breaks cleanly */
-  h1:'Fundierte Entscheidungen <span class="accent">vor der Investition.</span>',
-=======
   h1:'Ingenieur&shy;ent&shy;scheidungen, <span class="accent">validiert vor der Investition.</span>',
->>>>>>> 6664fe111f2ce5951e7a59685f3dd8b7b7c6668e
   hsub:'Diskrete Ereignissimulation und Prozessoptimierung für europäische Hersteller.',
   hb1:'Erstgespräch buchen',
   havail:'Verfügbar · Deutschland &amp; Remote',
