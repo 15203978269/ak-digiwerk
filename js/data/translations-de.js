@@ -8,7 +8,7 @@ window.T.de = {
 
   /* Hero */
   eyebrow:'Freiberuflicher Digitalisierungsingenieur · Deutschland',
-  h1:'Ingenieurentscheidungen, <span class="accent">validiert vor der Investition.</span>',
+  h1:'Ingenieur&shy;ent&shy;scheidungen, <span class="accent">validiert vor der Investition.</span>',
   hsub:'Diskrete Ereignissimulation und Prozessoptimierung für europäische Hersteller.',
   hb1:'Erstgespräch buchen',
   havail:'Verfügbar · Deutschland &amp; Remote',
