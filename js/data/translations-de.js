@@ -1,25 +1,22 @@
 /* ============================================================
-   GERMAN TRANSLATIONS — v4 (homepage)
+   GERMAN TRANSLATIONS — v4 final (all pages)
    ============================================================ */
 window.T = window.T || {};
 window.T.de = {
   /* Nav */
   n0:'Start', n1:'Leistungen', n2:'Projekte', n3:'Kontakt', n4:'Kontakt aufnehmen',
 
-  /* Hero */
+  /* ────────── HOMEPAGE ────────── */
   eyebrow:'Freiberuflicher Digitalisierungsingenieur · Deutschland',
-  h1:'Ingenieurentscheidungen, <span class="accent">validiert vor der Investition.</span>',
+  /* Soft hyphens in the long compound word so it breaks cleanly */
+  h1:'Fundierte Entscheidungen <span class="accent">vor der Investition.</span>',
   hsub:'Diskrete Ereignissimulation und Prozessoptimierung für europäische Hersteller.',
   hb1:'Erstgespräch buchen',
   havail:'Verfügbar · Deutschland &amp; Remote',
-
-  /* Trust strip */
   trust1:'<strong>M.Eng</strong> Hochschule Stralsund',
   trust2:'Deutsche Ingenieurpraxis',
   trust3:'<strong>DSGVO</strong>-konform',
   trust4:'5+ Jahre Industrieerfahrung',
-
-  /* Industries */
   indlbl:'Branchen',
   indh:'Eine fokussierte Praxis in<br>europäischen Industriesektoren.',
   ind1h:'Fertigung',
@@ -29,42 +26,121 @@ window.T.de = {
   ind3h:'Logistik',
   ind3p:'Lageroptimierung, 3D-Behälterpackung, Lieferketten-Simulation und Routenalgorithmen für betriebliche Effizienz.',
   indlink:'Projekte ansehen →', indlink2:'Projekte ansehen →', indlink3:'Projekte ansehen →',
-
-  /* Featured */
   featlbl:'Ausgewähltes Projekt',
   featyear:'2026',
   featind:'Logistik',
   feath:'3D-Behälterpackungs-Optimierung',
-  featp:'Hybride Optimierung: Greedy-Skyline-Platzierung kombiniert mit Simulated Annealing — gültige Packungskonfigurationen über mehrere Behältergrößen, maximierte Raumnutzung, garantiert ohne Überlappungen oder Grenzverletzungen.',
+  featp:'Hybride Optimierung: Greedy-Skyline-Platzierung kombiniert mit Simulated Annealing — gültige Packungskonfigurationen über mehrere Behältergrößen, maximierte Raumnutzung, garantiert ohne Überlappungen.',
   featk1:'Kombinatorische Optimierung',
   featk2:'Volumetrischer Zustandsraum',
   featk3:'Raumnutzungsgewinn',
   featbtn:'Vollständige Fallstudie',
-
-  /* Methodology */
   methlbl:'So arbeite ich',
   methh:'Ingenieur-zu-Ingenieur Prozess.<br>Keine Black Boxes.',
   methp:'Jedes Engagement folgt derselben disziplinierten Sequenz — kalibriert anhand realer Produktionsdaten, statistisch validiert, vollständig dokumentiert übergeben.',
-  m1h:'Erfassen',  m1p:'30 Minuten zur Erfassung von Entscheidungsraum, Randbedingungen und verfügbaren Daten.',
-  m2h:'Modellieren', m2p:'Aufbau der Simulation oder des Algorithmus. Kalibrierung anhand Ihrer historischen Betriebsdaten.',
+  m1h:'Erfassen',   m1p:'30 Minuten zur Erfassung von Entscheidungsraum, Randbedingungen und verfügbaren Daten.',
+  m2h:'Modellieren',m2p:'Aufbau der Simulation oder des Algorithmus. Kalibrierung anhand Ihrer historischen Betriebsdaten.',
   m3h:'Validieren', m3p:'Statistische Verifikation, Replikationsläufe, Sensitivitätsanalyse. Zahlen, die Sie verteidigen können.',
   m4h:'Übergeben',  m4p:'Dokumentiertes Modell, geschultes Team, Support. Das Ergebnis gehört Ihnen.',
-
-  /* Background */
   bgd:'Praxis aufgebaut in führenden globalen Industrieunternehmen',
-
-  /* About */
   albl:'Über mich',
   ash:'Fünf Jahre Entscheidungen —<br>jetzt freiberuflich verfügbar.',
   biop1:'Ausgebildet in führenden europäischen Industrieunternehmen — Leistungselektronik, Automotive, Infrastruktur — arbeite ich nun unabhängig und übersetze komplexe Produktionsherausforderungen in validierte Simulationsmodelle und Python-Automatisierung.',
   biop2:'Sitz in Flensburg. Betrieb nach strengen deutschen DSGVO-Standards. Jedes Engagement endet mit dokumentiertem Modell, geschultem Team und klarem ROI.',
   bion:'Affan Khan',
   biot:'M.Eng · Freiberuflicher Digitalisierungsingenieur',
-
-  /* CTA */
   ctah:'Kostenloses 30-minütiges Erstgespräch.',
   ctasub:'Fester Umfang. Fester Preis. Keine Überraschungen.',
   ctabtn:'Gespräch buchen',
+
+  /* ────────── SERVICES PAGE ────────── */
+  slbl:'Leistungen',
+  sh1:'Eine fokussierte Praxis<br>für industrielle Entscheidungen.',
+  ssub:'Branchen und Methoden, die ich in jedes Engagement einbringe — vom Erstgespräch bis zur Lieferung.',
+  toolslbl:'Werkzeuge &amp; Methoden',
+  toolsh:'Was ich in jedes Engagement einbringe.',
+  toolssub:'Sechs Fähigkeitsbereiche — kombiniert nach Projektbedarf.',
+  s1h:'Diskrete Ereignissimulation', s1p:'Produktion, Logistik und Materialfluss modellieren. Engpässe finden, ROI nachweisen — vor der Investition.',
+  s2h:'Prozess- &amp; Layoutoptimierung', s2p:'Lean-Analyse, VSM und Lagerumgestaltung — auf Basis von Simulationsdaten, nicht Intuition.',
+  s3h:'Python-Automatisierung', s3p:'Skripte, Reporting-Pipelines, Workflow-Automatisierung. Manuelle Aufgaben werden zu zuverlässigen Systemen.',
+  s4h:'Datenanalyse &amp; Reporting', s4p:'Statistische Studien, KPI-Dashboards und quantitative Analysen. Daten, die Entscheidungen ermöglichen.',
+  s5h:'IBM Maximo Implementierung', s5p:'EAM-Einführung und Optimierung. Altsysteme konsolidieren, Ausfallzeiten reduzieren, Wartung standardisieren.',
+  s6h:'Algorithmus- &amp; Web-App-Entwicklung', s6p:'Maßgeschneiderte Algorithmen, Live-Datenintegrationen und Webanwendungen — von Bin-Packing bis Trading-Tools.',
+
+  /* ────────── CASE STUDIES PAGE ────────── */
+  cslbl:'Fallstudien',
+  csh1:'Ausgewählte Projekte — Fertigung, Wind, Logistik.',
+  cssub:'Klicken Sie auf ein Projekt für Problem, Ansatz und Ergebnisse.',
+  ndah:'NDA &amp; DSGVO',
+  ndap:'Visualisierungen anonymisiert (NDA, DSGVO Art. 6 Abs. 1 lit. b).',
+  tp:'Problem', ts:'Ansatz', tr:'Ergebnisse',
+  /* CS1 */
+  c1m:'Infrastruktur · Deutschland · Diskrete Ereignissimulation',
+  c1t:'Simulation der Windturm-Produktion',
+  c1p:'Ein führender Industriekunde musste eine größere Kraninvestition für die Windturm-Montagelinie rechtfertigen. Konventionelle Kapazitätsplanung konnte stochastische Variabilität, Ausfälle und Schichtinterdependenzen nicht abbilden.',
+  c1si:'Ein DES-Modell wurde in AnyLogic erstellt, um den Produktionsabschnitt und die Materialhandlingsprozesse abzubilden. Empirische Produktionsdaten dienten zur Parametrisierung und Validierung.',
+  c1s1:'Datengetriebene Kalibrierung anhand historischer Produktionsdaten',
+  c1s2:'Schrittweise Verifikation der Prozesslogik und Systeminteraktionen',
+  c1s3:'Szenariengestaltung mit stochastischen Nachfrageinputs',
+  c1s4:'Durchsatzanalyse und Engpasserkennung über mehrere Krankonfigurationen',
+  c1r:'Quantitative Bewertung der Krans-Szenarien basierend auf Auslastung, Durchsatz und Warteschlangendynamik. Ein interaktives Dashboard visualisiert KPI-Verhalten über alle Szenarien.',
+  c1k1:'Durchsatzsteigerung', c1k2:'Stabile Auslastung', c1k3:'Materialhandling-Verzögerungen',
+  /* CS2 */
+  c2m:'Windenergie · Deutschland · Heuristischer Algorithmus',
+  c2t:'Optimierung der Windturm-Installation',
+  c2p:'Windturm-Installationsvorgänge sind stark wetterabhängig, was Installationsdauer und Projektausführung erheblich beeinflusst.',
+  c2si:'Eine DES der gesamten Logistikkette in AnyLogic kombiniert mit einer benutzerdefinierten Greedy-Heuristik in Java.',
+  c2s1:'Stochastische Wettermodellierung aus historischen Winddaten',
+  c2s2:'Java-basierte Heuristik für Schedule-Optimierung',
+  c2s3:'Vollständiges faktorielles DoE zur Identifikation kritischer Variablen',
+  c2s4:'ANOVA und Wechselwirkungsanalyse in Minitab validiert',
+  c2r:'Windtoleranz auf Komponentenebene reduziert konsistent die Installationszeit. Die Gondel wurde als kritischste Komponente identifiziert.',
+  c2k1:'Vollständiges faktorielles DoE', c2k2:'Statistische Validierung', c2k3:'Custom Greedy-Heuristik',
+  /* CS3 */
+  c3m:'Eigenprojekt · Live-Webanwendung',
+  c3t:'Multimarkt-Algorithmic-Trader',
+  c3p:'Manuelle Identifikation institutioneller Smart-Money-Muster an mehreren internationalen Märkten ist zeitaufwendig und fehleranfällig.',
+  c3si:'Eine Python-Anwendung mit Live-API-Integrationen für Krypto, Tadawul (Saudi-Arabien) und PSX (Pakistan).',
+  c3s1:'Live-Multi-Markt-Datenverarbeitung mit Reconnect-Logik',
+  c3s2:'Algorithmische FVG-, Order-Block- und Liquiditäts-Grab-Erkennung',
+  c3s3:'Signal-Konfidenz-Scoring und Risikokategorisierung',
+  c3s4:'Modulare Architektur — neue Märkte in unter 30 Minuten',
+  c3r:'Vollständig operatives Echtzeit-Scanning-Tool an drei Live-Märkten, das musterbasierte Signale ohne manuellen Aufwand liefert.',
+  c3k1:'Live-Märkte', c3k2:'Echtzeitsignale', c3k3:'Python, kein Drittanbieter',
+  /* CS4 */
+  c4m:'Logistikforschung · Kombinatorische Optimierung',
+  c4t:'3D-Behälterpackungs-Optimierung',
+  c4p:'Das 3D-Behälterpackungsproblem — verbreitet in Fertigung und Logistik. Teile unterschiedlicher Abmessungen in Behältern anordnen, Raumnutzung maximieren.',
+  c4si:'Hybride Optimierung: Greedy-Layering kombiniert mit Simulated Annealing.',
+  c4s1:'Greedy Skyline-basierte Erstplatzierung',
+  c4s2:'3D-Kollisions- und Grenzprüfungen',
+  c4s3:'Simulated Annealing zur Optimierung (Tausch, Rotation, Verschiebung)',
+  c4r:'Gültige Packungskonfigurationen über verschiedene Behältergrößen ohne Kollisionen. Verbesserte Raumnutzung durch Optimierung.',
+  c4k1:'Kombinatorische Optimierung', c4k2:'Volumetrischer Zustandsraum', c4k3:'Raumnutzung vs. Baseline',
+
+  /* ────────── CONTACT PAGE ────────── */
+  cnlbl:'Kontakt', cnh1:'Lassen Sie uns Ihr Projekt besprechen.',
+  cnsub:'Antwort innerhalb eines Werktages — auf Englisch oder Deutsch.',
+  cnh2:'Direkt in Kontakt treten.',
+  cnp:'Verfügbar für projektbasierte Aufträge in ganz Deutschland und remote.',
+  dlbl:'DSGVO-Konformität',
+  dp:'Formulardaten werden ausschließlich zur Bearbeitung Ihrer Anfrage verarbeitet (Art. 6 Abs. 1 lit. b DSGVO). Nicht an Dritte weitergegeben. <a href="#" onclick="showPage(\'datenschutz\');return false;">Datenschutzerklärung</a>.',
+  plnk:'Datenschutzerklärung',
+  fn:'Name', fe:'E-Mail', fc:'Unternehmen (optional)', fs:'Gewünschte Leistung',
+  fs0:'Leistung auswählen…',
+  fs1:'Diskrete Ereignissimulation', fs2:'Prozess- &amp; Layoutoptimierung',
+  fs3:'Python-Automatisierung', fs4:'Datenanalyse &amp; Reporting',
+  fs5:'IBM Maximo Implementierung', fs6:'Algorithmus- &amp; Web-App-Entwicklung',
+  fs7:'Sonstiges / Noch nicht sicher',
+  fm:'Projektdetails',
+  fpriv:'Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten zu (Art. 6 Abs. 1 lit. b DSGVO). <a href="#" onclick="showPage(\'datenschutz\');return false;">Datenschutzerklärung</a>.',
+  fsub:'Nachricht senden',
+  fok:'✓ Nachricht gesendet. Ich melde mich innerhalb eines Werktages.',
+  plbl:'Ablauf',
+  p1ps:'30 Minuten. Herausforderung verstehen.',
+  p2ps:'Simulation gegen Ihre Daten aufbauen.',
+  p3ps:'Statistische Verifikation. Belastbare Zahlen.',
+  p4ps:'Dokumentiertes Modell. Support inklusive.',
 
   /* Footer */
   fim:'Impressum', fprv:'Datenschutz'

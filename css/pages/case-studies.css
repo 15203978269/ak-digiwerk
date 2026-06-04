@@ -1,37 +1,48 @@
 /* ============================================================
-   CASE STUDIES — full inline sections, no accordion
-   Each project gets its own breathable section
+   CASE STUDIES PAGE — Ribbon system
    ============================================================ */
 
-/* ─── CASE STUDY INTRO ───────────────────────────────────── */
-.cs-intro {
-  padding: clamp(4rem, 8vw, 6rem) 0 clamp(3rem, 5vw, 4rem);
+/* ─── PAGE HEADER ─────────────────────────────────────────── */
+.cs-header {
+  padding: clamp(5rem, 9vw, 7rem) 0 clamp(2.5rem, 5vw, 4rem);
   border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
 }
-.cs-intro-in {
-  max-width: 1180px;
+.cs-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 20%, var(--teal-glow), transparent 50%);
+  pointer-events: none;
+}
+.cs-header-in {
+  position: relative;
+  max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 1.4fr auto;
   gap: 3rem;
   align-items: end;
 }
-.cs-intro h1 {
+.cs-header h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1rem;
+  max-width: 720px;
 }
-.cs-intro p {
-  font-size: 1.0625rem;
+.cs-header .lede {
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
   color: var(--muted);
-  max-width: 500px;
-  line-height: 1.6;
+  max-width: 540px;
+  line-height: 1.55;
 }
 
+/* NDA + DSGVO badge box — top right of header */
 .nda-note {
   font-size: 0.75rem;
   color: var(--muted);
-  padding: 0.85rem 1rem;
+  padding: 1rem 1.2rem;
   border-left: 2px solid var(--teal);
   background: var(--teal-tint);
   border-radius: 0 2px 2px 0;
@@ -42,179 +53,301 @@
   display: block;
   color: var(--ink);
   font-weight: 600;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-/* ─── CASE STUDY LIST ────────────────────────────────────── */
-.cs-list {
-  padding: 0 0 clamp(3rem, 6vw, 5rem);
-}
-
-/* Individual case study — alternating image/text layout */
-.cs-item {
-  padding: clamp(4rem, 7vw, 6rem) 0;
-  border-bottom: 1px solid var(--line);
-}
-.cs-item:last-child { border-bottom: none; }
-
-.cs-item-in {
-  max-width: 1180px;
+/* ─── RIBBONS CONTAINER ───────────────────────────────────── */
+.ribbons {
+  max-width: var(--max-w);
   margin: 0 auto;
-  padding: 0 clamp(1.25rem, 4vw, 3rem);
-  display: grid;
-  grid-template-columns: 1fr 1.2fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 4vw, 3rem) clamp(4rem, 8vw, 6rem);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-/* Alternate sides for visual rhythm */
-.cs-item:nth-child(even) .cs-item-in {
-  grid-template-columns: 1.2fr 1fr;
-}
-.cs-item:nth-child(even) .cs-visual {
-  order: 2;
-}
-
-/* Visual column */
-.cs-visual {
-  background: var(--bg-2);
-  border: 1px solid var(--line);
-  border-radius: 2px;
+.ribbon {
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: 4px;
   overflow: hidden;
-  aspect-ratio: 4/3;
+  transition: border-color var(--t-med), box-shadow var(--t-med);
+}
+.ribbon.open {
+  border-color: var(--teal);
+  box-shadow: 0 8px 32px var(--teal-glow);
+}
+
+/* ─── Closed header strip ─────────────────────────────────── */
+.ribbon-head {
+  display: grid;
+  grid-template-columns: 70px 1fr auto 40px;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.4rem 1.6rem;
+  cursor: pointer;
+  user-select: none;
+  background: var(--bg);
+  transition: background var(--t-fast);
+}
+.ribbon-head:hover { background: var(--bg-2); }
+.ribbon.open .ribbon-head { background: var(--bg-2); }
+
+.ribbon-year {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--teal);
+  letter-spacing: -0.01em;
+}
+.ribbon-meta {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+.ribbon-title {
+  font-family: var(--font-display);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.ribbon-tags {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+/* Project tags vs NDA badge — different shapes */
+.r-tag {
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--teal);
+  background: transparent;
+  border: 1px solid var(--teal-tint);
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.r-nda {
+  border-radius: 2px;
+  border-style: dashed;
+  border-color: var(--muted-2);
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  font-size: 9.5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 3px 8px;
+  background: transparent;
+}
+
+/* Plus/minus toggle */
+.ribbon-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all var(--t-med);
+  flex-shrink: 0;
   position: relative;
 }
-.cs-visual img {
+.ribbon.open .ribbon-toggle {
+  background: var(--teal);
+  border-color: var(--teal);
+}
+.ribbon-toggle::before,
+.ribbon-toggle::after {
+  content: '';
+  position: absolute;
+  background: var(--ink);
+  transition: all var(--t-med);
+}
+.ribbon-toggle::before { width: 11px; height: 1.5px; }
+.ribbon-toggle::after  { width: 1.5px; height: 11px; }
+.ribbon.open .ribbon-toggle::before,
+.ribbon.open .ribbon-toggle::after { background: #fff; }
+.ribbon.open .ribbon-toggle::after { opacity: 0; }
+
+/* ─── Expanded body ──────────────────────────────────────── */
+.ribbon-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--t-med);
+}
+.ribbon.open .ribbon-body { max-height: 1500px; }
+
+.ribbon-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+  padding: 0.5rem 1.6rem 1.6rem;
+  align-items: start;
+}
+
+.ribbon-visual {
+  background: var(--bg-3);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.ribbon-visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.cs-visual-placeholder {
-  font-size: 0.75rem;
+.ribbon-visual .placeholder {
+  font-size: 0.7rem;
+  font-weight: 500;
   color: var(--muted-2);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-/* Year badge over visual */
-.cs-year {
-  position: absolute;
-  top: 12px; left: 12px;
-  background: rgba(250,250,249,0.95);
-  border: 1px solid var(--line);
-  padding: 4px 10px;
+/* ─── PSR Tabs ────────────────────────────────────────────── */
+.psr {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.psr-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 1.25rem;
+}
+.psr-tab {
   font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  color: var(--ink);
-  border-radius: 2px;
-  backdrop-filter: blur(8px);
-}
-
-/* Content column */
-.cs-content {
-  padding-top: 0.5rem;
-}
-.cs-meta {
   font-size: 11px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
-  margin-bottom: 0.85rem;
-}
-.cs-title {
-  font-size: clamp(1.5rem, 2.8vw, 2.125rem);
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  margin-bottom: 1.25rem;
-}
-
-/* Inline subsections (Problem / Approach / Results) */
-.cs-block { margin-bottom: 1.5rem; }
-.cs-block:last-child { margin-bottom: 0; }
-.cs-block-label {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--teal);
-  margin-bottom: 0.5rem;
-}
-.cs-block p {
-  font-size: 0.9375rem;
-  line-height: 1.7;
-  color: var(--ink-2);
-  margin-bottom: 0.5rem;
-}
-.cs-block ul {
-  list-style: none;
-  margin-top: 0.5rem;
-}
-.cs-block li {
-  font-size: 0.875rem;
-  line-height: 1.65;
-  color: var(--ink-2);
-  padding: 0.4rem 0 0.4rem 1.25rem;
-  border-bottom: 1px solid var(--line);
+  background: transparent;
+  border: none;
+  padding: 0.65rem 0;
+  margin-right: 2rem;
+  cursor: pointer;
   position: relative;
+  transition: color var(--t-fast);
 }
-.cs-block li:last-child { border-bottom: none; }
-.cs-block li::before {
+.psr-tab:hover { color: var(--ink); }
+.psr-tab.active { color: var(--teal); }
+.psr-tab.active::after {
   content: '';
   position: absolute;
-  left: 0;
-  top: 1rem;
-  width: 8px;
-  height: 1px;
+  left: 0; right: 0;
+  bottom: -1px;
+  height: 2px;
   background: var(--teal);
 }
 
-/* KPI strip below content */
-.cs-kpis {
-  display: flex;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--line);
+.psr-pane {
+  display: none;
+  animation: paneFade .25s ease both;
 }
-.cs-kpi-num {
+.psr-pane.active { display: block; }
+@keyframes paneFade {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.psr-pane p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin-bottom: 0.75rem;
+}
+.psr-pane ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+.psr-pane li {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ink-2);
+  padding: 0.4rem 0 0.4rem 1.1rem;
+  position: relative;
+  border-bottom: 1px solid var(--line);
+}
+.psr-pane li:last-child { border-bottom: none; }
+.psr-pane li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 1.05rem;
+  width: 7px; height: 1px;
+  background: var(--teal);
+}
+
+/* ─── KPI strip at the bottom ─────────────────────────────── */
+.ribbon-kpis {
+  display: flex;
+  gap: 2.5rem;
+  padding: 1.25rem 1.6rem;
+  border-top: 1px solid var(--line);
+  background: var(--bg-2);
+  flex-wrap: wrap;
+}
+.ribbon-kpi-num {
   font-family: var(--font-display);
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--teal);
   letter-spacing: -0.02em;
   line-height: 1;
-  margin-bottom: 4px;
 }
-.cs-kpi-label {
-  font-size: 0.75rem;
+.ribbon-kpi-label {
+  font-size: 0.6875rem;
   color: var(--muted);
-  letter-spacing: 0.02em;
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
-/* Tag strip in case studies */
-.cs-tags {
-  margin-bottom: 1.25rem;
-}
-
-/* ─── RESPONSIVE ─────────────────────────────────────────── */
+/* ─── Mobile ──────────────────────────────────────────────── */
 @media (max-width: 880px) {
-  .cs-intro-in { grid-template-columns: 1fr; align-items: start; }
-  .cs-item-in,
-  .cs-item:nth-child(even) .cs-item-in {
+  .cs-header-in {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    align-items: start;
   }
-  .cs-item:nth-child(even) .cs-visual { order: -1; }
-  .cs-visual { aspect-ratio: 16/10; }
+  .nda-note { max-width: 100%; }
+
+  .ribbon-head {
+    grid-template-columns: 50px 1fr 36px;
+    gap: 1rem;
+    padding: 1.1rem 1.2rem;
+  }
+  .ribbon-tags { display: none; }
+  .ribbon-content {
+    grid-template-columns: 1fr;
+    padding: 0.5rem 1.2rem 1.2rem;
+    gap: 1.25rem;
+  }
+  .ribbon-visual { aspect-ratio: 16/10; }
+  .ribbon-kpis {
+    padding: 1rem 1.2rem;
+    gap: 1.5rem;
+  }
+  .psr-tab { margin-right: 1.25rem; }
+}
+@media (max-width: 480px) {
+  .ribbon-year { font-size: 0.9rem; }
+  .ribbon-title { font-size: 0.95rem; }
 }

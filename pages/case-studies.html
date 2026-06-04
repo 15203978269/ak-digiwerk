@@ -1,249 +1,235 @@
 <!-- ============================================================
-     PAGE: CASE STUDIES — 4 projects, inline full sections
+     PAGE: CASE STUDIES — ribbon system
      ============================================================ -->
 <div id="page-casestudies" class="page">
 
-  <!-- ─── INTRO ─────────────────────────────────────────────── -->
-  <div class="cs-intro">
-    <div class="cs-intro-in">
+  <!-- Header -->
+  <div class="cs-header">
+    <div class="cs-header-in">
       <div>
         <div class="eyebrow" data-key="cslbl">Case studies</div>
-        <h1 data-key="csh1">Real projects. Real results.</h1>
-        <p data-key="cssub">Selected work spanning production simulation, optimisation algorithms, and live data systems.</p>
+        <h1 data-key="csh1">Selected work — manufacturing, wind, logistics.</h1>
+        <p class="lede" data-key="cssub">Click any project to read the full problem, approach, and results.</p>
       </div>
       <div class="nda-note">
         <strong data-key="ndah">NDA &amp; DSGVO</strong>
-        <span data-key="ndap">Visuals anonymised to protect client IP under mutual NDA and DSGVO Art. 6 Abs. 1 lit. b.</span>
+        <span data-key="ndap">Visuals anonymised under mutual NDA and DSGVO Art. 6 Abs. 1 lit. b.</span>
       </div>
     </div>
   </div>
 
-  <!-- ─── CASE STUDIES LIST ────────────────────────────────── -->
-  <div class="cs-list">
+  <!-- Ribbons -->
+  <div class="ribbons">
 
-    <!-- ====================================================
-         PROJECT 1 — Wind Turbine Production Simulation
-         ==================================================== -->
-    <article class="cs-item">
-      <div class="cs-item-in">
-        <div class="cs-visual">
-          <span class="cs-year">2022</span>
-          <img src="assets/1st.gif" alt="Wind turbine production simulation" onerror="this.style.display='none'">
+    <!-- ─── PROJECT 1: Wind Turbine Production Simulation ─── -->
+    <article class="ribbon" id="cs1">
+      <div class="ribbon-head" onclick="toggleRibbon('cs1')">
+        <div class="ribbon-year">2022</div>
+        <div>
+          <div class="ribbon-meta" data-key="c1m">Heavy Infrastructure · Germany · Discrete Event Simulation</div>
+          <div class="ribbon-title" data-key="c1t">Wind Turbine Production Simulation</div>
         </div>
-        <div class="cs-content">
-          <div class="cs-meta" data-key="c1m">Heavy Infrastructure · Germany · Discrete Event Simulation</div>
-          <h2 class="cs-title" data-key="c1t">Wind Turbine Production Simulation</h2>
-          <div class="cs-tags tags">
-            <span class="tag">AnyLogic</span>
-            <span class="tag">Digital Twin</span>
-            <span class="tag">DES</span>
+        <div class="ribbon-tags">
+          <span class="r-nda">NDA</span>
+          <span class="r-tag">AnyLogic</span>
+          <span class="r-tag">Digital Twin</span>
+          <span class="r-tag">DES</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/1st.gif" alt="Wind turbine production simulation — anonymised" onerror="this.style.display='none'">
           </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tp">Problem</div>
-            <p data-key="c1p">A leading industrial client needed to justify a major crane investment for their wind turbine assembly line. Conventional capacity planning could not capture stochastic variability, equipment breakdowns, and shift interdependencies — management required evidence, not assumptions.</p>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="ts">Approach</div>
-            <p data-key="c1si">A discrete-event simulation model was developed in AnyLogic to represent the relevant production segment and material handling processes. Empirical production data was used for parameterisation and validation, with structured verification throughout the model lifecycle.</p>
-            <ul>
-              <li data-key="c1s1">Data-driven calibration from historical production datasets</li>
-              <li data-key="c1s2">Stepwise verification of process logic and system interactions</li>
-              <li data-key="c1s3">Scenario design with stochastic demand inputs from upstream processes</li>
-              <li data-key="c1s4">Throughput analysis and bottleneck detection across crane configurations</li>
-            </ul>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tr">Results</div>
-            <p data-key="c1r">Quantitative evaluation of crane scenarios based on utilisation, throughput, and queue dynamics. Task allocation was structured to balance system load and minimise bottlenecks. An interactive dashboard visualises KPI behaviour across scenarios.</p>
-          </div>
-
-          <div class="cs-kpis">
-            <div>
-              <div class="cs-kpi-num">+</div>
-              <div class="cs-kpi-label" data-key="c1k1">Throughput improvement</div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs1','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs1','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs1','r')" data-key="tr">Results</button>
             </div>
-            <div>
-              <div class="cs-kpi-num">+</div>
-              <div class="cs-kpi-label" data-key="c1k2">Utilisation stability</div>
+            <div class="psr-pane active" id="cs1-p">
+              <p data-key="c1p">A leading industrial client needed to justify a major crane investment for their wind turbine assembly line. Conventional capacity planning could not capture stochastic variability, equipment breakdowns, or shift interdependencies — management required evidence, not assumptions.</p>
             </div>
-            <div>
-              <div class="cs-kpi-num">−</div>
-              <div class="cs-kpi-label" data-key="c1k3">Material handling delays</div>
+            <div class="psr-pane" id="cs1-a">
+              <p data-key="c1si">A discrete-event simulation model was developed in AnyLogic to represent the relevant production segment and material handling processes. Empirical production data was used for parameterisation and validation.</p>
+              <ul>
+                <li data-key="c1s1">Data-driven calibration from historical production datasets</li>
+                <li data-key="c1s2">Stepwise verification of process logic and system interactions</li>
+                <li data-key="c1s3">Scenario design with stochastic upstream demand inputs</li>
+                <li data-key="c1s4">Throughput analysis across multiple crane configurations</li>
+              </ul>
             </div>
+            <div class="psr-pane" id="cs1-r">
+              <p data-key="c1r">Quantitative evaluation of crane scenarios based on utilisation, throughput, and queue dynamics. Task allocation was structured to balance system load and minimise bottlenecks. An interactive dashboard visualises KPI behaviour across scenarios.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div>
+            <div class="ribbon-kpi-num">↑</div>
+            <div class="ribbon-kpi-label" data-key="c1k1">Throughput improvement</div>
+          </div>
+          <div>
+            <div class="ribbon-kpi-num">↑</div>
+            <div class="ribbon-kpi-label" data-key="c1k2">Utilisation stability</div>
+          </div>
+          <div>
+            <div class="ribbon-kpi-num">↓</div>
+            <div class="ribbon-kpi-label" data-key="c1k3">Material handling delays</div>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- ====================================================
-         PROJECT 2 — Wind Turbine Installation Optimisation
-         ==================================================== -->
-    <article class="cs-item">
-      <div class="cs-item-in">
-        <div class="cs-visual">
-          <span class="cs-year">2024</span>
-          <img src="assets/thesis3.png" alt="Tabu search scheduling — anonymised" onerror="this.style.display='none'">
+    <!-- ─── PROJECT 2: Wind Turbine Installation Optimisation ─── -->
+    <article class="ribbon" id="cs2">
+      <div class="ribbon-head" onclick="toggleRibbon('cs2')">
+        <div class="ribbon-year">2024</div>
+        <div>
+          <div class="ribbon-meta" data-key="c2m">Wind Industry · Germany · Heuristic Algorithm</div>
+          <div class="ribbon-title" data-key="c2t">Wind Turbine Installation Optimisation</div>
         </div>
-        <div class="cs-content">
-          <div class="cs-meta" data-key="c2m">Wind Industry · Germany · Heuristic Algorithm</div>
-          <h2 class="cs-title" data-key="c2t">Wind Turbine Installation Optimisation</h2>
-          <div class="cs-tags tags">
-            <span class="tag">AnyLogic</span>
-            <span class="tag">Java</span>
-            <span class="tag">DoE</span>
-            <span class="tag">Minitab</span>
+        <div class="ribbon-tags">
+          <span class="r-nda">NDA</span>
+          <span class="r-tag">AnyLogic</span>
+          <span class="r-tag">Java</span>
+          <span class="r-tag">DoE</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/thesis3.png" alt="Wind turbine installation optimisation — anonymised" onerror="this.style.display='none'">
           </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tp">Problem</div>
-            <p data-key="c2p">Wind turbine installation operations are highly sensitive to wind-speed constraints, which significantly impact installation duration and project execution. Planning methods often lack the ability to quantify how component-level wind tolerance affects overall system performance under uncertain environmental conditions.</p>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="ts">Approach</div>
-            <p data-key="c2si">A discrete-event simulation of the full logistics chain in AnyLogic was paired with a custom greedy heuristic in Java. Tasks were iteratively rescheduled around weather forecasts to minimise constraint violations.</p>
-            <ul>
-              <li data-key="c2s1">Stochastic weather modelling from historical European wind data</li>
-              <li data-key="c2s2">Java-based heuristic for constrained schedule optimisation</li>
-              <li data-key="c2s3">Full factorial DoE to identify critical driver variables</li>
-              <li data-key="c2s4">ANOVA and interaction analysis validated in Minitab</li>
-            </ul>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tr">Results</div>
-            <p data-key="c2r">Component-level wind tolerance consistently reduces installation time across all evaluated scenarios. Sensitivity analysis identified the nacelle as the most critical component influencing overall installation performance.</p>
-          </div>
-
-          <div class="cs-kpis">
-            <div>
-              <div class="cs-kpi-num">DoE</div>
-              <div class="cs-kpi-label" data-key="c2k1">Full factorial design</div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs2','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs2','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs2','r')" data-key="tr">Results</button>
             </div>
-            <div>
-              <div class="cs-kpi-num">ANOVA</div>
-              <div class="cs-kpi-label" data-key="c2k2">Statistical validation</div>
+            <div class="psr-pane active" id="cs2-p">
+              <p data-key="c2p">Wind turbine installation operations are highly sensitive to wind-speed constraints, which significantly impact installation duration and project execution efficiency.</p>
             </div>
-            <div>
-              <div class="cs-kpi-num">Java</div>
-              <div class="cs-kpi-label" data-key="c2k3">Custom greedy heuristic</div>
+            <div class="psr-pane" id="cs2-a">
+              <p data-key="c2si">A discrete-event simulation of the full logistics chain in AnyLogic was paired with a custom greedy heuristic in Java. Tasks were iteratively rescheduled around weather forecasts to minimise constraint violations.</p>
+              <ul>
+                <li data-key="c2s1">Stochastic weather modelling from historical European wind data</li>
+                <li data-key="c2s2">Java-based heuristic for constrained schedule optimisation</li>
+                <li data-key="c2s3">Full factorial DoE to identify critical driver variables</li>
+                <li data-key="c2s4">ANOVA and interaction analysis validated in Minitab</li>
+              </ul>
+            </div>
+            <div class="psr-pane" id="cs2-r">
+              <p data-key="c2r">Component-level wind tolerance consistently reduces installation time across all evaluated scenarios. Sensitivity analysis identified the nacelle as the most critical component influencing overall installation performance.</p>
             </div>
           </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div><div class="ribbon-kpi-num">DoE</div><div class="ribbon-kpi-label" data-key="c2k1">Full factorial design</div></div>
+          <div><div class="ribbon-kpi-num">ANOVA</div><div class="ribbon-kpi-label" data-key="c2k2">Statistical validation</div></div>
+          <div><div class="ribbon-kpi-num">Java</div><div class="ribbon-kpi-label" data-key="c2k3">Custom heuristic</div></div>
         </div>
       </div>
     </article>
 
-    <!-- ====================================================
-         PROJECT 3 — Multi-Market Algorithmic Trader
-         ==================================================== -->
-    <article class="cs-item">
-      <div class="cs-item-in">
-        <div class="cs-visual">
-          <span class="cs-year">2025</span>
-          <img src="assets/app.png" alt="Algorithmic trading dashboard" onerror="this.style.display='none'">
+    <!-- ─── PROJECT 3: Multi-Market Algorithmic Trader ─── -->
+    <article class="ribbon" id="cs3">
+      <div class="ribbon-head" onclick="toggleRibbon('cs3')">
+        <div class="ribbon-year">2025</div>
+        <div>
+          <div class="ribbon-meta" data-key="c3m">Personal Project · Live Web Application</div>
+          <div class="ribbon-title" data-key="c3t">Multi-Market Algorithmic Trader</div>
         </div>
-        <div class="cs-content">
-          <div class="cs-meta" data-key="c3m">Personal Project · Live Web Application</div>
-          <h2 class="cs-title" data-key="c3t">Multi-Market Algorithmic Trader</h2>
-          <div class="cs-tags tags">
-            <span class="tag">Python</span>
-            <span class="tag">Live Data API</span>
-            <span class="tag">Web App</span>
+        <div class="ribbon-tags">
+          <span class="r-tag">Python</span>
+          <span class="r-tag">Live Data API</span>
+          <span class="r-tag">Web App</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/app.png" alt="Multi-market algorithmic trader dashboard" onerror="this.style.display='none'">
           </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tp">Problem</div>
-            <p data-key="c3p">Manual identification of institutional Smart Money patterns across multiple international markets is time-consuming, inconsistent, and prone to missed signals — especially when monitoring different time zones and asset classes simultaneously.</p>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="ts">Approach</div>
-            <p data-key="c3si">A full-stack Python application with live API integrations for Crypto, Tadawul (Saudi Arabia), and PSX (Pakistan). Pattern detection algorithms continuously scan price data and surface signals through a real-time dashboard.</p>
-            <ul>
-              <li data-key="c3s1">Live multi-market data ingestion with reconnect logic</li>
-              <li data-key="c3s2">Algorithmic FVG, Order Block, and liquidity grab detection</li>
-              <li data-key="c3s3">Signal confidence scoring and risk categorisation</li>
-              <li data-key="c3s4">Modular — new markets added in under 30 minutes</li>
-            </ul>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tr">Results</div>
-            <p data-key="c3r">A fully operational real-time scanner running across three live markets simultaneously, surfacing pattern-based signals with zero manual effort. Demonstrates applied algorithmic engineering beyond industrial simulation.</p>
-          </div>
-
-          <div class="cs-kpis">
-            <div>
-              <div class="cs-kpi-num">3</div>
-              <div class="cs-kpi-label" data-key="c3k1">Live markets</div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs3','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs3','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs3','r')" data-key="tr">Results</button>
             </div>
-            <div>
-              <div class="cs-kpi-num">RT</div>
-              <div class="cs-kpi-label" data-key="c3k2">Real-time signals</div>
+            <div class="psr-pane active" id="cs3-p">
+              <p data-key="c3p">Manual identification of institutional Smart Money patterns across multiple international markets is time-consuming, inconsistent, and prone to missed signals.</p>
             </div>
-            <div>
-              <div class="cs-kpi-num">100%</div>
-              <div class="cs-kpi-label" data-key="c3k3">Python, no third-party logic</div>
+            <div class="psr-pane" id="cs3-a">
+              <p data-key="c3si">A full-stack Python application with live API integrations for Crypto, Tadawul (Saudi Arabia), and PSX (Pakistan). Pattern detection algorithms scan price data and surface signals via real-time dashboard.</p>
+              <ul>
+                <li data-key="c3s1">Live multi-market data ingestion with reconnect logic</li>
+                <li data-key="c3s2">Algorithmic FVG, Order Block, and liquidity grab detection</li>
+                <li data-key="c3s3">Signal confidence scoring and risk categorisation</li>
+                <li data-key="c3s4">Modular — new markets added in under 30 minutes</li>
+              </ul>
+            </div>
+            <div class="psr-pane" id="cs3-r">
+              <p data-key="c3r">Fully operational real-time scanner running across three live markets simultaneously, surfacing pattern-based signals with zero manual effort.</p>
             </div>
           </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div><div class="ribbon-kpi-num">3</div><div class="ribbon-kpi-label" data-key="c3k1">Live markets</div></div>
+          <div><div class="ribbon-kpi-num">RT</div><div class="ribbon-kpi-label" data-key="c3k2">Real-time signals</div></div>
+          <div><div class="ribbon-kpi-num">100%</div><div class="ribbon-kpi-label" data-key="c3k3">Python, no third-party logic</div></div>
         </div>
       </div>
     </article>
 
-    <!-- ====================================================
-         PROJECT 4 — 3D Bin Packing
-         ==================================================== -->
-    <article class="cs-item">
-      <div class="cs-item-in">
-        <div class="cs-visual">
-          <span class="cs-year">2026</span>
-          <img src="assets/3_d bin optimizer.png" alt="3D bin packing optimiser" onerror="this.style.display='none'">
+    <!-- ─── PROJECT 4: 3D Bin Packing ─── -->
+    <article class="ribbon" id="cs4">
+      <div class="ribbon-head" onclick="toggleRibbon('cs4')">
+        <div class="ribbon-year">2026</div>
+        <div>
+          <div class="ribbon-meta" data-key="c4m">Logistics Research · Combinatorial Optimisation</div>
+          <div class="ribbon-title" data-key="c4t">3D Bin Packing Optimisation System</div>
         </div>
-        <div class="cs-content">
-          <div class="cs-meta" data-key="c4m">Logistics Research · Combinatorial Optimisation</div>
-          <h2 class="cs-title" data-key="c4t">3D Bin Packing Optimisation System</h2>
-          <div class="cs-tags tags">
-            <span class="tag">Python</span>
-            <span class="tag">Simulated Annealing</span>
+        <div class="ribbon-tags">
+          <span class="r-tag">Python</span>
+          <span class="r-tag">Simulated Annealing</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/3_d bin optimizer.png" alt="3D bin packing optimisation system" onerror="this.style.display='none'">
           </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tp">Problem</div>
-            <p data-key="c4p">The 3D bin packing problem — common in manufacturing, logistics, and automated packaging. Efficiently arrange parts of varying dimensions inside available containers while maximising space utilisation and ensuring no overlaps or boundary violations.</p>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="ts">Approach</div>
-            <p data-key="c4si">Hybrid optimisation combining a greedy constructive heuristic with simulated annealing. The greedy phase builds an initial feasible solution using layered skyline-based placement; simulated annealing iteratively improves it through random swaps, rotations, and repositioning.</p>
-            <ul>
-              <li data-key="c4s1">Greedy skyline-based initial placement</li>
-              <li data-key="c4s2">3D collision and boundary checks</li>
-              <li data-key="c4s3">Simulated annealing for optimisation (swap, rotate, move)</li>
-            </ul>
-          </div>
-
-          <div class="cs-block">
-            <div class="cs-block-label" data-key="tr">Results</div>
-            <p data-key="c4r">Valid packing configurations across multiple box sizes with no collisions. Improved space utilisation by reducing unused volume through optimisation, adapting effectively to different container dimensions.</p>
-          </div>
-
-          <div class="cs-kpis">
-            <div>
-              <div class="cs-kpi-num">SA</div>
-              <div class="cs-kpi-label" data-key="c4k1">Combinatorial optimisation</div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs4','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs4','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs4','r')" data-key="tr">Results</button>
             </div>
-            <div>
-              <div class="cs-kpi-num">3D</div>
-              <div class="cs-kpi-label" data-key="c4k2">Volumetric state space</div>
+            <div class="psr-pane active" id="cs4-p">
+              <p data-key="c4p">The 3D bin packing problem — common in manufacturing, logistics, and automated packaging. Efficiently arrange parts of varying dimensions inside available containers while maximising space utilisation.</p>
             </div>
-            <div>
-              <div class="cs-kpi-num">+ Vol</div>
-              <div class="cs-kpi-label" data-key="c4k3">Space utilisation vs baseline</div>
+            <div class="psr-pane" id="cs4-a">
+              <p data-key="c4si">Hybrid optimisation combining a greedy constructive heuristic with simulated annealing. The greedy phase builds an initial feasible solution; simulated annealing iteratively improves it.</p>
+              <ul>
+                <li data-key="c4s1">Greedy skyline-based initial placement</li>
+                <li data-key="c4s2">3D collision and boundary checks</li>
+                <li data-key="c4s3">Simulated annealing for optimisation (swap, rotate, move)</li>
+              </ul>
+            </div>
+            <div class="psr-pane" id="cs4-r">
+              <p data-key="c4r">Valid packing configurations across multiple box sizes with no collisions. Improved space utilisation by reducing unused volume through optimisation.</p>
             </div>
           </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div><div class="ribbon-kpi-num">SA</div><div class="ribbon-kpi-label" data-key="c4k1">Combinatorial optimisation</div></div>
+          <div><div class="ribbon-kpi-num">3D</div><div class="ribbon-kpi-label" data-key="c4k2">Volumetric state space</div></div>
+          <div><div class="ribbon-kpi-num">+ Vol</div><div class="ribbon-kpi-label" data-key="c4k3">Space utilisation gain</div></div>
         </div>
       </div>
     </article>
