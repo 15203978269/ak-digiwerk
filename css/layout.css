@@ -1,60 +1,82 @@
 /* ============================================================
-   LAYOUT — containers, page system, section rhythms
+   LAYOUT — containers, page system, section rhythm
    ============================================================ */
 
-/* ─── Container widths ────────────────────────────────────── */
+/* ─── Containers ──────────────────────────────────────────── */
 .wrap {
-  max-width: 1180px;
+  max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
-
 .wrap-narrow {
-  max-width: 760px;
+  max-width: var(--max-w-narrow);
   margin: 0 auto;
   padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 
-/* ─── Page routing system ─────────────────────────────────── */
+/* ─── Page system ─────────────────────────────────────────── */
 .page { display: none; padding-top: var(--nav-h); min-height: 100vh; }
 .page.active { display: block; }
 
-/* ─── Section spacing ─────────────────────────────────────── */
-.section { padding: clamp(4rem, 8vw, 7rem) 0; }
-.section--tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
+/* ─── Section base ────────────────────────────────────────── */
+.section {
+  padding: clamp(4rem, 9vw, 8rem) 0;
+}
+.section--tight {
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+}
+.section--dark {
+  background: var(--bg-dark);
+  color: var(--on-dark-muted);
+}
 
-/* ─── Eyebrow (quiet section label — replaces old big red text) */
+/* ─── Eyebrow — quiet section label ──────────────────────── */
 .eyebrow {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 1.25rem;
 }
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 18px;
+  height: 1px;
+  background: var(--teal);
+}
+.on-dark .eyebrow {
+  color: var(--on-dark-faint);
+}
+.on-dark .eyebrow::before {
+  background: var(--teal-bright);
+}
 
 /* ─── Page header (reused on inner pages) ─────────────────── */
 .page-header {
-  padding: clamp(4rem, 8vw, 6rem) 0 clamp(3rem, 5vw, 4rem);
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(3rem, 5vw, 4rem);
   border-bottom: 1px solid var(--line);
 }
 .page-header h1 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1rem;
+  max-width: 800px;
 }
-.page-header p {
-  font-size: 1.0625rem;
+.page-header .lede {
+  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
   color: var(--muted);
-  max-width: 540px;
-  line-height: 1.6;
+  max-width: 600px;
+  line-height: 1.55;
 }
 
-/* ─── Horizontal rule (used between sections) ─────────────── */
+/* ─── Horizontal rule ─────────────────────────────────────── */
 .divider {
   height: 1px;
   background: var(--line);
   border: 0;
-  margin: 0;
 }

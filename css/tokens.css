@@ -1,47 +1,69 @@
 /* ============================================================
-   DESIGN TOKENS — AK DigiWerk v2
-   Swiss-precision palette · teal + grays · NO red
+   DESIGN TOKENS — AK DigiWerk v4
+   Consultancy-grade · editorial restraint · teal + grays
    ============================================================ */
 :root {
 
   /* ─── BACKGROUNDS ─────────────────────────────────────────
-     Barely-warm off-white. Pure white was too clinical;
-     this keeps a hint of paper without going beige. */
-  --bg:        #fafaf9;
-  --bg-2:      #f4f3f1;   /* subtle section contrast */
-  --bg-3:      #ececea;   /* card hover, image fallback */
+     Layered grays for section rhythm. Adding a deep ink layer
+     for "dark sections" that create theater (Stutz-style). */
+  --bg:        #fafaf9;       /* page */
+  --bg-2:      #f4f3f1;       /* subtle section */
+  --bg-3:      #ececea;       /* card / placeholder */
+  --bg-dark:   #0d1715;       /* deep teal-black for dramatic bands */
+  --bg-darker: #050a09;       /* deepest, footer / hero overlay */
 
-  /* ─── INK (text colours) ──────────────────────────────────
-     Near-black, not pure black. Easier on the eye. */
+  /* ─── INK ─────────────────────────────────────────────────
+     Calm near-blacks. Pure black is too harsh. */
   --ink:       #0a0a0a;
-  --ink-2:     #3a3a38;
+  --ink-2:     #2a2a28;
   --muted:     #6b6b66;
   --muted-2:   #9a9a93;
+  --line-ink:  rgba(10,10,10,.07);  /* light line on light bg */
 
-  /* ─── BRAND (one colour, used with restraint) ─────────────
-     Pulled directly from the AK DigiWerk business card. */
-  --teal:      #0d5e5b;   /* primary — card colour */
-  --teal-dark: #084543;   /* hover / pressed */
-  --teal-tint: #e3efee;   /* very pale wash for backgrounds */
+  /* ─── BRAND ───────────────────────────────────────────────
+     Card-faithful teal. Now with a brighter "active" variant
+     for use on dark sections. */
+  --teal:        #0d5e5b;
+  --teal-dark:   #084543;
+  --teal-bright: #1ba39c;   /* for dark backgrounds only */
+  --teal-tint:   #e3efee;
+  --teal-glow:   rgba(13,94,91,.08);
 
-  /* ─── BORDERS (whisper-thin) ──────────────────────────────
-     Confidence is in what you DON'T draw on the page. */
+  /* ─── TYPE FOR DARK SECTIONS ──────────────────────────── */
+  --on-dark:       #f5f5f3;
+  --on-dark-muted: rgba(245,245,243,.65);
+  --on-dark-faint: rgba(245,245,243,.18);
+
+  /* ─── BORDERS ─────────────────────────────────────────── */
   --line:      rgba(10,10,10,.07);
   --line-2:    rgba(10,10,10,.14);
+  --line-dark: rgba(245,245,243,.10);
 
-  /* ─── TYPOGRAPHY ──────────────────────────────────────────
-     Switzer = free Söhne-alternative (display + body)
-     Inter   = workhorse body (rendered everywhere else)
-     Fonts are loaded in index.html from Fontshare. */
-  --font-display: 'Switzer', 'Inter', system-ui, -apple-system, sans-serif;
-  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+  /* ─── TYPOGRAPHY ──────────────────────────────────────── */
+  --font-display: 'Switzer', 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
 
-  /* ─── MOTION ──────────────────────────────────────────────
-     Quick, never-bouncy. Engineering aesthetic. */
-  --t-fast:    .15s ease;
-  --t-med:     .25s ease;
+  /* ─── SPACING SCALE ───────────────────────────────────── */
+  --s-1:  0.25rem;
+  --s-2:  0.5rem;
+  --s-3:  0.75rem;
+  --s-4:  1rem;
+  --s-5:  1.5rem;
+  --s-6:  2rem;
+  --s-7:  3rem;
+  --s-8:  4rem;
+  --s-9:  6rem;
+  --s-10: 8rem;
 
-  /* ─── LAYOUT ──────────────────────────────────────────────
-     Header offset used by .page top-padding. */
-  --nav-h:     64px;
+  /* ─── MOTION ──────────────────────────────────────────── */
+  --t-fast: .15s ease;
+  --t-med:  .3s cubic-bezier(.2,.7,.2,1);
+  --t-slow: .6s cubic-bezier(.2,.7,.2,1);
+
+  /* ─── LAYOUT ──────────────────────────────────────────── */
+  --nav-h:    64px;
+  --max-w:    1240px;
+  --max-w-narrow: 900px;
 }

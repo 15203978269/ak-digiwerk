@@ -1,25 +1,30 @@
 /* ============================================================
-   COMPONENTS — buttons, tags, cookie banner
+   COMPONENTS — buttons, tags, badges, cookie banner
    ============================================================ */
 
 /* ─── BUTTONS ─────────────────────────────────────────────── */
-.btn {
+.btn, .btn-ghost, .btn-inv, .btn-dark {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.5rem;
+  gap: 0.55rem;
+  padding: 0.95rem 1.65rem;
   font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.005em;
-  color: #fff;
-  background: var(--teal);
-  border: 1px solid var(--teal);
   border-radius: 2px;
   cursor: pointer;
-  transition: background var(--t-fast), border-color var(--t-fast), transform var(--t-fast);
   text-decoration: none;
   white-space: nowrap;
+  transition: background var(--t-fast), border-color var(--t-fast), color var(--t-fast), transform var(--t-fast);
+  border: 1px solid transparent;
+}
+
+/* Primary — solid teal */
+.btn {
+  color: #fff;
+  background: var(--teal);
+  border-color: var(--teal);
 }
 .btn:hover {
   background: var(--teal-dark);
@@ -28,56 +33,53 @@
 }
 .btn:active { transform: translateY(1px); }
 
+/* Ghost — outlined */
 .btn-ghost {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
   color: var(--ink);
   background: transparent;
-  border: 1px solid var(--line-2);
-  border-radius: 2px;
-  cursor: pointer;
-  transition: border-color var(--t-fast), background var(--t-fast);
-  text-decoration: none;
-  white-space: nowrap;
+  border-color: var(--line-2);
 }
 .btn-ghost:hover {
   border-color: var(--ink);
   color: var(--ink);
 }
 
+/* Inverted — for teal/dark backgrounds */
 .btn-inv {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.5rem;
-  font-family: var(--font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
   color: var(--teal);
   background: #fff;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  cursor: pointer;
-  transition: background var(--t-fast);
-  text-decoration: none;
-  white-space: nowrap;
+  border-color: #fff;
 }
-.btn-inv:hover { background: var(--teal-tint); color: var(--teal-dark); }
+.btn-inv:hover {
+  background: var(--teal-tint);
+  color: var(--teal-dark);
+}
 
+/* Dark — for on-dark sections, transparent with light border */
+.btn-dark {
+  color: var(--on-dark);
+  background: transparent;
+  border-color: var(--on-dark-faint);
+}
+.btn-dark:hover {
+  background: var(--on-dark);
+  color: var(--ink);
+  border-color: var(--on-dark);
+}
+
+/* Arrow on hover slides right */
 .btn-arrow {
   display: inline-block;
   transition: transform var(--t-fast);
 }
 .btn:hover .btn-arrow,
 .btn-ghost:hover .btn-arrow,
-.btn-inv:hover .btn-arrow { transform: translateX(2px); }
+.btn-inv:hover .btn-arrow,
+.btn-dark:hover .btn-arrow {
+  transform: translateX(3px);
+}
 
-/* ─── TAGS ────────────────────────────────────────────────── */
+/* ─── TAGS — outlined teal pills ─────────────────────────── */
 .tag {
   display: inline-block;
   font-family: var(--font-body);
@@ -87,13 +89,43 @@
   color: var(--teal);
   background: transparent;
   border: 1px solid var(--teal-tint);
-  padding: 4px 10px;
+  padding: 4px 11px;
   border-radius: 999px;
   white-space: nowrap;
 }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.on-dark .tag {
+  color: var(--teal-bright);
+  border-color: rgba(27,163,156,.3);
+}
 
-/* ─── COOKIE BANNER — fixed bottom, narrower, doesn't cover ─── */
+/* ─── BADGE — for NDA / certification markers ─────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--bg-2);
+  border: 1px solid var(--line-2);
+  padding: 4px 9px;
+  border-radius: 2px;
+}
+.badge::before {
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--teal);
+}
+.badge--nda::before { background: #c87a3a; }
+
+/* ─── COOKIE BANNER ──────────────────────────────────────── */
 #cookie-banner {
   position: fixed;
   bottom: 1rem;
@@ -102,9 +134,9 @@
   z-index: 9999;
   max-width: 540px;
   margin: 0 auto;
-  background: var(--ink);
-  color: rgba(255,255,255,0.82);
-  padding: 0.85rem 1.1rem;
+  background: var(--bg-dark);
+  color: rgba(255,255,255,.82);
+  padding: 0.9rem 1.15rem;
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -113,28 +145,28 @@
   flex-wrap: wrap;
   font-size: 0.8125rem;
   line-height: 1.5;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.2);
 }
 #cookie-banner a { color: #fff; text-decoration: underline; }
 .cb-btns { display: flex; gap: 0.5rem; flex-shrink: 0; }
 .cb-btns button {
   font-size: 0.75rem;
   font-weight: 500;
-  padding: 0.4rem 0.85rem;
+  padding: 0.45rem 0.95rem;
   border-radius: 2px;
   border: 1px solid rgba(255,255,255,0.25);
   cursor: pointer;
   background: transparent;
-  color: rgba(255,255,255,0.7);
-  transition: background var(--t-fast), color var(--t-fast);
+  color: rgba(255,255,255,.75);
+  transition: all var(--t-fast);
 }
-.cb-btns button:hover { color: #fff; border-color: rgba(255,255,255,0.5); }
+.cb-btns button:hover { color: #fff; border-color: rgba(255,255,255,.5); }
 #cb-accept {
   background: #fff !important;
-  color: var(--ink) !important;
+  color: var(--bg-dark) !important;
   border-color: #fff !important;
 }
-#cb-accept:hover { background: rgba(255,255,255,0.85) !important; }
+#cb-accept:hover { background: rgba(255,255,255,.85) !important; }
 
 @media (max-width: 480px) {
   #cookie-banner {
@@ -142,7 +174,6 @@
     align-items: stretch;
     text-align: center;
     gap: 0.75rem;
-    padding: 0.85rem;
   }
   .cb-btns { justify-content: center; }
 }
