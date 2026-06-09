@@ -711,7 +711,7 @@
 
 .gallery-item {
   width: 100%;
-  aspect-ratio: 4/5;
+  aspect-ratio: 1/1;
   background: var(--bg-3);
   border: 1px solid var(--line);
   border-radius: 3px;
@@ -734,7 +734,7 @@
     margin: 0 auto;
   }
   .gallery-col { gap: 10px; }
-  .gallery-item { aspect-ratio: 3/4; }
+  .gallery-item { aspect-ratio: 1/1; }
   .gallery-col-up   { animation-duration: 45s; }
   .gallery-col-down { animation-duration: 45s; }
 }
