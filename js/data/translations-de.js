@@ -1,5 +1,5 @@
 /* ============================================================
-   GERMAN TRANSLATIONS — v4 final (all pages)
+   GERMAN TRANSLATIONS — capability-led, all projects
    ============================================================ */
 window.T = window.T || {};
 window.T.de = {
@@ -8,24 +8,29 @@ window.T.de = {
 
   /* ────────── HOMEPAGE ────────── */
   eyebrow:'Freiberuflicher Digitalisierungsingenieur · Deutschland',
-  h1:'Ingenieur&shy;ent&shy;scheidungen, <span class="accent">validiert vor der Investition.</span>',
-  hsub:'Diskrete Ereignissimulation und Prozessoptimierung für europäische Hersteller.',
+  h1:'Fundierte Entscheidungen <span class="accent">vor der Investition.</span>',
+  hsub:'Simulation, Optimierung und Digitalisierung für europäische Hersteller.',
   hb1:'Erstgespräch buchen',
   havail:'Verfügbar · Deutschland &amp; Remote',
+
   trust1:'<strong>M.Eng</strong> Hochschule Stralsund',
   trust2:'Deutsche Ingenieurpraxis',
   trust3:'<strong>DSGVO</strong>-konform',
   trust4:'5+ Jahre Industrieerfahrung',
-  indlbl:'Branchen',
-  indh:'Eine fokussierte Praxis in<br>europäischen Industriesektoren.',
-  ind1h:'Fertigung',
-  ind1p:'Produktionslinien, Werkslayouts, Kapazitätsplanung und Lean-Transformation für Leistungselektronik, Automotive und Schwerindustrie.',
-  ind2h:'Wind &amp; Infrastruktur',
-  ind2p:'Installationslogistik, Planung unter Wetterunsicherheit, Montagemodellierung für On- und Offshore-Windparks.',
-  ind3h:'Logistik',
-  ind3p:'Lageroptimierung, 3D-Behälterpackung, Lieferketten-Simulation und Routenalgorithmen für betriebliche Effizienz.',
-  indlink:'Projekte ansehen →', indlink2:'Projekte ansehen →', indlink3:'Projekte ansehen →',
- /* Featured (Cognitive Twin) */
+
+  /* Capabilities */
+  caplbl:'Was ich mache',
+  caph:'Drei Kompetenzen,<br>eine Ingenieurpraxis.',
+  cap1h:'Simulation',
+  cap1p:'Diskrete Ereignissimulation, Echtzeit-Digital-Twins und Szenarioanalyse. Modellieren Sie Ihren Betrieb, führen Sie Experimente in virtueller Zeit durch, entscheiden Sie mit Daten.',
+  cap2h:'Optimierung',
+  cap2p:'Prozesse, Werkslayouts, Lieferketten, kombinatorische Algorithmen. Lean-, statistische und heuristische Methoden — eingesetzt dort, wo der Gewinn messbar ist.',
+  cap3h:'Digitalisierung',
+  cap3p:'Edge-to-Cloud-Plattformen, Automatisierungs-Pipelines, Systemarchitektur. ISA-95-Denken vom Hallenboden bis zur Unternehmensanwendung — von einer Maschine zu tausend.',
+  caplink1:'Mehr erfahren →', caplink2:'Mehr erfahren →', caplink3:'Mehr erfahren →',
+  capind:'Eingesetzt in Fertigung, Windenergie, Logistik und maritimen Anwendungen.',
+
+  /* Featured (Cognitive Twin) */
   featlbl:'Ausgewähltes Projekt',
   featyear:'2025',
   featind:'Digital Twin',
@@ -36,12 +41,63 @@ window.T.de = {
   featk3:'Autonomer geschlossener Regelkreis',
   featbtn:'Vollständige Fallstudie',
 
-  /* 4. Industriekarte */
-  ind4h:'Industrial IoT &amp; Architektur',
-  ind4p:'Edge-to-Cloud-Plattformen, Digital Twins, flottenweites Systemdesign. ISA-95-Architekturen, die Feldgeräte mit Unternehmensanwendungen verbinden.',
-  indlink4:'Projekte ansehen →',
+  /* Methodology */
+  methlbl:'So arbeite ich',
+  methh:'Ingenieur-zu-Ingenieur Prozess.<br>Keine Black Boxes.',
+  methp:'Jedes Engagement folgt derselben disziplinierten Sequenz — kalibriert anhand realer Produktionsdaten, statistisch validiert, vollständig dokumentiert übergeben.',
+  m1h:'Erfassen',   m1p:'30 Minuten zur Erfassung von Entscheidungsraum, Randbedingungen und verfügbaren Daten.',
+  m2h:'Modellieren',m2p:'Aufbau der Simulation oder des Algorithmus. Kalibrierung anhand Ihrer historischen Betriebsdaten.',
+  m3h:'Validieren', m3p:'Statistische Verifikation, Replikationsläufe, Sensitivitätsanalyse. Zahlen, die Sie verteidigen können.',
+  m4h:'Übergeben',  m4p:'Dokumentiertes Modell, geschultes Team, Support. Das Ergebnis gehört Ihnen.',
 
-  /* Cognitive Twin ribbon */
+  /* Background */
+  bgd:'Praxis aufgebaut in führenden globalen Industrieunternehmen',
+
+  /* About */
+  albl:'Über mich',
+  ash:'Fünf Jahre Entscheidungen —<br>jetzt freiberuflich verfügbar.',
+  biop1:'Ausgebildet in führenden europäischen Industrieunternehmen — Leistungselektronik, Automotive, Infrastruktur — arbeite ich nun unabhängig und übersetze komplexe Produktionsherausforderungen in validierte Simulationsmodelle und Python-Automatisierung.',
+  biop2:'Sitz in Flensburg. Betrieb nach strengen deutschen DSGVO-Standards. Jedes Engagement endet mit dokumentiertem Modell, geschultem Team und klarem ROI.',
+  bion:'Affan Khan',
+  biot:'M.Eng · Freiberuflicher Digitalisierungsingenieur',
+
+  /* CTA */
+  ctah:'Kostenloses 30-minütiges Erstgespräch.',
+  ctasub:'Fester Umfang. Fester Preis. Keine Überraschungen.',
+  ctabtn:'Gespräch buchen',
+
+  /* ────────── SERVICES PAGE ────────── */
+  slbl:'Leistungen',
+  sh1:'Eine fokussierte Praxis<br>für industrielle Entscheidungen.',
+  ssub:'Branchen und Methoden, die ich in jedes Engagement einbringe — vom Erstgespräch bis zur Lieferung.',
+  indlbl:'Branchen',
+  indh:'Drei Sektoren, die ich von innen kenne.',
+  ind1h:'Fertigung',
+  ind1p:'Produktionslinien, Werkslayouts, Kapazitätsplanung und Lean-Transformation für Leistungselektronik, Automotive und Schwerindustrie.',
+  ind2h:'Wind &amp; Infrastruktur',
+  ind2p:'Installationslogistik, Planung unter Wetterunsicherheit, Montagemodellierung für On- und Offshore-Windparks.',
+  ind3h:'Logistik',
+  ind3p:'Lageroptimierung, 3D-Behälterpackung, Lieferketten-Simulation und Routenalgorithmen für betriebliche Effizienz.',
+  indlink:'Projekte ansehen →', indlink2:'Projekte ansehen →', indlink3:'Projekte ansehen →',
+  toolslbl:'Werkzeuge &amp; Methoden',
+  toolsh:'Was ich in jedes Engagement einbringe.',
+  toolssub:'Sechs Fähigkeitsbereiche — kombiniert nach Projektbedarf.',
+  s1h:'Diskrete Ereignissimulation', s1p:'Produktion, Logistik und Materialfluss modellieren. Engpässe finden, ROI nachweisen — vor der Investition.',
+  s2h:'Prozess- &amp; Layoutoptimierung', s2p:'Lean-Analyse, VSM und Lagerumgestaltung — auf Basis von Simulationsdaten, nicht Intuition.',
+  s3h:'Python-Automatisierung', s3p:'Skripte, Reporting-Pipelines, Workflow-Automatisierung. Manuelle Aufgaben werden zu zuverlässigen Systemen.',
+  s4h:'Datenanalyse &amp; Reporting', s4p:'Statistische Studien, KPI-Dashboards und quantitative Analysen. Daten, die Entscheidungen ermöglichen.',
+  s5h:'IBM Maximo Implementierung', s5p:'EAM-Einführung und Optimierung. Altsysteme konsolidieren, Ausfallzeiten reduzieren, Wartung standardisieren.',
+  s6h:'Algorithmus- &amp; Web-App-Entwicklung', s6p:'Maßgeschneiderte Algorithmen, Live-Datenintegrationen und Webanwendungen — von Bin-Packing bis Trading-Tools.',
+
+  /* ────────── CASE STUDIES PAGE ────────── */
+  cslbl:'Fallstudien',
+  csh1:'Ausgewählte Projekte — Simulation, Optimierung, Digitalisierung.',
+  cssub:'Klicken Sie auf ein Projekt für Problem, Ansatz und Ergebnisse.',
+  ndah:'NDA &amp; DSGVO',
+  ndap:'Visualisierungen anonymisiert (NDA, DSGVO Art. 6 Abs. 1 lit. b).',
+  tp:'Problem', ts:'Ansatz', tr:'Ergebnisse',
+
+  /* Cognitive Twin */
   cdtm:'Kognitiver Digital Twin · Echtzeit-Simulation · LLM-Orchestrierung',
   cdtt:'Cognitive Twin — Autonomer Experiment-Direktor',
   cdtp:'Klassische Digital Twins spiegeln Zustände, aber denken nicht darüber nach. Ein Bediener muss weiterhin entscheiden, was simuliert wird, wann ein Szenario läuft und was mit dem Ergebnis geschieht. Für autonome Flotten — AMRs im Lager, Schiffe auf See, Fahrzeuge auf Route — ist diese manuelle Schleife der Engpass. Die Frage: Kann ein Digital Twin eigenständig Experimente an sich selbst durchführen — kontrollierbar und für Ingenieure nachvollziehbar?',
@@ -55,7 +111,7 @@ window.T.de = {
   cdtk2:'LLM-zu-Ergebnis-Zykluszeit',
   cdtk3:'Unbeaufsichtigter autonomer Betrieb',
 
-  /* NAVOS ribbon */
+  /* NAVOS */
   navm:'Industrial IoT · AWS-Architektur · Proof-of-Concept',
   navt:'NAVOS — Autonome Schiffskommando-Plattform',
   navp:'Maritime Flottenbetreiber stehen vor drei zentralen Lücken: keine Echtzeitübersicht über Schiffssysteme auf See, kein sicheres Fernkommando ohne Internetexposition der Hardware, und vollständiger Betriebsausfall bei Satellitenausfall. Bestehende Ansätze skalieren nicht über wenige Schiffe hinaus. Die Anforderung: eine Architektur, die heute ein Schiff und morgen tausend bedient — ohne Kompromisse bei Sicherheit oder Offline-Resilienz.',
@@ -68,46 +124,8 @@ window.T.de = {
   navk1:'Kommando-Latenz online',
   navk2:'Internet für Crew-Betrieb erforderlich',
   navk3:'Schiffe auf derselben Architektur',
-  methlbl:'So arbeite ich',
-  methh:'Ingenieur-zu-Ingenieur Prozess.<br>Keine Black Boxes.',
-  methp:'Jedes Engagement folgt derselben disziplinierten Sequenz — kalibriert anhand realer Produktionsdaten, statistisch validiert, vollständig dokumentiert übergeben.',
-  m1h:'Erfassen',   m1p:'30 Minuten zur Erfassung von Entscheidungsraum, Randbedingungen und verfügbaren Daten.',
-  m2h:'Modellieren',m2p:'Aufbau der Simulation oder des Algorithmus. Kalibrierung anhand Ihrer historischen Betriebsdaten.',
-  m3h:'Validieren', m3p:'Statistische Verifikation, Replikationsläufe, Sensitivitätsanalyse. Zahlen, die Sie verteidigen können.',
-  m4h:'Übergeben',  m4p:'Dokumentiertes Modell, geschultes Team, Support. Das Ergebnis gehört Ihnen.',
-  bgd:'Praxis aufgebaut in führenden globalen Industrieunternehmen',
-  albl:'Über mich',
-  ash:'Fünf Jahre Entscheidungen —<br>jetzt freiberuflich verfügbar.',
-  biop1:'Ausgebildet in führenden europäischen Industrieunternehmen — Leistungselektronik, Automotive, Infrastruktur — arbeite ich nun unabhängig und übersetze komplexe Produktionsherausforderungen in validierte Simulationsmodelle und Python-Automatisierung.',
-  biop2:'Sitz in Flensburg. Betrieb nach strengen deutschen DSGVO-Standards. Jedes Engagement endet mit dokumentiertem Modell, geschultem Team und klarem ROI.',
-  bion:'Affan Khan',
-  biot:'M.Eng · Freiberuflicher Digitalisierungsingenieur',
-  ctah:'Kostenloses 30-minütiges Erstgespräch.',
-  ctasub:'Fester Umfang. Fester Preis. Keine Überraschungen.',
-  ctabtn:'Gespräch buchen',
 
-  /* ────────── SERVICES PAGE ────────── */
-  slbl:'Leistungen',
-  sh1:'Eine fokussierte Praxis<br>für industrielle Entscheidungen.',
-  ssub:'Branchen und Methoden, die ich in jedes Engagement einbringe — vom Erstgespräch bis zur Lieferung.',
-  toolslbl:'Werkzeuge &amp; Methoden',
-  toolsh:'Was ich in jedes Engagement einbringe.',
-  toolssub:'Sechs Fähigkeitsbereiche — kombiniert nach Projektbedarf.',
-  s1h:'Diskrete Ereignissimulation', s1p:'Produktion, Logistik und Materialfluss modellieren. Engpässe finden, ROI nachweisen — vor der Investition.',
-  s2h:'Prozess- &amp; Layoutoptimierung', s2p:'Lean-Analyse, VSM und Lagerumgestaltung — auf Basis von Simulationsdaten, nicht Intuition.',
-  s3h:'Python-Automatisierung', s3p:'Skripte, Reporting-Pipelines, Workflow-Automatisierung. Manuelle Aufgaben werden zu zuverlässigen Systemen.',
-  s4h:'Datenanalyse &amp; Reporting', s4p:'Statistische Studien, KPI-Dashboards und quantitative Analysen. Daten, die Entscheidungen ermöglichen.',
-  s5h:'IBM Maximo Implementierung', s5p:'EAM-Einführung und Optimierung. Altsysteme konsolidieren, Ausfallzeiten reduzieren, Wartung standardisieren.',
-  s6h:'Algorithmus- &amp; Web-App-Entwicklung', s6p:'Maßgeschneiderte Algorithmen, Live-Datenintegrationen und Webanwendungen — von Bin-Packing bis Trading-Tools.',
-
-  /* ────────── CASE STUDIES PAGE ────────── */
-  cslbl:'Fallstudien',
-  csh1:'Ausgewählte Projekte — Fertigung, Wind, Logistik.',
-  cssub:'Klicken Sie auf ein Projekt für Problem, Ansatz und Ergebnisse.',
-  ndah:'NDA &amp; DSGVO',
-  ndap:'Visualisierungen anonymisiert (NDA, DSGVO Art. 6 Abs. 1 lit. b).',
-  tp:'Problem', ts:'Ansatz', tr:'Ergebnisse',
-  /* CS1 */
+  /* CS1 — Wind Production */
   c1m:'Infrastruktur · Deutschland · Diskrete Ereignissimulation',
   c1t:'Simulation der Windturm-Produktion',
   c1p:'Ein führender Industriekunde musste eine größere Kraninvestition für die Windturm-Montagelinie rechtfertigen. Konventionelle Kapazitätsplanung konnte stochastische Variabilität, Ausfälle und Schichtinterdependenzen nicht abbilden.',
@@ -118,7 +136,8 @@ window.T.de = {
   c1s4:'Durchsatzanalyse und Engpasserkennung über mehrere Krankonfigurationen',
   c1r:'Quantitative Bewertung der Krans-Szenarien basierend auf Auslastung, Durchsatz und Warteschlangendynamik. Ein interaktives Dashboard visualisiert KPI-Verhalten über alle Szenarien.',
   c1k1:'Durchsatzsteigerung', c1k2:'Stabile Auslastung', c1k3:'Materialhandling-Verzögerungen',
-  /* CS2 */
+
+  /* CS2 — Wind Installation */
   c2m:'Windenergie · Deutschland · Heuristischer Algorithmus',
   c2t:'Optimierung der Windturm-Installation',
   c2p:'Windturm-Installationsvorgänge sind stark wetterabhängig, was Installationsdauer und Projektausführung erheblich beeinflusst.',
@@ -129,7 +148,8 @@ window.T.de = {
   c2s4:'ANOVA und Wechselwirkungsanalyse in Minitab validiert',
   c2r:'Windtoleranz auf Komponentenebene reduziert konsistent die Installationszeit. Die Gondel wurde als kritischste Komponente identifiziert.',
   c2k1:'Vollständiges faktorielles DoE', c2k2:'Statistische Validierung', c2k3:'Custom Greedy-Heuristik',
-  /* CS3 */
+
+  /* CS3 — Algo Trader */
   c3m:'Eigenprojekt · Live-Webanwendung',
   c3t:'Multimarkt-Algorithmic-Trader',
   c3p:'Manuelle Identifikation institutioneller Smart-Money-Muster an mehreren internationalen Märkten ist zeitaufwendig und fehleranfällig.',
@@ -140,7 +160,8 @@ window.T.de = {
   c3s4:'Modulare Architektur — neue Märkte in unter 30 Minuten',
   c3r:'Vollständig operatives Echtzeit-Scanning-Tool an drei Live-Märkten, das musterbasierte Signale ohne manuellen Aufwand liefert.',
   c3k1:'Live-Märkte', c3k2:'Echtzeitsignale', c3k3:'Python, kein Drittanbieter',
-  /* CS4 */
+
+  /* CS4 — 3D Bin Packing */
   c4m:'Logistikforschung · Kombinatorische Optimierung',
   c4t:'3D-Behälterpackungs-Optimierung',
   c4p:'Das 3D-Behälterpackungsproblem — verbreitet in Fertigung und Logistik. Teile unterschiedlicher Abmessungen in Behältern anordnen, Raumnutzung maximieren.',
