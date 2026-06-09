@@ -1,5 +1,5 @@
 <!-- ============================================================
-     PAGE: CASE STUDIES — ribbon system
+     PAGE: CASE STUDIES — full ribbon system, 6 projects
      ============================================================ -->
 <div id="page-casestudies" class="page">
 
@@ -8,7 +8,7 @@
     <div class="cs-header-in">
       <div>
         <div class="eyebrow" data-key="cslbl">Case studies</div>
-        <h1 data-key="csh1">Selected work — manufacturing, wind, logistics.</h1>
+        <h1 data-key="csh1">Selected work — simulation, optimisation, digitalisation.</h1>
         <p class="lede" data-key="cssub">Click any project to read the full problem, approach, and results.</p>
       </div>
       <div class="nda-note">
@@ -18,10 +18,10 @@
     </div>
   </div>
 
-   <!-- Ribbons -->
+  <!-- Ribbons -->
   <div class="ribbons">
 
-    <!-- ─── PROJECT: Cognitive Twin (NEW — top featured) ─── -->
+    <!-- ─── 1: Cognitive Twin (2025) ─── -->
     <article class="ribbon" id="cs-cdt">
       <div class="ribbon-head" onclick="toggleRibbon('cs-cdt')">
         <div class="ribbon-year">2025</div>
@@ -74,7 +74,7 @@
       </div>
     </article>
 
-    <!-- ─── PROJECT: NAVOS (NEW — top featured) ─── -->
+    <!-- ─── 2: NAVOS (2025) ─── -->
     <article class="ribbon" id="cs-navos">
       <div class="ribbon-head" onclick="toggleRibbon('cs-navos')">
         <div class="ribbon-year">2025</div>
@@ -126,8 +126,108 @@
       </div>
     </article>
 
+    <!-- ─── 3: Wind Turbine Installation Optimisation (2024) ─── -->
+    <article class="ribbon" id="cs2">
+      <div class="ribbon-head" onclick="toggleRibbon('cs2')">
+        <div class="ribbon-year">2024</div>
+        <div>
+          <div class="ribbon-meta" data-key="c2m">Wind Industry · Germany · Heuristic Algorithm</div>
+          <div class="ribbon-title" data-key="c2t">Wind Turbine Installation Optimisation</div>
+        </div>
+        <div class="ribbon-tags">
+          <span class="r-nda">NDA</span>
+          <span class="r-tag">AnyLogic</span>
+          <span class="r-tag">Java</span>
+          <span class="r-tag">DoE</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/thesis3.png" alt="Wind turbine installation optimisation — anonymised" onerror="this.style.display='none'">
+          </div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs2','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs2','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs2','r')" data-key="tr">Results</button>
+            </div>
+            <div class="psr-pane active" id="cs2-p">
+              <p data-key="c2p">Wind turbine installation operations are highly sensitive to wind-speed constraints, which significantly impact installation duration and project execution efficiency.</p>
+            </div>
+            <div class="psr-pane" id="cs2-a">
+              <p data-key="c2si">A discrete-event simulation of the full logistics chain in AnyLogic was paired with a custom greedy heuristic in Java. Tasks were iteratively rescheduled around weather forecasts to minimise constraint violations.</p>
+              <ul>
+                <li data-key="c2s1">Stochastic weather modelling from historical European wind data</li>
+                <li data-key="c2s2">Java-based heuristic for constrained schedule optimisation</li>
+                <li data-key="c2s3">Full factorial DoE to identify critical driver variables</li>
+                <li data-key="c2s4">ANOVA and interaction analysis validated in Minitab</li>
+              </ul>
+            </div>
+            <div class="psr-pane" id="cs2-r">
+              <p data-key="c2r">Component-level wind tolerance consistently reduces installation time across all evaluated scenarios. Sensitivity analysis identified the nacelle as the most critical component influencing overall installation performance.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div><div class="ribbon-kpi-num">DoE</div><div class="ribbon-kpi-label" data-key="c2k1">Full factorial design</div></div>
+          <div><div class="ribbon-kpi-num">ANOVA</div><div class="ribbon-kpi-label" data-key="c2k2">Statistical validation</div></div>
+          <div><div class="ribbon-kpi-num">Java</div><div class="ribbon-kpi-label" data-key="c2k3">Custom heuristic</div></div>
+        </div>
+      </div>
+    </article>
 
-    <!-- ─── PROJECT 1: Wind Turbine Production Simulation ─── -->
+    <!-- ─── 4: 3D Bin Packing (2026) ─── -->
+    <article class="ribbon" id="cs4">
+      <div class="ribbon-head" onclick="toggleRibbon('cs4')">
+        <div class="ribbon-year">2026</div>
+        <div>
+          <div class="ribbon-meta" data-key="c4m">Logistics Research · Combinatorial Optimisation</div>
+          <div class="ribbon-title" data-key="c4t">3D Bin Packing Optimisation System</div>
+        </div>
+        <div class="ribbon-tags">
+          <span class="r-tag">Python</span>
+          <span class="r-tag">Simulated Annealing</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/3_d bin optimizer.png" alt="3D bin packing optimisation system" onerror="this.style.display='none'">
+          </div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs4','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs4','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs4','r')" data-key="tr">Results</button>
+            </div>
+            <div class="psr-pane active" id="cs4-p">
+              <p data-key="c4p">The 3D bin packing problem — common in manufacturing, logistics, and automated packaging. Efficiently arrange parts of varying dimensions inside available containers while maximising space utilisation.</p>
+            </div>
+            <div class="psr-pane" id="cs4-a">
+              <p data-key="c4si">Hybrid optimisation combining a greedy constructive heuristic with simulated annealing. The greedy phase builds an initial feasible solution; simulated annealing iteratively improves it.</p>
+              <ul>
+                <li data-key="c4s1">Greedy skyline-based initial placement</li>
+                <li data-key="c4s2">3D collision and boundary checks</li>
+                <li data-key="c4s3">Simulated annealing for optimisation (swap, rotate, move)</li>
+              </ul>
+            </div>
+            <div class="psr-pane" id="cs4-r">
+              <p data-key="c4r">Valid packing configurations across multiple box sizes with no collisions. Improved space utilisation by reducing unused volume through optimisation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div><div class="ribbon-kpi-num">SA</div><div class="ribbon-kpi-label" data-key="c4k1">Combinatorial optimisation</div></div>
+          <div><div class="ribbon-kpi-num">3D</div><div class="ribbon-kpi-label" data-key="c4k2">Volumetric state space</div></div>
+          <div><div class="ribbon-kpi-num">+ Vol</div><div class="ribbon-kpi-label" data-key="c4k3">Space utilisation gain</div></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ─── 5: Wind Turbine Production Simulation (2022) ─── -->
     <article class="ribbon" id="cs1">
       <div class="ribbon-head" onclick="toggleRibbon('cs1')">
         <div class="ribbon-year">2022</div>
@@ -188,59 +288,7 @@
       </div>
     </article>
 
-    <!-- ─── PROJECT 2: Wind Turbine Installation Optimisation ─── -->
-    <article class="ribbon" id="cs2">
-      <div class="ribbon-head" onclick="toggleRibbon('cs2')">
-        <div class="ribbon-year">2024</div>
-        <div>
-          <div class="ribbon-meta" data-key="c2m">Wind Industry · Germany · Heuristic Algorithm</div>
-          <div class="ribbon-title" data-key="c2t">Wind Turbine Installation Optimisation</div>
-        </div>
-        <div class="ribbon-tags">
-          <span class="r-nda">NDA</span>
-          <span class="r-tag">AnyLogic</span>
-          <span class="r-tag">Java</span>
-          <span class="r-tag">DoE</span>
-        </div>
-        <button class="ribbon-toggle" aria-label="Toggle"></button>
-      </div>
-      <div class="ribbon-body">
-        <div class="ribbon-content">
-          <div class="ribbon-visual">
-            <img src="assets/thesis3.png" alt="Wind turbine installation optimisation — anonymised" onerror="this.style.display='none'">
-          </div>
-          <div class="psr">
-            <div class="psr-tabs">
-              <button class="psr-tab active" onclick="psrTab(this,'cs2','p')" data-key="tp">Problem</button>
-              <button class="psr-tab"        onclick="psrTab(this,'cs2','a')" data-key="ts">Approach</button>
-              <button class="psr-tab"        onclick="psrTab(this,'cs2','r')" data-key="tr">Results</button>
-            </div>
-            <div class="psr-pane active" id="cs2-p">
-              <p data-key="c2p">Wind turbine installation operations are highly sensitive to wind-speed constraints, which significantly impact installation duration and project execution efficiency.</p>
-            </div>
-            <div class="psr-pane" id="cs2-a">
-              <p data-key="c2si">A discrete-event simulation of the full logistics chain in AnyLogic was paired with a custom greedy heuristic in Java. Tasks were iteratively rescheduled around weather forecasts to minimise constraint violations.</p>
-              <ul>
-                <li data-key="c2s1">Stochastic weather modelling from historical European wind data</li>
-                <li data-key="c2s2">Java-based heuristic for constrained schedule optimisation</li>
-                <li data-key="c2s3">Full factorial DoE to identify critical driver variables</li>
-                <li data-key="c2s4">ANOVA and interaction analysis validated in Minitab</li>
-              </ul>
-            </div>
-            <div class="psr-pane" id="cs2-r">
-              <p data-key="c2r">Component-level wind tolerance consistently reduces installation time across all evaluated scenarios. Sensitivity analysis identified the nacelle as the most critical component influencing overall installation performance.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ribbon-kpis">
-          <div><div class="ribbon-kpi-num">DoE</div><div class="ribbon-kpi-label" data-key="c2k1">Full factorial design</div></div>
-          <div><div class="ribbon-kpi-num">ANOVA</div><div class="ribbon-kpi-label" data-key="c2k2">Statistical validation</div></div>
-          <div><div class="ribbon-kpi-num">Java</div><div class="ribbon-kpi-label" data-key="c2k3">Custom heuristic</div></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- ─── PROJECT 3: Multi-Market Algorithmic Trader ─── -->
+    <!-- ─── 6: Multi-Market Algorithmic Trader (2025) ─── -->
     <article class="ribbon" id="cs3">
       <div class="ribbon-head" onclick="toggleRibbon('cs3')">
         <div class="ribbon-year">2025</div>
@@ -287,55 +335,6 @@
           <div><div class="ribbon-kpi-num">3</div><div class="ribbon-kpi-label" data-key="c3k1">Live markets</div></div>
           <div><div class="ribbon-kpi-num">RT</div><div class="ribbon-kpi-label" data-key="c3k2">Real-time signals</div></div>
           <div><div class="ribbon-kpi-num">100%</div><div class="ribbon-kpi-label" data-key="c3k3">Python, no third-party logic</div></div>
-        </div>
-      </div>
-    </article>
-
-    <!-- ─── PROJECT 4: 3D Bin Packing ─── -->
-    <article class="ribbon" id="cs4">
-      <div class="ribbon-head" onclick="toggleRibbon('cs4')">
-        <div class="ribbon-year">2026</div>
-        <div>
-          <div class="ribbon-meta" data-key="c4m">Logistics Research · Combinatorial Optimisation</div>
-          <div class="ribbon-title" data-key="c4t">3D Bin Packing Optimisation System</div>
-        </div>
-        <div class="ribbon-tags">
-          <span class="r-tag">Python</span>
-          <span class="r-tag">Simulated Annealing</span>
-        </div>
-        <button class="ribbon-toggle" aria-label="Toggle"></button>
-      </div>
-      <div class="ribbon-body">
-        <div class="ribbon-content">
-          <div class="ribbon-visual">
-            <img src="assets/3_d bin optimizer.png" alt="3D bin packing optimisation system" onerror="this.style.display='none'">
-          </div>
-          <div class="psr">
-            <div class="psr-tabs">
-              <button class="psr-tab active" onclick="psrTab(this,'cs4','p')" data-key="tp">Problem</button>
-              <button class="psr-tab"        onclick="psrTab(this,'cs4','a')" data-key="ts">Approach</button>
-              <button class="psr-tab"        onclick="psrTab(this,'cs4','r')" data-key="tr">Results</button>
-            </div>
-            <div class="psr-pane active" id="cs4-p">
-              <p data-key="c4p">The 3D bin packing problem — common in manufacturing, logistics, and automated packaging. Efficiently arrange parts of varying dimensions inside available containers while maximising space utilisation.</p>
-            </div>
-            <div class="psr-pane" id="cs4-a">
-              <p data-key="c4si">Hybrid optimisation combining a greedy constructive heuristic with simulated annealing. The greedy phase builds an initial feasible solution; simulated annealing iteratively improves it.</p>
-              <ul>
-                <li data-key="c4s1">Greedy skyline-based initial placement</li>
-                <li data-key="c4s2">3D collision and boundary checks</li>
-                <li data-key="c4s3">Simulated annealing for optimisation (swap, rotate, move)</li>
-              </ul>
-            </div>
-            <div class="psr-pane" id="cs4-r">
-              <p data-key="c4r">Valid packing configurations across multiple box sizes with no collisions. Improved space utilisation by reducing unused volume through optimisation.</p>
-            </div>
-          </div>
-        </div>
-        <div class="ribbon-kpis">
-          <div><div class="ribbon-kpi-num">SA</div><div class="ribbon-kpi-label" data-key="c4k1">Combinatorial optimisation</div></div>
-          <div><div class="ribbon-kpi-num">3D</div><div class="ribbon-kpi-label" data-key="c4k2">Volumetric state space</div></div>
-          <div><div class="ribbon-kpi-num">+ Vol</div><div class="ribbon-kpi-label" data-key="c4k3">Space utilisation gain</div></div>
         </div>
       </div>
     </article>
