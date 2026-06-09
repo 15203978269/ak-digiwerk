@@ -1,5 +1,5 @@
 /* ============================================================
-   ENGLISH TRANSLATIONS — v4 final (all pages)
+   ENGLISH TRANSLATIONS — capability-led, all projects
    ============================================================ */
 window.T = window.T || {};
 window.T.en = {
@@ -10,25 +10,29 @@ window.T.en = {
   /* Hero */
   eyebrow:'Freelance Digitalisation Engineer · Germany',
   h1:'Engineering decisions, <span class="accent">validated before you invest.</span>',
-  hsub:'Discrete Event Simulation and process optimisation for European manufacturers.',
+  hsub:'Simulation, optimisation and digitalisation for European manufacturers.',
   hb1:'Book a discovery call',
   havail:'Available · Germany &amp; Remote',
+
   /* Trust strip */
   trust1:'<strong>M.Eng</strong> Hochschule Stralsund',
   trust2:'German Engineering Practice',
   trust3:'<strong>DSGVO</strong>-compliant',
   trust4:'5+ Years Industrial Experience',
-  /* Industries (home) */
-  indlbl:'Industries served',
-  indh:'A focused practice across<br>European industrial sectors.',
-  ind1h:'Manufacturing',
-  ind1p:'Production lines, factory layouts, capacity planning and lean transformation for power electronics, automotive and heavy industry.',
-  ind2h:'Wind &amp; Infrastructure',
-  ind2p:'Installation logistics, scheduling under weather uncertainty, large-scale assembly modelling for onshore and offshore wind operations.',
-  ind3h:'Logistics',
-  ind3p:'Warehouse optimisation, 3D bin packing, supply chain simulation and routing algorithms for operational efficiency.',
-  indlink:'View work →', indlink2:'View work →', indlink3:'View work →',
- /* Featured (Cognitive Twin) */
+
+  /* Capabilities (replaces industries on home) */
+  caplbl:'What I do',
+  caph:'Three capabilities,<br>one engineering practice.',
+  cap1h:'Simulation',
+  cap1p:'Discrete Event Simulation, real-time digital twins, and scenario analysis. Build a working model of your operation, run experiments at virtual speed, decide with evidence.',
+  cap2h:'Optimisation',
+  cap2p:'Process flows, factory layouts, supply chains, combinatorial algorithms. Lean, statistical, and heuristic methods — applied where the gain is measurable.',
+  cap3h:'Digitalisation',
+  cap3p:'Edge-to-cloud platforms, automation pipelines, system architecture. ISA-95 thinking applied from factory floor to enterprise — from one machine to a thousand.',
+  caplink1:'Learn more →', caplink2:'Learn more →', caplink3:'Learn more →',
+  capind:'Applied across manufacturing, wind energy, logistics, and maritime operations.',
+
+  /* Featured (Cognitive Twin) */
   featlbl:'Featured project',
   featyear:'2025',
   featind:'Digital Twin',
@@ -39,10 +43,62 @@ window.T.en = {
   featk3:'Autonomous closed-loop operation',
   featbtn:'Read full case study',
 
-  /* 4th industry card */
-  ind4h:'Industrial IoT &amp; Architecture',
-  ind4p:'Edge-to-cloud platforms, digital twins, fleet-scale system design. ISA-95 architectures bridging field hardware to enterprise applications.',
-  indlink4:'View work →',
+  /* Methodology */
+  methlbl:'How I work',
+  methh:'Engineer-to-engineer process.<br>No black boxes.',
+  methp:'Every engagement follows the same disciplined sequence — calibrated against real production data, statistically validated, and handed over with full documentation.',
+  m1h:'Discover', m1p:'30-minute call to map the decision space, constraints, and data available.',
+  m2h:'Model',    m2p:'Build the simulation or algorithm. Calibrate against your historical operational data.',
+  m3h:'Validate', m3p:'Statistical verification, replication runs, sensitivity analysis. Numbers you can defend.',
+  m4h:'Hand over',m4p:'Documented model, trained team, ongoing support. You own the result.',
+
+  /* Background */
+  bgd:'Practice built inside leading global manufacturers',
+
+  /* About */
+  albl:'About',
+  ash:'Five years of decisions —<br>now available freelance.',
+  biop1:'Trained inside leading European manufacturers — power electronics, automotive, infrastructure — I now operate independently, translating complex production challenges into validated simulation models and Python automation.',
+  biop2:'Based in Flensburg. Operating under strict German DSGVO standards. Every engagement ends with a documented model, a trained team, and a clear return on investment.',
+  bion:'Affan Khan',
+  biot:'M.Eng · Freelance Digitalisation Engineer',
+
+  /* CTA */
+  ctah:'Free 30-minute discovery call.',
+  ctasub:'Fixed scope. Fixed price. No surprises.',
+  ctabtn:'Book a call',
+
+  /* ────────── SERVICES PAGE (existing keys preserved) ────────── */
+  slbl:'What I do',
+  sh1:'A focused practice<br>for industrial decisions.',
+  ssub:'Industries served and methods I bring to each engagement — from first call to final delivery.',
+  /* Industries — kept for services page detail */
+  indlbl:'Industries served',
+  indh:'Three sectors I know from the inside.',
+  ind1h:'Manufacturing',
+  ind1p:'Production lines, factory layouts, capacity planning and lean transformation for power electronics, automotive and heavy industry.',
+  ind2h:'Wind &amp; Infrastructure',
+  ind2p:'Installation logistics, scheduling under weather uncertainty, large-scale assembly modelling for onshore and offshore wind operations.',
+  ind3h:'Logistics',
+  ind3p:'Warehouse optimisation, 3D bin packing, supply chain simulation and routing algorithms for operational efficiency.',
+  indlink:'View work →', indlink2:'View work →', indlink3:'View work →',
+  toolslbl:'Tools &amp; methods',
+  toolsh:'What I bring to each engagement.',
+  toolssub:'Six capability areas — combined as the project requires.',
+  s1h:'Discrete Event Simulation', s1p:'Model production, logistics, and material flow. Find bottlenecks and prove ROI before you invest.',
+  s2h:'Process &amp; Layout Optimisation', s2p:'Lean analysis, VSM, and warehouse redesign — backed by simulation data, not intuition.',
+  s3h:'Python Automation', s3p:'Scripts, reporting pipelines, workflow automation. Manual tasks become reliable, repeatable systems.',
+  s4h:'Data Analysis &amp; Reporting', s4p:'Statistical studies, KPI dashboards, and quantitative analysis. Data that drives decisions.',
+  s5h:'IBM Maximo Implementation', s5p:'EAM rollout and optimisation. Consolidate legacy systems, reduce downtime, standardise maintenance.',
+  s6h:'Algorithm &amp; Web App Development', s6p:'Custom algorithms, live data integrations, and web applications — from bin-packing to market scanners.',
+
+  /* ────────── CASE STUDIES PAGE ────────── */
+  cslbl:'Case studies',
+  csh1:'Selected work — simulation, optimisation, digitalisation.',
+  cssub:'Click any project to read the full problem, approach, and results.',
+  ndah:'NDA &amp; DSGVO',
+  ndap:'Visuals anonymised under mutual NDA and DSGVO Art. 6 Abs. 1 lit. b.',
+  tp:'Problem', ts:'Approach', tr:'Results',
 
   /* Cognitive Twin ribbon */
   cdtm:'Cognitive Digital Twin · Real-time Simulation · LLM Orchestration',
@@ -71,50 +127,8 @@ window.T.en = {
   navk1:'Command latency online',
   navk2:'Internet required for crew operation',
   navk3:'Vessels on same architecture',
-  /* Methodology */
-  methlbl:'How I work',
-  methh:'Engineer-to-engineer process.<br>No black boxes.',
-  methp:'Every engagement follows the same disciplined sequence — calibrated against real production data, statistically validated, and handed over with full documentation.',
-  m1h:'Discover', m1p:'30-minute call to map the decision space, constraints, and data available.',
-  m2h:'Model',    m2p:'Build the simulation or algorithm. Calibrate against your historical operational data.',
-  m3h:'Validate', m3p:'Statistical verification, replication runs, sensitivity analysis. Numbers you can defend.',
-  m4h:'Hand over',m4p:'Documented model, trained team, ongoing support. You own the result.',
-  /* Background */
-  bgd:'Practice built inside leading global manufacturers',
-  /* About */
-  albl:'About',
-  ash:'Five years of decisions —<br>now available freelance.',
-  biop1:'Trained inside leading European manufacturers — power electronics, automotive, infrastructure — I now operate independently, translating complex production challenges into validated simulation models and Python automation.',
-  biop2:'Based in Flensburg. Operating under strict German DSGVO standards. Every engagement ends with a documented model, a trained team, and a clear return on investment.',
-  bion:'Affan Khan',
-  biot:'M.Eng · Freelance Digitalisation Engineer',
-  /* CTA */
-  ctah:'Free 30-minute discovery call.',
-  ctasub:'Fixed scope. Fixed price. No surprises.',
-  ctabtn:'Book a call',
 
-  /* ────────── SERVICES PAGE ────────── */
-  slbl:'What I do',
-  sh1:'A focused practice<br>for industrial decisions.',
-  ssub:'Industries served and methods I bring to each engagement — from first call to final delivery.',
-  toolslbl:'Tools &amp; methods',
-  toolsh:'What I bring to each engagement.',
-  toolssub:'Six capability areas — combined as the project requires.',
-  s1h:'Discrete Event Simulation', s1p:'Model production, logistics, and material flow. Find bottlenecks and prove ROI before you invest.',
-  s2h:'Process &amp; Layout Optimisation', s2p:'Lean analysis, VSM, and warehouse redesign — backed by simulation data, not intuition.',
-  s3h:'Python Automation', s3p:'Scripts, reporting pipelines, workflow automation. Manual tasks become reliable, repeatable systems.',
-  s4h:'Data Analysis &amp; Reporting', s4p:'Statistical studies, KPI dashboards, and quantitative analysis. Data that drives decisions.',
-  s5h:'IBM Maximo Implementation', s5p:'EAM rollout and optimisation. Consolidate legacy systems, reduce downtime, standardise maintenance.',
-  s6h:'Algorithm &amp; Web App Development', s6p:'Custom algorithms, live data integrations, and web applications — from bin-packing to market scanners.',
-
-  /* ────────── CASE STUDIES PAGE ────────── */
-  cslbl:'Case studies',
-  csh1:'Selected work — manufacturing, wind, logistics.',
-  cssub:'Click any project to read the full problem, approach, and results.',
-  ndah:'NDA &amp; DSGVO',
-  ndap:'Visuals anonymised under mutual NDA and DSGVO Art. 6 Abs. 1 lit. b.',
-  tp:'Problem', ts:'Approach', tr:'Results',
-  /* CS1 */
+  /* CS1 — Wind Production */
   c1m:'Heavy Infrastructure · Germany · Discrete Event Simulation',
   c1t:'Wind Turbine Production Simulation',
   c1p:'A leading industrial client needed to justify a major crane investment for their wind turbine assembly line. Conventional capacity planning could not capture stochastic variability, equipment breakdowns, or shift interdependencies — management required evidence, not assumptions.',
@@ -125,7 +139,8 @@ window.T.en = {
   c1s4:'Throughput analysis across multiple crane configurations',
   c1r:'Quantitative evaluation of crane scenarios based on utilisation, throughput, and queue dynamics. Task allocation was structured to balance system load and minimise bottlenecks. An interactive dashboard visualises KPI behaviour across scenarios.',
   c1k1:'Throughput improvement', c1k2:'Utilisation stability', c1k3:'Material handling delays',
-  /* CS2 */
+
+  /* CS2 — Wind Installation */
   c2m:'Wind Industry · Germany · Heuristic Algorithm',
   c2t:'Wind Turbine Installation Optimisation',
   c2p:'Wind turbine installation operations are highly sensitive to wind-speed constraints, which significantly impact installation duration and project execution efficiency.',
@@ -136,7 +151,8 @@ window.T.en = {
   c2s4:'ANOVA and interaction analysis validated in Minitab',
   c2r:'Component-level wind tolerance consistently reduces installation time across all evaluated scenarios. Sensitivity analysis identified the nacelle as the most critical component influencing overall installation performance.',
   c2k1:'Full factorial design', c2k2:'Statistical validation', c2k3:'Custom heuristic',
-  /* CS3 */
+
+  /* CS3 — Algo Trader */
   c3m:'Personal Project · Live Web Application',
   c3t:'Multi-Market Algorithmic Trader',
   c3p:'Manual identification of institutional Smart Money patterns across multiple international markets is time-consuming, inconsistent, and prone to missed signals.',
@@ -147,7 +163,8 @@ window.T.en = {
   c3s4:'Modular — new markets added in under 30 minutes',
   c3r:'Fully operational real-time scanner running across three live markets simultaneously, surfacing pattern-based signals with zero manual effort.',
   c3k1:'Live markets', c3k2:'Real-time signals', c3k3:'Python, no third-party logic',
-  /* CS4 */
+
+  /* CS4 — 3D Bin Packing */
   c4m:'Logistics Research · Combinatorial Optimisation',
   c4t:'3D Bin Packing Optimisation System',
   c4p:'The 3D bin packing problem — common in manufacturing, logistics, and automated packaging. Efficiently arrange parts of varying dimensions inside available containers while maximising space utilisation.',
