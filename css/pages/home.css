@@ -719,9 +719,11 @@
   flex-shrink: 0;
 }
 .gallery-item img {
-  width: 100%;
-  height: 100%;
+  width: 110%;
+  height: 110%;
   object-fit: cover;
+  object-position: center;
+  margin: -5%;
   display: block;
 }
 Two changes:
