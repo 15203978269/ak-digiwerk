@@ -653,3 +653,12 @@
     gap: 1rem 1.5rem;
   }
 }
+/* Industries line under capability cards */
+.cap-industries {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  margin-top: clamp(2rem, 4vw, 3rem);
+  font-style: italic;
+}
