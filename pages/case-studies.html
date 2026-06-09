@@ -18,8 +18,114 @@
     </div>
   </div>
 
-  <!-- Ribbons -->
+   <!-- Ribbons -->
   <div class="ribbons">
+
+    <!-- ─── PROJECT: Cognitive Twin (NEW — top featured) ─── -->
+    <article class="ribbon" id="cs-cdt">
+      <div class="ribbon-head" onclick="toggleRibbon('cs-cdt')">
+        <div class="ribbon-year">2025</div>
+        <div>
+          <div class="ribbon-meta" data-key="cdtm">Cognitive Digital Twin · Real-time Simulation · LLM Orchestration</div>
+          <div class="ribbon-title" data-key="cdtt">Cognitive Twin — Autonomous Experiment Director</div>
+        </div>
+        <div class="ribbon-tags">
+          <span class="r-tag">AnyLogic</span>
+          <span class="r-tag">Python</span>
+          <span class="r-tag">MQTT</span>
+          <span class="r-tag">LLM</span>
+          <span class="r-tag">Pi5</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/cdt-1.png" alt="Cognitive Twin — AnyLogic agent simulation" onerror="this.style.display='none'">
+          </div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs-cdt','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs-cdt','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs-cdt','r')" data-key="tr">Results</button>
+            </div>
+            <div class="psr-pane active" id="cs-cdt-p">
+              <p data-key="cdtp">Traditional digital twins mirror state but don't reason about it. An operator still has to decide what to simulate, when to run a scenario, and what to do with the result. For autonomous fleets — AMRs in warehouses, vessels at sea, vehicles on a route — this manual loop is the bottleneck. The question: can a digital twin run experiments on itself, autonomously, while still being controllable and explainable to a human engineer?</p>
+            </div>
+            <div class="psr-pane" id="cs-cdt-a">
+              <p data-key="cdtsi">A four-component cognitive digital twin built on commodity hardware — a Raspberry Pi 5 as live data source feeding a multi-paradigm simulation that an LLM directs in real time.</p>
+              <ul>
+                <li data-key="cdts1">Hardware layer (Pi5) — IMU, encoder, battery telemetry over MQTT at 2-second cadence with reconnect resilience</li>
+                <li data-key="cdts2">Simulation layer (AnyLogic) — one real agent driven by Pi5 data alongside 19 synthetic clones, 200 customer agents with social-influence demand, System Dynamics for fleet health</li>
+                <li data-key="cdts3">Intelligence layer (Ollama + Mistral 7B) — structured JSON scenario requests with reasoning and urgency scoring every 60 seconds</li>
+                <li data-key="cdts4">Orchestrator (Python + FastAPI) — dispatches scenarios, parses results, sends physical commands back to Pi5 hardware</li>
+              </ul>
+            </div>
+            <div class="psr-pane" id="cs-cdt-r">
+              <p data-key="cdtr">A fully operational closed-loop system running unattended for 30+ minute sessions. The LLM autonomously identifies bottlenecks in the simulated fleet, dispatches scenario tests (robot failure, demand spike, accelerated battery drain), reads back KPI deltas, and adjusts physical hardware behaviour — all under 15 seconds per scenario cycle. Demonstrates that production-grade cognitive digital twins are achievable on commodity hardware, without specialist cloud infrastructure.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div><div class="ribbon-kpi-num">4</div><div class="ribbon-kpi-label" data-key="cdtk1">Layers — HW → Sim → LLM → HW</div></div>
+          <div><div class="ribbon-kpi-num">&lt;15s</div><div class="ribbon-kpi-label" data-key="cdtk2">LLM-to-result cycle time</div></div>
+          <div><div class="ribbon-kpi-num">30+ min</div><div class="ribbon-kpi-label" data-key="cdtk3">Unattended autonomous operation</div></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ─── PROJECT: NAVOS (NEW — top featured) ─── -->
+    <article class="ribbon" id="cs-navos">
+      <div class="ribbon-head" onclick="toggleRibbon('cs-navos')">
+        <div class="ribbon-year">2025</div>
+        <div>
+          <div class="ribbon-meta" data-key="navm">Industrial IoT · AWS Architecture · Proof-of-Concept</div>
+          <div class="ribbon-title" data-key="navt">NAVOS — Autonomous Vessel Command Platform</div>
+        </div>
+        <div class="ribbon-tags">
+          <span class="r-tag">AWS IoT</span>
+          <span class="r-tag">Greengrass</span>
+          <span class="r-tag">Digital Twin</span>
+          <span class="r-tag">Three.js</span>
+        </div>
+        <button class="ribbon-toggle" aria-label="Toggle"></button>
+      </div>
+      <div class="ribbon-body">
+        <div class="ribbon-content">
+          <div class="ribbon-visual">
+            <img src="assets/navos-hero.png" alt="NAVOS vessel command dashboard" onerror="this.style.display='none'">
+          </div>
+          <div class="psr">
+            <div class="psr-tabs">
+              <button class="psr-tab active" onclick="psrTab(this,'cs-navos','p')" data-key="tp">Problem</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs-navos','a')" data-key="ts">Approach</button>
+              <button class="psr-tab"        onclick="psrTab(this,'cs-navos','r')" data-key="tr">Results</button>
+            </div>
+            <div class="psr-pane active" id="cs-navos-p">
+              <p data-key="navp">Maritime fleet operators face three critical gaps: no real-time visibility into vessel systems at sea, no secure remote command without exposing hardware to the public internet, and complete operational failure when satellite connectivity drops. Existing approaches don't scale beyond a handful of vessels. The requirement: an architecture that works for one vessel today and a thousand tomorrow — without compromising security or offline resilience.</p>
+            </div>
+            <div class="psr-pane" id="cs-navos-a">
+              <p data-key="navsi">A self-initiated proof-of-concept built on a physical vessel proxy running the full production AWS stack — validating the architecture end-to-end before any maritime hardware commitment. Three-tier Industrial IoT design following the ISA-95 reference model.</p>
+              <ul>
+                <li data-key="navs1">Edge layer — AWS Greengrass v2 as vessel operating system with local MQTT broker for offline crew operation</li>
+                <li data-key="navs2">Cloud layer — AWS IoT Core with certificate-based mTLS, Device Shadow digital twin, DynamoDB voyage history</li>
+                <li data-key="navs3">Application layer — AWS Amplify + Cognito with three role-based dashboards: Captain, Guest, Engineer</li>
+                <li data-key="navs4">Fleet scale by design — IoT Fleet Provisioning, OTA via Thing Groups, multi-region by parameter</li>
+              </ul>
+            </div>
+            <div class="psr-pane" id="cs-navos-r">
+              <p data-key="navr">Fully operational end-to-end platform. Captain commands from any browser worldwide reach the vessel in under 500ms via API Gateway → Lambda → IoT Core → Greengrass → hardware. Offline mode is identical: when satellite drops, local MQTT continues serving crew with zero latency, telemetry spools and syncs on reconnect. Same architecture scales linearly to 1,000+ vessels at approximately €20/month total messaging cost — orders of magnitude below traditional SCADA pricing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="ribbon-kpis">
+          <div><div class="ribbon-kpi-num">&lt;500ms</div><div class="ribbon-kpi-label" data-key="navk1">Command latency online</div></div>
+          <div><div class="ribbon-kpi-num">0</div><div class="ribbon-kpi-label" data-key="navk2">Internet required for crew operation</div></div>
+          <div><div class="ribbon-kpi-num">1000+</div><div class="ribbon-kpi-label" data-key="navk3">Vessels on same architecture</div></div>
+        </div>
+      </div>
+    </article>
+
 
     <!-- ─── PROJECT 1: Wind Turbine Production Simulation ─── -->
     <article class="ribbon" id="cs1">
