@@ -721,9 +721,26 @@
 .gallery-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: 8px;
   display: block;
 }
+Two changes:
+
+cover → contain (shows whole image, no crop)
+Added padding: 8px (small white border around each image — looks clean)
+Commit: Gallery — show full image instead of cropping
+
+Hard refresh. Your full images will now display inside each tile.
+
+One side effect
+If your images have different aspect ratios (some wide, some square, some tall), they'll all be centered inside their square tiles with empty space around them. Looks intentional and gallery-like. If you'd rather have a colored background fill the empty space, the existing background: var(--bg-3) already handles that (light gray fill).
+
+Try it and tell me if it looks right. If the empty space around irregular images bothers you, we can switch to a smarter approach (e.g., object-fit: cover with a "scale: 0.85" to zoom out slightly while keeping the fill).
+
+
+
+
 
 /* Mobile */
 @media (max-width: 880px) {
