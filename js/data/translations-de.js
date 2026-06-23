@@ -9,7 +9,7 @@ window.T.de = {
   /* ────────── HOMEPAGE ────────── */
   eyebrow:'Freiberuflicher Digitalisierungsingenieur · Deutschland',
   h1:'Fundierte Entscheidungen <span class="accent">vor der Investition.</span>',
-  hsub:'Simulation, Optimierung und Digitalisierung für europäische Hersteller.',
+  hsub:'Simulation, Optimierung und digitale Zwillinge für Produktion und Logistik.',
   hb1:'Erstgespräch buchen',
   havail:'Verfügbar · Deutschland &amp; Remote',
 
