@@ -95,7 +95,6 @@ window.T.en = {
   /* ────────── CASE STUDIES PAGE ────────── */
   cslbl:'Case studies',
   csh1:'Selected work — simulation, optimisation, digitalisation.',
-  cssub:'Click any project to read the full problem, approach, and results.',
   ndah:'NDA &amp; DSGVO',
   ndap:'Visuals anonymised under mutual NDA and DSGVO Art. 6 Abs. 1 lit. b.',
   tp:'Problem', ts:'Approach', tr:'Results',
