@@ -10,7 +10,7 @@ window.T.en = {
   /* Hero */
   eyebrow:'Freelance Digitalisation Engineer · Germany',
   h1:'Engineering decisions, <span class="accent">validated before you invest.</span>',
-  hsub:'Simulation, optimisation and digitalisation for European manufacturers.',
+  hsub:'Simulation, optimisation and digital twins for production and logistics.',
   hb1:'Book a discovery call',
   havail:'Available · Germany &amp; Remote',
 
