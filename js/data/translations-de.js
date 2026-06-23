@@ -92,7 +92,6 @@ window.T.de = {
   /* ────────── CASE STUDIES PAGE ────────── */
   cslbl:'Fallstudien',
   csh1:'Ausgewählte Projekte — Simulation, Optimierung, Digitalisierung.',
-  cssub:'Klicken Sie auf ein Projekt für Problem, Ansatz und Ergebnisse.',
   ndah:'NDA &amp; DSGVO',
   ndap:'Visualisierungen anonymisiert (NDA, DSGVO Art. 6 Abs. 1 lit. b).',
   tp:'Problem', ts:'Ansatz', tr:'Ergebnisse',
