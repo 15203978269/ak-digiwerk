@@ -32,7 +32,7 @@ window.T.de = {
 
   /* Featured (Cognitive Twin) */
   featlbl:'Ausgewähltes Projekt',
-  featyear:'2025',
+  featyear:'2026',
   featind:'Digital Twin',
   feath:'Cognitive Twin — Autonomer Experiment-Direktor',
   featp:'Ein vierschichtiger kognitiver Digital Twin: Live-Hardware-Telemetrie, multi-paradigmatische AnyLogic-Simulation und ein LLM als autonomer Experiment-Direktor. Das System erkennt Engpässe, führt Szenariotests durch und überträgt Kommandos zurück an die physische Hardware — geschlossener Regelkreis, unbeaufsichtigt, auf Standard-Hardware.',
