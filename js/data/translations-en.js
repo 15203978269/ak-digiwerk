@@ -34,7 +34,7 @@ window.T.en = {
 
   /* Featured (Cognitive Twin) */
   featlbl:'Featured project',
-  featyear:'2025',
+  featyear:'2026',
   featind:'Digital Twin',
   feath:'Cognitive Twin — Autonomous Experiment Director',
   featp:'A four-layer cognitive digital twin combining live hardware telemetry, multi-paradigm AnyLogic simulation, and an LLM acting as autonomous experiment director. The system identifies bottlenecks, runs scenario tests, and applies commands back to physical hardware — closed-loop, unattended, on commodity infrastructure.',
